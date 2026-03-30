@@ -1,6 +1,6 @@
 # VALOR — Veteran Adaptive Life-Assistance and Operations Robot System
 
-> A distributed mobile robot fleet for comprehensive veteran support across all 20 domains of veteran life.
+> A distributed mobile robot fleet for comprehensive veteran support across all 20 domains of veteran life. This is a personal idea and project and this repository is not affiliated with the VA. Claude AI from Anthropic was used for this project.
 
 [![System Status](https://img.shields.io/badge/status-concept--phase-blue)]()
 [![Archetypes](https://img.shields.io/badge/robot%20archetypes-5-teal)]()
