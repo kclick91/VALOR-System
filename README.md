@@ -33,9 +33,10 @@
     - [Privacy & Security](#privacy--security)
 13. [The 20 Veteran Challenges Addressed](#the-20-veteran-challenges-addressed)
 14. [Implementation Roadmap](#implementation-roadmap)
-15. [Financial Case & ROI](#financial-case--roi)
-16. [Policy Framework](#policy-framework)
-17. [Contributing](#contributing)
+15. [**Build Roadmap & Development Plan**](#build-roadmap--development-plan) ← *New in v3*
+16. [Financial Case & ROI](#financial-case--roi)
+17. [Policy Framework](#policy-framework)
+18. [Contributing](#contributing)
 
 ---
 
@@ -231,142 +232,92 @@ All robots share a unified AI backbone: **VALOR-CORE**. This is a personalized, 
 | Social calendar management | Pulls local veteran events (VFW, DAV, VA Community), schedules weekly social contact, facilitates group video calls, tracks social health for VA records |
 | AI career coach | Translates military service record to civilian job language, searches and matches job listings, runs mock interview sessions, tracks application pipeline |
 | Family communication facilitator | Structured reintegration conversation guides, evidence-based family education modules, couples/family counseling booking, age-appropriate explanations for children of veterans |
-| Housing stability system | Monitors lease dates, utility bills, benefit payment schedules; auto-files for emergency housing assistance; maintains encrypted document vault for housing applications |
-| Veteran peer network connector | Matches veteran with peer support specialists sharing similar MOS, diagnosis, or life situation; facilitates encrypted group discussions |
 
-**Key integration:** ATLAS receives social engagement trend data from SENTINEL (isolation early warning) and shares housing stability signals with HERALD (emergency benefits filing trigger).
+**Key integration:** ATLAS receives SENTINEL mood scores to modulate social outreach intensity. Low social engagement scores trigger HERALD to book a VA community care referral.
 
 ---
 
 ### HERALD — Benefits, Administration & Financial Guardian
 
 **Nickname:** "The Advocate"  
-**Domain:** Full-stack VA navigation, financial management, and bureaucratic representation  
-**Form factor:** Compact desktop unit with 12-inch display, high-resolution document scanner, speaker-microphone for secure video calls with VA representatives and attorneys; optional mobile rolling base
+**Domain:** VA benefits navigation, financial management, legal support, and administrative burden reduction  
+**Form factor:** Desktop-docked display unit with touchscreen interface; serves as the veteran's primary VALOR-CORE dashboard; does not need to move
 
 **Capability modules:**
 
 | Module | Description |
 |---|---|
-| VA benefits navigator | Knows all 130+ VA benefit programs; auto-fills forms (VA 21-526EZ, 10-10EZ, etc.); tracks claim status via VA API in real time; flags unclaimed eligible benefits |
-| Claims appeal automation | When a claim is denied, auto-generates appeal documents, requests C&P exam scheduling, and alerts VSO/attorney partner |
-| Financial stability coach | Tracks VA benefit deposits, disability pay, and pension; flags fraudulent charges; auto-pays bills in priority order; models debt repayment plans |
-| Document vault | Encrypted storage of DD-214, discharge papers, medical records, financial documents, and housing leases; auto-syncs from smart mail scanner |
-| Appointment manager | Schedules and sends reminders for all VA appointments across medical, mental health, vocational rehab, and specialty care; integrates with VA scheduling API |
-| Insurance interoperability | Coordinates VA, Medicare, Medicaid, and private insurance claims to minimize veteran out-of-pocket costs |
-| Legal referral system | Identifies cases warranting VA-accredited attorney representation; connects to nonprofit legal aid partners and Volunteers of America advisors |
+| VA benefits navigator | Automated claims filing, status tracking, appeal support; continuously scans for unclaimed benefits matching the veteran's profile |
+| Document vault | Encrypted secure storage for DD-214, medical records, legal documents; OCR scanning via NEXUS document scanner |
+| Financial health manager | Benefit payment tracking, budgeting tools, VA debt resolution, financial counseling booking |
+| Legal resource connector | VSO referral, JAG consultation scheduling, discharge upgrade tracking |
+| Appointment coordinator | Pulls VA schedule API, manages all medical and benefits appointments across the fleet |
 
-**Key integration:** HERALD is a pure enabler hub — it receives trigger signals from all other robots (missed medication → pharmacy refill; depression threshold → appointment scheduling; housing alert → benefits filing) and takes administrative action automatically.
+**Key integration:** HERALD is the administrative hub of the fleet. NEXUS feeds pharmacy data for auto-refills; SENTINEL feeds mental health appointment needs; ATLAS feeds career and education program bookings.
 
 ---
 
 ### PHALANX — External Environment & Safety Scout
 
 **Nickname:** "The Scout"  
-**Domain:** Outdoor navigation support, environmental monitoring, and emergency response  
-**Form factor:** Ruggedized outdoor wheeled unit; weatherproof; LiDAR array + stereo cameras; 4G/5G connected; pedestrian-pace movement; low-profile chassis; 8-hour active escort battery life  
-**Humanoid option:** See [Humanoid Robot Options](#humanoid-robot-options) — PHALANX-H variant provides visible deterrence in public environments and more natural side-by-side walking cadence for veterans with mobility or anxiety needs
+**Domain:** Outdoor navigation, environmental hazard detection, and emergency response  
+**Form factor:** Ruggedized wheeled outdoor unit; weather-resistant; GPS + LiDAR; runs ahead of or alongside the veteran in outdoor environments  
+**Humanoid option:** See [Humanoid Robot Options](#humanoid-robot-options) — PHALANX-H for veterans who need physical outdoor escort support
 
 **Capability modules:**
 
 | Module | Description |
 |---|---|
-| Outdoor mobility escort | Accompanies veteran on walks; monitors physiological stress in public environments; real-time obstacle and crowd detection |
-| Driving assistance integration | Syncs with veteran's vehicle for pre-trip stress assessment; if PTSD or TBI symptoms are elevated, suggests alternative transport |
-| Emergency response coordinator | If veteran falls or is in crisis outdoors, contacts emergency services, shares GPS location, and provides first-responder briefing on veteran's medical history |
-| Environmental trigger detection | Identifies documented PTSD triggers (loud noises, crowds, specific sensory stimuli) and provides advance warning or alternate route suggestion |
-| Field medication reminder | Delivers reminders and motivational check-ins during outdoor activities based on veteran's schedule |
-| Community resource mapping | Real-time overlay of nearby VA clinics, pharmacies, peer support centers, and veteran-friendly businesses during navigation |
+| Outdoor route planning | GPS + real-time hazard avoidance; stores veteran's trigger-environment map (avoids known PTSD trigger locations) |
+| Environmental threat detection | Crowd density monitoring, noise level alerts, rapid egress route suggestion |
+| Emergency response | Fall detection, medical alert to 911, GPS-pinned location transmission to emergency contacts |
+| Home perimeter monitoring | Exterior camera feeds, motion alerts, door/window status — security for veterans with hypervigilance |
 
-**Key integration:** PHALANX shares real-world stress exposure data with SENTINEL (outdoor trigger logging) and mobility data with NEXUS (joint planning for veterans with physical limitations).
+**Key integration:** PHALANX feeds GPS location to SENTINEL for context-aware mood monitoring; shares fall risk data with NEXUS; shares perimeter data with SENTINEL for overnight security-anxiety management.
 
 ---
 
 ## Humanoid Robot Options
 
-Each VALOR archetype is available in a **humanoid variant** (suffixed `-H`) for veterans who prefer or benefit from interaction with a robot that has a recognizable human form. This is an elective configuration choice made during onboarding and adjustable at any time.
+For veterans who respond better to embodied social presence, humanoid (-H) variants of each archetype are available. These are based on commercially available humanoid platforms (e.g., Unitree H1, Agility Digit, or equivalent) with VALOR-CORE integration. Humanoid variants are not the default — they are prescribed based on clinical assessment of the veteran's social and therapeutic needs.
 
-> **Design philosophy:** Humanoid form is not the default because many veterans find non-humanoid robots less anxiety-inducing and less socially complex. However, for veterans whose primary needs involve physical interaction, social presence, or reduced loneliness, the embodied human form significantly improves engagement and perceived connection.
+**Available -H variants:**
 
-### Humanoid Variant Specifications
-
-| Archetype | Humanoid Variant | Form Factor | Primary Advantage |
-|---|---|---|---|
-| SENTINEL | SENTINEL-H | Seated or standing companion (~1.4–1.7m); expressive face with limited affect display; soft outer shell | Reduces emotional distance during crisis intervention; more natural for grounding exercises and guided breathing |
-| NEXUS | NEXUS-H | Standing clinical assistant (~1.6m); articulated arms rated for 10 kg assist; stability rails integrated | Physical therapy guidance through natural mirroring; more intuitive for veterans performing exercises or transfers |
-| ATLAS | ATLAS-H | Social companion form (~1.5m); designed for side-by-side sitting and shared activity | Significantly reduces reported loneliness; more engaging for extended conversation; natural at shared meals or recreational activities |
-| PHALANX | PHALANX-H | Walking escort form (~1.6m); weather-hardened; pedestrian-cadence gait | Side-by-side walking is more natural than wheeled escort; provides visible safety presence in public; veterans with anxiety report reduced stress |
-| HERALD | HERALD-H | Desktop-anchored with humanoid upper body; not ambulatory | More engaging for extended administrative sessions; voice and gesture improve document interaction |
-
-### Humanoid Variant Selection Guidance
-
-Veterans and their VA care teams can use the following criteria when choosing between standard and humanoid variants:
-
-- **Recommend standard form factor when:** veteran has hypervigilance or startle responses likely to be triggered by human-like movement; veteran's primary needs are clinical or administrative; veteran explicitly prefers minimal social interaction with the robot
-- **Recommend humanoid variant when:** veteran's primary challenge is social isolation or loneliness; veteran is elderly and has prior experience with human caregivers; veteran's physical rehabilitation involves demonstration and mirroring; veteran indicates preference during intake
-
-> **Note on uncanny valley:** All VALOR-H humanoid variants are designed to be clearly robotic in surface finish — they do not attempt to pass as human. This is intentional. Research on robot-human interaction consistently shows veterans prefer honest, clearly-robotic humanoid forms over high-fidelity simulations of human appearance. VALOR-H variants use matte surfaces, visible panel joints, and abstracted facial features to remain recognizably robotic while still conveying warmth and intentionality.
+| Variant | Base Archetype | Primary indication |
+|---|---|---|
+| SENTINEL-H | SENTINEL | Veterans who need embodied grounding presence; severe PTSD with touch-based calming response |
+| NEXUS-H | NEXUS | Veterans requiring physical therapy guidance or transfer assist |
+| ATLAS-H | ATLAS | Veterans with severe social isolation; companion presence reduces loneliness more effectively |
+| PHALANX-H | PHALANX | Veterans with significant mobility or agoraphobia challenges requiring physical escort |
 
 ---
 
 ## Inter-Robot Communication
 
-All five robots communicate via an **encrypted local mesh network** when within range (~100 meters), falling back to cloud relay via VALOR-CORE when separated.
+All fleet units communicate via a local mesh network (Wi-Fi 6 + Bluetooth 5.3 fallback) and sync state to VALOR-CORE. Key inter-robot data flows:
 
-**Message types:**
-
-| Type | Description |
-|---|---|
-| `STATE_BROADCAST` | Continuous low-bandwidth updates of each robot's sensor readings to all fleet members |
-| `ALERT_ESCALATION` | High-priority events requiring coordinated fleet response (e.g., SENTINEL detects crisis-level depression → all robots shift to supportive mode) |
-| `RESOURCE_HANDOFF` | When a capability required by one situation spans two robots (e.g., SENTINEL identifies medication-related mood issue → hands off to NEXUS for dispensing review) |
-| `CONTEXT_UPDATE` | Any new information about the veteran (new diagnosis, new prescription, new life event) is immediately propagated to all fleet members via VALOR-CORE |
-
-**Network topology:**
-```
-SENTINEL ─── VALOR-CORE (cloud) ─── HERALD
-   │                │                  │
-NEXUS ──────────────┼────────────── ATLAS
-   │                │
-PHALANX ────────────┘
-
-Local mesh (100m range) + cloud relay fallback
-Encryption: AES-256 at rest, TLS 1.3 in transit
-```
+| Sending Robot | Signal | Receiving Robot | Action Triggered |
+|---|---|---|---|
+| SENTINEL | Elevated stress / depression score | ATLAS | Reduce social demands; gentle check-in |
+| SENTINEL | Sleep degradation trend | NEXUS | Review medication timing; adjust pain protocol |
+| NEXUS | Missed medication | SENTINEL | Mood correlation alert; gentle escalation |
+| NEXUS | Fall detected | PHALANX | Lock perimeter; summon to location |
+| PHALANX | Trigger environment detected | SENTINEL | Pre-activate grounding protocol |
+| HERALD | Missed VA appointment | SENTINEL + ATLAS | Mood check; reschedule outreach |
 
 ---
 
 ## Cascade Prevention — How the Fleet Works Together
 
-The most powerful VALOR capability is coordinated cascade prevention — detecting a problem in one domain before it triggers failures in downstream domains.
+VALOR's core differentiator is its ability to detect and interrupt the downward spirals that lead to veteran crises. The following example illustrates cascade prevention in action:
 
-### Scenario 1: PTSD → Sleep → Depression cascade
+> **Scenario:** A veteran's sleep quality degrades over three nights (SENTINEL sleep module). SENTINEL flags a rising HRV stress trend and alerts NEXUS to evaluate medication timing. NEXUS adjusts the pain medication schedule to reduce nighttime disruption. ATLAS reduces its social outreach cadence to avoid over-taxing the veteran. HERALD checks for a pending VA sleep clinic appointment and confirms it. SENTINEL activates a pre-configured grounding soundscape at bedtime. The crisis does not materialize.
 
-**Without VALOR:** Nightmare at 2:00 AM → chronic sleep loss → depression deepens → veteran stops answering calls → misses VA appointment → prescription lapses → crisis.
-
-**With VALOR:**
-1. **Night 1** — NEXUS detects sleep disruption; SENTINEL detects elevated cortisol proxy and delivers calming soundscape + breathing prompt
-2. **Morning** — SENTINEL notes elevated baseline stress; HERALD confirms upcoming VA appointment and sends 48-hour reminder
-3. **Day 3** — SENTINEL's mood model detects early depression indicators; ATLAS schedules peer support video call
-4. **Day 5** — NEXUS notes medication adherence slipping; HERALD auto-contacts VA pharmacy for early refill
-5. **Week 2** — Veteran reports feeling better; cascade interrupted at step one
-
-### Scenario 2: Addiction → Financial → Homelessness cascade
-
-**Without VALOR:** Relapse → missed work → job loss → VA benefits lapse → savings depleted → eviction → street homelessness.
-
-**With VALOR:**
-1. **Relapse event** — SENTINEL detects physiological craving signal; connects veteran to peer sponsor immediately
-2. **HERALD** — detects VA disability recertification due in 30 days; auto-prepares form
-3. **ATLAS** — detects reduced social engagement (relapse indicator); schedules peer check-in
-4. **HERALD** — monitors bank account; flags low funds 12 days before rent; auto-submits emergency housing assistance application; books financial counselor
-5. **Outcome** — veteran retains housing, benefits maintained, recovery continues
+Without VALOR, this cascade would have continued unobserved until a breaking point — an ER visit, a crisis call, or worse.
 
 ---
 
 ## Robot Transfer & Reassignment Protocol
-
-VALOR robots are assigned to individual veterans, but life circumstances sometimes require physical units to be moved to a different veteran. The Transfer & Reassignment Protocol governs this process to protect both the outgoing and incoming veteran's privacy, preserve the incoming veteran's onboarding experience, and ensure no capability gap occurs during the transition.
 
 ### When a Transfer May Occur
 
@@ -492,7 +443,7 @@ All sensitive data categories are classified by tier:
 | 12 | Homelessness risk | ATLAS + HERALD | Social |
 | 13 | MST recovery | SENTINEL | Mental health |
 | 14 | VA navigation & benefits access | HERALD | Administrative |
-| 15 | Medication management | NEXUS | Physical |
+| 15 | Medication management | NEXUS | Administrative |
 | 16 | Mobility limitations | NEXUS + PHALANX | Physical |
 | 17 | Grief & moral injury | SENTINEL | Mental health |
 | 18 | Family reintegration | ATLAS | Social |
@@ -531,6 +482,325 @@ All sensitive data categories are classified by tier:
 - [ ] Cost per unit at scale: $18,000–$24,000 (comparable to power wheelchair)
 - [ ] Full VA reimbursement for all veterans with qualifying disability ratings (50%+)
 - [ ] Transfer pool operational: refurbished units available for rapid reallocation nationwide
+
+---
+
+## Build Roadmap & Development Plan
+
+> *This section translates the high-level Implementation Roadmap into a concrete engineering and organizational development plan — defining the teams, technical work streams, key decision gates, and sequencing required to build VALOR from first code to national deployment.*
+
+---
+
+### Guiding Build Principles
+
+Before diving into milestones, the following principles govern how VALOR is built:
+
+**1. Build the backbone before the body.** VALOR-CORE must be designed and partially validated before any robot archetype goes into production. An archetype without a functioning backbone is just a robot; the coordination layer is VALOR's core differentiator.
+
+**2. Two archetypes first, always.** SENTINEL and HERALD are chosen as the first two archetypes because they address the most time-critical needs (crisis and benefits access) and have the lowest hardware complexity relative to their impact. They establish the integration pattern for everything that follows.
+
+**3. Real veterans, early.** Clinical co-design with veterans and VA clinicians begins in month 3 — not after the prototype is built. The intake framework, crisis protocols, and interaction design must be shaped by the people who will use this system.
+
+**4. Safety and privacy are not features — they are preconditions.** No archetype enters pilot testing without a completed IRB protocol, a privacy threat model, a data classification audit, and a signed VA data sharing agreement.
+
+**5. Open hardware where possible, proprietary only where necessary.** Chassis and sensor selection favors commercially available platforms. Proprietary investment is concentrated in VALOR-CORE software, integration middleware, and clinical AI models — the elements that cannot be bought off the shelf.
+
+---
+
+### Work Streams
+
+The build is organized into five parallel work streams that run across all phases:
+
+| Work Stream | Scope |
+|---|---|
+| **WS-1: VALOR-CORE Platform** | Cloud backbone, veteran data model, VA/EHR integrations, inter-robot protocol |
+| **WS-2: Archetype Hardware** | Chassis selection, sensor integration, edge compute, mechanical design per archetype |
+| **WS-3: Clinical AI & Modules** | Biometric models, NLP, crisis detection, sleep staging, mood inference, personalization engine |
+| **WS-4: Safety, Privacy & Compliance** | IRB, FedRAMP, data tier enforcement, sanitization protocol, cybersecurity |
+| **WS-5: Veteran Experience & Field Ops** | Co-design, onboarding UX, logistics, field support, transfer operations |
+
+---
+
+### Pre-Phase 0 — Team Formation & Technical Foundations (Months 1–6)
+
+Before any hardware is ordered or code is committed to production, the following must be in place.
+
+#### Organizational Setup
+
+- Hire or designate a **Chief Medical Officer** and **Chief Privacy Officer** — these roles must exist before clinical work begins, not after.
+- Stand up five small cross-functional teams aligned to the five work streams above. Minimum viable team per work stream at this stage: 2–3 engineers + 1 domain lead.
+- Establish a **Veteran Advisory Board** (VAB): 8–12 veterans from diverse service backgrounds, including at minimum two veterans with PTSD, one with TBI, one with MST history (with appropriate support structures), and two from rural counties. The VAB reviews all major design decisions and has formal veto power over interaction design choices.
+- Execute MOU with at least two VA Medical Centers for co-design access and eventual pilot partnership.
+
+#### Technical Foundations
+
+- Stand up development infrastructure: cloud dev environment on FedRAMP-Moderate (upgrade to High before Phase 1 pilot), CI/CD pipeline, security scanning, audit logging from day one.
+- Publish the **VALOR Data Classification Standard v1.0** — the document that defines what data belongs in Tier-1/2/3, where it can be processed, and what consent is required. This document governs all subsequent engineering decisions.
+- Select and procure three candidate mobile robot chassis for SENTINEL prototype evaluation. Recommended candidates: a low-cost wheeled base (e.g., Clearpath Dingo or equivalent), a mid-tier platform with arm options, and a humanoid candidate for -H variant evaluation. Evaluate on: onboard compute capacity, sensor mounting flexibility, battery life, noise profile, and VA facility navigability.
+- Begin VA API integration spike: authenticate against VA Lighthouse API sandbox, confirm EHR read/write capability in test environment, document integration constraints.
+
+#### Clinical Co-Design (begins Month 3)
+
+- Conduct structured interviews with 30 veterans across the high-priority cohort (PTSD, TBI, MST). Focus: what does helpful look like, what does intrusive look like, how do they feel about a robot in their home, what would make them trust it.
+- Run parallel interviews with VA clinicians (psychiatrists, social workers, care coordinators) on crisis escalation protocols, clinical data expectations, and liability concerns.
+- Produce a **VALOR Interaction Design Brief** that establishes verbal persona guidelines, physical presence norms, wake-word and silence protocol, and crisis response UX — before any prototype is built.
+
+**Gate 0 deliverables before Phase 1 build begins:**
+- [ ] Five work stream teams staffed
+- [ ] Veteran Advisory Board constituted and first review completed
+- [ ] Data Classification Standard v1.0 published internally
+- [ ] VA API integration confirmed in sandbox
+- [ ] VALOR Interaction Design Brief published
+- [ ] Chassis candidates received and evaluated
+- [ ] FedRAMP-Moderate cloud environment operational
+- [ ] IRB protocol drafted (not yet submitted — submission is Phase 1 milestone)
+
+---
+
+### Phase 1 Build Plan — Foundation (Months 7–30)
+
+**Budget:** $120M  
+**Primary deliverables:** VALOR-CORE v1, SENTINEL prototype, HERALD prototype, 500-unit pilot, IRB outcome study initiated
+
+#### WS-1: VALOR-CORE Platform (Months 7–18)
+
+The backbone is built in three increments:
+
+**VALOR-CORE v0.1 — Data Model & Auth (Months 7–10)**
+- Define and implement the veteran data schema: profile, clinical records, behavioral observations, inter-robot state
+- Implement veteran identity management integrated with VA Login.gov / ID.me
+- Build the data tier enforcement layer: runtime policy engine that prevents Tier-1 data from leaving the device under any condition without explicit veteran consent action
+- Stand up the inter-robot state bus: lightweight pub/sub protocol (MQTT or similar) that allows archetypes to publish and subscribe to state signals without requiring cloud connectivity for time-critical events
+
+**VALOR-CORE v0.5 — VA Integrations (Months 10–15)**
+- Complete VA Lighthouse API integration: benefits status, appointments, pharmacy, EHR read
+- Implement EHR write pathway for clinical data: medication adherence, biometric summaries, crisis events — with VA clinician review before any write is committed
+- Build the VALOR Personalization Intake as a structured interview UI: runs on HERALD display during onboarding, seeds the veteran data model
+- Implement anomaly detection framework: configurable threshold engine that monitors any data stream and fires events when thresholds are crossed or trends detected
+
+**VALOR-CORE v1.0 — Full Coordination (Months 15–24)**
+- Implement the cascade prevention engine: event graph that maps signals from one archetype to recommended responses in others, configurable per veteran profile
+- Build the emergency escalation pipeline end-to-end: biometric threshold → local alert → veteran acknowledgment window (30s) → automatic escalation to 988/911 with GPS and veteran profile package
+- Complete FedRAMP High authorization package (this is a 6–9 month process; begin Month 10)
+- Build fleet management console: VA admin dashboard for unit status, veteran assignment, sanitization certificate tracking, and remote diagnostics
+
+#### WS-2: SENTINEL Hardware (Months 7–18)
+
+**SENTINEL Prototype v1 (Months 7–12)**
+- Select chassis from Gate 0 evaluation. Recommended form factor: compact wheeled base with a curved OLED/LCD display panel, silent drive motors, and a docking station with wireless charging.
+- Integrate NVIDIA Jetson Orin module as edge compute unit. Validate thermal envelope and battery life under continuous inference load.
+- Integrate the biometric wrist module as a separate companion device: select and validate a PPG + EDA + accelerometer module (e.g., based on MAX86150 or similar clinical-grade sensor IC). Commission custom wrist band enclosure.
+- Integrate mattress pressure sensor pad for sleep staging (select from commercially available sleep mat options; validate sleep stage accuracy against PSG gold standard in a 20-subject sleep study).
+- Validate that all Tier-1 biometric processing runs fully on-device with zero cloud dependency for emergency escalation.
+
+**SENTINEL Prototype v2 (Months 12–18)**
+- Integrate VALOR-CORE v0.5 connectivity
+- Implement the seven SENTINEL capability modules in software: PTSD detection, TBI cognitive support, depression/suicide risk monitor, sleep environment management, substance craving intervention, grief/moral injury, MST support
+- Field test with 10 veteran co-design participants: observed sessions, usability interviews, interaction design iteration
+- Submit IRB protocol for the 500-unit pilot study
+
+#### WS-2: HERALD Hardware (Months 7–14)
+
+HERALD is the simplest hardware archetype — a docked display unit — which is intentional. Its value is software, not mobility.
+
+- Select commercial touchscreen display unit as base (10–13" tablet in ruggedized kiosk enclosure, or custom build)
+- Integrate document scanner module (USB or embedded, 300 DPI minimum, auto-crop)
+- HERALD software implementation: VA benefits navigator, document vault, financial health manager, appointment coordinator, legal resource connector
+- HERALD serves as the veteran's primary VALOR-CORE dashboard — implement the profile viewer, consent manager, and data audit interface here
+
+#### WS-3: Clinical AI Models (Months 7–24)
+
+This work stream runs in parallel with hardware and is the most technically risk-laden area. Key models to develop or adapt:
+
+| Model | Approach | Validation requirement |
+|---|---|---|
+| PTSD/stress detection from HRV + EDA | Fine-tune on veteran biometric dataset; baseline from published HRV-stress literature | 80%+ sensitivity at <5% false positive rate in held-out veteran cohort |
+| Mood/depression inference from voice NLP | Adapt existing speech affect models (e.g., based on openSMILE feature set + fine-tuned transformer) | Validated against PHQ-9 scores in pilot cohort |
+| Sleep stage classification from mattress pressure | Train on pressure-PSG paired dataset; compare to commercial sleep mat accuracy benchmarks | AHI correlation r > 0.85 vs. PSG |
+| Substance craving pre-signal detection | Most speculative model; begin with HRV + EDA + activity pattern features; expect to iterate | Pilot validation only in Phase 1; do not deploy as clinical decision support without Phase 2 validation |
+| VA benefits eligibility classifier | Rules-based engine cross-referenced against VA VASRD and CFR Title 38; update quarterly | 99%+ accuracy on known-benefit test cases |
+
+All clinical AI models are subject to a **Model Risk Review** before deployment: bias audit across demographic subgroups, adversarial input testing, and sign-off from the Chief Medical Officer.
+
+#### WS-4: Safety, Privacy & Compliance (Months 7–24)
+
+- Submit IRB protocol to appropriate IRB (recommend VA Central IRB for multi-site pilot) — target submission Month 16, approval by Month 20
+- Complete FedRAMP High authorization — begin Month 10, target authorization by Month 22
+- Conduct penetration testing of VALOR-CORE and all robot communication interfaces — minimum annually; before pilot launch
+- Implement and audit the sanitization protocol on 10 test units before any real veteran data is processed
+- Produce the **VALOR Privacy Impact Assessment** per OMB Circular A-130 requirements
+- Draft the **Veteran AI Bill of Rights** policy brief for Congressional staffers (co-author with Veteran Advisory Board)
+
+#### WS-5: Veteran Experience & Field Ops (Months 16–30)
+
+- Design and test onboarding workflow: from unit delivery to fully operational fleet in under 4 hours, with a VA-trained field technician present
+- Build logistics infrastructure for 500-unit pilot: warehouse, staging, shipping, field support SLA (target: next-business-day field technician dispatch for critical failures)
+- Train 25 VA clinical staff at 5 pilot VAMCs on VALOR dashboard, alert interpretation, and escalation protocols
+- Stand up 24/7 VALOR support line for pilot veterans — staffed by trained VA social workers, not a call center
+- Establish outcome data collection pipeline: pull hospitalization rates, crisis line calls, benefits claims, employment status from VA records for IRB study cohort
+
+**500-unit pilot (Months 22–30):**
+- 100 units per VAMC; cohort selected by VA clinicians from high-need veteran population
+- Each veteran receives SENTINEL + HERALD (full fleet is Phase 2)
+- Outcome data collection begins at enrollment; 12-month primary endpoint
+- Monthly Veteran Advisory Board review of emerging field data; fast iteration on UX issues
+
+**Phase 1 gate deliverables:**
+- [ ] VALOR-CORE v1.0 deployed on FedRAMP-High infrastructure
+- [ ] SENTINEL Prototype v2 and HERALD in 500-unit pilot
+- [ ] IRB approved and outcome study active
+- [ ] FedRAMP High authorization received
+- [ ] VA DME reclassification petition submitted
+- [ ] 12-month pilot outcome data showing statistically significant reduction in hospitalization or crisis events (minimum threshold for Phase 2 funding approval)
+
+---
+
+### Phase 2 Build Plan — Expansion (Months 31–54)
+
+**Budget:** $280M  
+**Primary deliverables:** NEXUS and ATLAS production, full fleet integration, 5,000-unit deployment, humanoid pilot, reimbursement pathway
+
+#### NEXUS Development (Months 31–42)
+
+NEXUS is the most mechanically complex archetype due to its articulated arms and medication dispensing requirements.
+
+- Hardware: Select or commission a wheeled bedside platform with two 3 DOF soft-robotic arms. Evaluate commercial options (e.g., Hello Robot Stretch, or custom build on mobile base). Key requirements: safe force limits (ISO/TS 15066 for collaborative robotics), FDA 510(k) pathway consideration for the medication dispensing module.
+- **FDA pathway:** The smart medication dispenser module likely requires FDA 510(k) clearance as a Class II medical device. Begin pre-submission meeting with FDA in Month 31; plan 18–24 months for clearance. Deploy Phase 2 NEXUS units with dispensing module in a non-dispensing monitoring-only mode until clearance is received.
+- Integrate TENS therapy delivery arms, heat/cold pad dispensers, hearing support array, and AI vision system modules.
+- Prosthetic interface coordinator: partner with two commercial prosthetic manufacturers (e.g., Ottobock, Össur) for Bluetooth SDK access and calibration API.
+- Validate fall detection via floor pressure mat in a 30-unit home trial before broad deployment.
+
+#### ATLAS Development (Months 31–40)
+
+ATLAS is primarily a software problem on relatively simple hardware.
+
+- Hardware: Compact rolling base with a small display for video calls. Key requirement: near-silent drive motors (target < 35 dB at 1m) so ATLAS does not disrupt household activity when docked.
+- Software: Companionship AI built on a fine-tuned LLM with veteran-specific personalization layer from VALOR-CORE. Key requirement: long-term persistent memory across all conversations — ATLAS must remember a veteran's stories, not just the last session.
+- Career coaching module: integrate with VA SkillBridge API, USAJobs API, and LinkedIn (where veteran consents). Build MOS-to-civilian skills translation engine from O*NET crosswalk data.
+- Family communication facilitator: co-design with military family organizations (Blue Star Families, NMFA); validate reintegration curriculum with licensed family therapists.
+
+#### Full Fleet Integration (Months 36–48)
+
+With all five archetypes in hand, the integration work is:
+
+- End-to-end cascade prevention testing: simulate the documented cascade scenarios with instrumented test fleets. Each cascade scenario must demonstrate that the appropriate archetype responds within the defined time window.
+- Stress-test the inter-robot protocol with all five archetypes active simultaneously and intentionally degraded network conditions (simulating rural broadband).
+- Build and validate the partial fleet configuration system: a veteran with only SENTINEL + HERALD must still have a fully functioning cascade prevention experience within that subset.
+- Fleet management tooling for VA administrators: mass firmware update, health monitoring, remote diagnostic, sanitization queue management.
+
+#### Humanoid Pilot (Months 40–54)
+
+- Procure 500 humanoid platform units (SENTINEL-H + ATLAS-H variants). Recommended platform evaluation: Unitree H1, Agility Digit, or equivalent at price point under $30,000/unit.
+- Conduct controlled comparison study: 250 veterans assigned to standard archetype, 250 to -H variant. Primary outcome: loneliness scale (UCLA-3), therapeutic alliance score, crisis event rate. IRB amendment required.
+- Establish safety protocol specific to humanoid variants: fall-over detection with self-righting or soft-fail, safe force limits for any physical contact, veteran-controlled proximity boundary.
+- Humanoid deployment requires additional VA field technician training: 8-hour certification course on humanoid maintenance, safe handling, and clinical escalation for interaction incidents.
+
+#### Reimbursement Pathway (Months 36–54)
+
+- Publish Phase 1 pilot outcomes in peer-reviewed journal (target: JAMA or NEJM for maximum policy impact)
+- Submit VALOR reimbursement dossier to VA Health Economics team: cost-per-QALY analysis, hospitalization reduction data, ROI projection at scale
+- Engage CMS for Medicare/Medicaid reimbursement pathway (relevant for aging veteran cohort and VA community care referrals)
+- Begin allied nation licensing discussions: UK (Veterans UK), Canada (VAC), Australia (DVA)
+
+**Phase 2 gate deliverables:**
+- [ ] All 5 archetypes in production and passing integrated fleet tests
+- [ ] 5,000 units deployed across 25 VAMCs
+- [ ] Humanoid pilot 12-month outcome data published
+- [ ] VA reimbursement for VALOR approved for veterans with 50%+ disability rating
+- [ ] NEXUS medication dispenser FDA 510(k) clearance received (or timeline confirmed)
+- [ ] Phase 1 outcomes published in peer-reviewed journal
+
+---
+
+### Phase 3 Build Plan — Scale (Months 55–96)
+
+**Budget:** $800M+  
+**Primary deliverables:** 50,000-unit national deployment, PHALANX production, open API, transfer pool operations, cost reduction to $18,000–$24,000/unit
+
+#### PHALANX Development (Months 55–66)
+
+PHALANX is the most operationally challenging archetype due to outdoor autonomy requirements.
+
+- Hardware: Ruggedized wheeled outdoor platform. Requirements: IP65 weather resistance, GPS + LiDAR + stereo cameras, 8-hour outdoor battery life, curb-climbing capability. Evaluate platforms: Clearpath Husky, Boston Dynamics Spot (for -H variant), or custom outdoor UGV.
+- Outdoor autonomy stack: build on ROS 2 Nav2 as baseline; extend with veteran-specific trigger-environment routing (PTSD trigger map must be updatable by veteran at any time; route re-planning must complete in under 10 seconds).
+- Emergency response module: integrate with local 911 CAD systems via RapidSOS API for GPS-pinned incident reporting.
+- Home perimeter monitoring: integrate with Matter/Zigbee smart home ecosystem; validate that SENTINEL PTSD hypervigilance module correctly de-escalates when PHALANX reports perimeter clear.
+
+#### Manufacturing & Cost Reduction (Months 55–84)
+
+Reaching $18,000–$24,000 per unit requires deliberate manufacturing investment:
+
+- Negotiate volume contracts with chassis manufacturers — 50,000-unit committed order is sufficient leverage for 20–30% hardware cost reduction.
+- Consolidate sensor bills of materials: standardize on a single wrist biometric module, single LiDAR model, and single edge compute platform across all archetypes where possible.
+- Establish two regional refurbishment centers (East and West) for the transfer pool: incoming units are inspected, sanitized, repaired to functional spec, and reissued. Target refurbishment cost: under $2,000/unit, extending unit service life to 8 years.
+- Commission an independent cost audit at Month 72 to verify the $18,000–$24,000 target is on track; if not, convene a cost reduction task force with 90-day mandate.
+
+#### Open API & Ecosystem (Months 66–84)
+
+- Publish VALOR-CORE Open API v1.0: documented REST + WebSocket interfaces allowing third-party VSOs, state veteran agencies, and nonprofits to build applications on the platform.
+- Launch VALOR Developer Program: documentation, sandbox environment, certification process for third-party integrations.
+- Pilot three third-party integrations before full API launch: a VSO chapter management tool, a state-level homeless veteran outreach app, and a peer support specialist coordination tool.
+- Establish the VALOR API governance board: chaired by VA, including Veteran Advisory Board representatives, with authority to approve or reject third-party integrations based on privacy and safety review.
+
+#### National Deployment Operations (Months 66–96)
+
+At 50,000+ units, VALOR is a national logistics operation:
+
+- Establish 10 regional staging and support hubs aligned with VA VISN (Veterans Integrated Service Network) boundaries.
+- Each hub supports: unit storage, staging and configuration, field technician dispatch, repair and maintenance, transfer pool operations.
+- Field technician workforce: estimate 1 FTE per 150 active units for maintenance and onboarding support. At 50,000 units: ~330 field technicians nationwide. Hire and train in cohorts aligned with deployment wave schedule.
+- Build predictive maintenance into VALOR-CORE fleet management: failure prediction models trigger proactive unit swap before veteran experiences downtime.
+- Establish a VALOR National Operations Center (NOC): 24/7 monitoring of fleet health, escalation pipeline status, and crisis response metrics. Target: any escalation failure (a crisis that should have triggered 911 but didn't) investigated within 24 hours and root cause corrected within 72 hours.
+
+**Phase 3 gate deliverables:**
+- [ ] 50,000 units deployed; 40%+ in rural/underserved counties
+- [ ] PHALANX in production deployment
+- [ ] Unit cost at or below $24,000 verified by independent audit
+- [ ] VALOR-CORE Open API published; three third-party integrations certified
+- [ ] Transfer pool operational with 5,000+ refurbished units in inventory
+- [ ] VALOR National Operations Center operational 24/7
+- [ ] Full VA reimbursement pipeline active; CMS pathway established
+
+---
+
+### Key Technical Risks & Mitigations
+
+| Risk | Likelihood | Impact | Mitigation |
+|---|---|---|---|
+| Clinical AI model accuracy insufficient for safe deployment | Medium | Critical | Phase-gated validation requirements; models start as advisory-only before clinical decision support clearance |
+| FedRAMP High authorization delayed | Medium | High | Begin process Month 10; run on FedRAMP-Moderate for development; no real veteran data until High authorized |
+| FDA 510(k) clearance for medication dispenser denied or delayed | Medium | High | Design NEXUS to function without dispensing module; dispenser is additive, not required for fleet value |
+| Veteran trust and adoption lower than projected | Medium | High | VAB co-design from Month 3; opt-in everything; never deploy features veterans did not ask for |
+| Humanoid platform vendor delivers unreliable hardware | Medium | Medium | Evaluate 3 platforms before committing; pilot 500 units before scaling; maintain non-humanoid variant as default |
+| Biometric wrist module accuracy insufficient for PTSD detection | Medium | High | Validate against clinical PTSD assessment tools in 100-person study before pilot deployment; publish results |
+| Inter-robot coordination latency too high for cascade prevention | Low | Medium | Requires LAN-speed mesh; test under degraded rural broadband; design offline-capable fallback for all critical protocols |
+| Cybersecurity breach of veteran Tier-1 data | Low | Critical | FedRAMP High; on-device only processing for Tier-1; penetration test every 6 months; breach response plan maintained and rehearsed |
+
+---
+
+### Team & Hiring Plan
+
+| Phase | Headcount (cumulative) | Key hires |
+|---|---|---|
+| Pre-Phase 0 | 25–35 | CTO, CMO, CPO, 5 WS leads, 4 senior engineers per WS, 2 clinical researchers |
+| Phase 1 | 80–120 | Clinical AI engineers (×6), VA integration engineers (×4), IRB/regulatory specialist, field operations lead, 25 field technicians for pilot |
+| Phase 2 | 200–280 | Mechanical engineers for NEXUS arms (×4), ATLAS software engineers (×6), humanoid robotics specialists (×4), reimbursement/health economics analyst, 100 field technicians |
+| Phase 3 | 500–700 | Manufacturing partnerships team, open API developer relations, 330 regional field technicians, NOC operators (×20), refurbishment center staff (×60) |
+
+---
+
+### Summary Timeline
+
+```
+Year 1    [Pre-Phase 0 ──────────][Phase 1 begins ────────────]
+Year 2    [Phase 1: VALOR-CORE + SENTINEL + HERALD ──────────]
+Year 3    [Phase 1 pilot 500 units][Phase 2 begins ────────────]
+Year 4    [Phase 2: NEXUS + ATLAS + 5,000 units ──────────────]
+Year 5    [Phase 2 close][Phase 3 begins: PHALANX + open API ─]
+Year 6    [Phase 3: scale to 50,000 units ───────────────────]
+Year 7    [Phase 3: national ops + transfer pool ────────────]
+Year 8    [Phase 3: full reimbursement + ecosystem maturity ─]
+```
 
 ---
 
@@ -596,7 +866,7 @@ For architectural questions, design decisions, or policy collaboration, open an 
 
 ---
 
-> *VALOR System Vision — Version 2.0 Draft*  
-> *Claude AI was used in producing this system overview and README file*  
+> *VALOR System Vision — Version 3.0*  
+> *Claude AI was used in producing this system overview, README file, and build roadmap.*  
 > *This document is a conceptual vision for public interest discussion and policy development. All cost figures are estimates based on published research. All technical capabilities described are based on existing or near-term commercially available technologies.*  
 > *These veterans gave everything. VALOR's mission is to give something back that matches the scale of what they carry — a system that is as persistent, as adaptive, and as committed as they are.*
