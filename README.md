@@ -36,7 +36,9 @@
 15. [**Build Roadmap & Development Plan**](#build-roadmap--development-plan) ← *New in v3*
 16. [Financial Case & ROI](#financial-case--roi)
 17. [Policy Framework](#policy-framework)
-18. [Contributing](#contributing)
+18. [**Top Development Challenges**](#top-development-challenges) ← *New in v3.1*
+19. [**Day in the Life**](#day-in-the-life) ← *New in v3.1*
+20. [Contributing](#contributing)
 
 ---
 
@@ -842,6 +844,288 @@ Federal regulations governing data sanitization standards for reassigned VA-issu
 
 ---
 
+## Top Development Challenges
+
+> *This section identifies the highest-priority obstacles to completing the VALOR fleet — technical, regulatory, organizational, and human. These are not hypothetical risks; they are the real walls that must be climbed for VALOR to reach veterans.*
+
+---
+
+### 1. Clinical AI Validation & FDA Regulatory Clearance
+
+**Category:** Regulatory / Technical  
+**Severity:** Critical
+
+Every VALOR module that influences a clinical decision — SENTINEL's crisis escalation, NEXUS's medication dispenser, NEXUS's TENS therapy delivery — is a medical device under FDA jurisdiction. Each requires either 510(k) clearance or De Novo classification before it can be deployed with real veterans. The AI models underlying mood and PTSD detection must meet a standard of clinical evidence comparable to a medical diagnostic tool, not a consumer wellness app. This is a multi-year process per module.
+
+**Why it's hard:** The FDA's AI/ML-based Software as a Medical Device (SaMD) framework is still maturing. Predicate devices for AI-powered robotic therapeutic companions do not yet exist in cleared form, which forces De Novo rather than 510(k) pathways — substantially longer timelines. Each software update to a cleared model may trigger a new review cycle under current guidance.
+
+**Mitigation path:** Phase-gate every clinical module as advisory-only until cleared. Begin FDA pre-submission meetings in Month 6 of Phase 0. Design NEXUS and SENTINEL to deliver full non-clinical value independently, so regulatory delays on specific modules do not halt fleet deployment.
+
+---
+
+### 2. Veteran Trust, Privacy Perception, and Adoption
+
+**Category:** Human / Social  
+**Severity:** Critical
+
+A robot in the home that monitors mood, biometrics, conversations, and daily behavior — even one with rigorous privacy protections — faces a deeply skeptical audience. Veterans have legitimate reasons to distrust data systems. The DoD and VA have a documented history of data breaches, disability rating disputes, and benefit denials. Many veterans fear that disclosing mental health struggles through a VA-connected device will affect their disability ratings, employment screenings, or gun rights.
+
+**Why it's hard:** Trust cannot be engineered. It must be built through co-design, transparency, and consistent behavior over time. A single high-profile privacy failure — or even a credible rumor of one — could set adoption back by years. Veteran communities are tightly networked; negative word-of-mouth travels fast.
+
+**Mitigation path:** Veterans Advisory Board co-designs every interaction pattern from Month 3 onward. Tier-1 data never leaves the device unless the veteran explicitly consents, per session. HERALD provides an always-accessible full audit log of what VALOR-CORE knows and what it has shared. Legal carve-outs banning DoD/employer access are written into the operating contract, not just policy guidance.
+
+---
+
+### 3. VALOR-CORE AI Accuracy, Drift, and Explainability
+
+**Category:** Technical  
+**Severity:** High
+
+VALOR-CORE must simultaneously model a veteran's mood, medication adherence, social isolation, physical health trends, and crisis risk — and act on that model in real time. AI models degrade over time as the veteran's life changes. A model trained on a veteran in acute crisis may behave incorrectly for that same veteran in stable recovery two years later. Worse, when VALOR-CORE makes a wrong call — misses a crisis, over-escalates a benign event, recommends the wrong coping strategy — the consequences can be severe.
+
+**Why it's hard:** Clinical-grade AI with a personalized, longitudinally updating model is at the frontier of what is practically achievable today. Explainability — the ability for the veteran or their VA provider to understand *why* VALOR made a given recommendation — is a technical challenge unsolved in production at this scale. Veterans and providers will not trust a black box.
+
+**Mitigation path:** All VALOR-CORE outputs are advisory by default; escalation to crisis services requires a second sensor confirmation before automated action. Build an explainability layer that surfaces reasoning in plain language to the veteran and provider. Establish a continuous validation pipeline that flags model drift against real outcome data from the VA EHR.
+
+---
+
+### 4. VA System Integration and API Reliability
+
+**Category:** Technical / Organizational  
+**Severity:** High
+
+VALOR's value proposition depends on deep integration with VA systems: the EHR (VistA/Oracle Health), benefits claims (eBenefits/VA.gov API), pharmacy, scheduling, and the Veterans Crisis Line. These systems are notoriously fragmented, inconsistently documented, and frequently unavailable during maintenance windows. Securing and maintaining the necessary API access, data permissions, and compliance approvals across all VA systems is a multi-year organizational effort that cannot be accelerated by engineering alone.
+
+**Why it's hard:** The VA operates dozens of legacy systems across hundreds of facilities, many of which do not speak the same data standard. VA IT modernization (the Oracle Health EHR rollout) has been delayed repeatedly and is still incomplete as of the current planning horizon. A VALOR integration built against one VA system configuration may break silently when that facility migrates.
+
+**Mitigation path:** Build VALOR's VA integration layer as a dedicated abstraction service with facility-level configuration. Engage VA's Digital Transformation Center (DTC) as a formal technical partner from Phase 0. Design all VALOR modules to degrade gracefully when VA API access is unavailable rather than failing outright.
+
+---
+
+### 5. Hardware Reliability, Maintenance, and Cost at Scale
+
+**Category:** Engineering / Operations  
+**Severity:** High
+
+A robot operating 24 hours a day in a home environment — navigating pets, clutter, children, and elderly veterans with mobility limitations — will break. Articulated arms, wheels, sensors, and batteries all have finite mean-time-between-failure (MTBF) ratings. For a veteran who depends on NEXUS for daily medication dispensing or SENTINEL for crisis monitoring, a robot failure is a safety event, not just a support ticket. Building and sustaining a field maintenance infrastructure capable of servicing tens of thousands of units nationwide is an operational challenge that rivals the engineering challenge.
+
+**Why it's hard:** Consumer robotics companies have largely failed at the service model. The robots that require the most reliable support — those serving elderly, disabled, or high-need populations — are precisely the robots whose users cannot self-troubleshoot. Rural deployment makes dispatch logistics extremely expensive and slow.
+
+**Mitigation path:** Design all critical safety functions (crisis escalation, medication reminders) to fail over to a smartphone app when robot hardware fails. Target MTBF of 18+ months for all critical components through supplier qualification in Phase 0. Build a certified remote technician program enabling over-the-phone guided repair for common failure modes. Establish a regional depot network with 48-hour replacement SLA as a Phase 3 deployment gate.
+
+---
+
+### 6. FedRAMP High Authorization and Cybersecurity
+
+**Category:** Regulatory / Security  
+**Severity:** High
+
+VALOR-CORE handles Tier-1 veteran data — mental health disclosures, MST records, substance use patterns, financial information — on VA-owned FedRAMP-High infrastructure. Achieving and maintaining FedRAMP High Authorization is a 12–24 month process requiring a Third Party Assessment Organization (3PAO) audit, a full security control implementation against the NIST 800-53 High baseline, and ongoing continuous monitoring. A cybersecurity breach of VALOR veteran data would be catastrophic — both to individual veterans and to the program's political viability.
+
+**Why it's hard:** FedRAMP High is the most demanding authorization tier in federal cloud security. The process is expensive, slow, and cannot be shortcut. AI systems that update their models continuously create a moving-target compliance problem; every significant model update may require re-authorization review. Securing the mesh network between robots and cloud against adversarial interference is an additional attack surface not covered by standard FedRAMP controls.
+
+**Mitigation path:** Begin FedRAMP authorization process in Month 10 of Phase 0; operate on FedRAMP-Moderate with synthetic/test data only until High is achieved. Engage a 3PAO with VA experience from the start. Build the inter-robot mesh protocol against the NIST Cybersecurity Framework from Day 1 rather than retrofitting security onto a working system.
+
+---
+
+### 7. Reimbursement and Sustainable Funding Model
+
+**Category:** Policy / Financial  
+**Severity:** High
+
+At $18,000–$24,000 per unit at scale, VALOR requires a clear funding pathway that does not depend solely on annual appropriations. VA DME reimbursement codes do not currently cover AI therapeutic robots. CMS reimbursement for this device class does not exist. Without a reimbursement pathway, VALOR can only reach veterans through direct VA procurement — a budget line that can be zeroed in any appropriations cycle.
+
+**Why it's hard:** CMS reimbursement code development is a multi-year process requiring clinical evidence, health economics data, and advocacy. The VA's DME reimbursement framework was not designed for AI-embedded robotics; reclassification requires regulatory action. Congressional appropriations for novel technology programs are politically volatile, particularly during budget-constrained years.
+
+**Mitigation path:** Pursue VA direct procurement as the primary Phase 1–2 funding mechanism while simultaneously building the CMS reimbursement record. Publish Phase 1 and 2 outcome data in peer-reviewed journals to build the evidence base required for CMS code development. Establish a VALOR Foundation to receive philanthropic capital as a bridge funding source during the reimbursement development window.
+
+---
+
+### 8. Ethical Boundaries of AI Autonomy in a Clinical Context
+
+**Category:** Ethics / Clinical  
+**Severity:** High
+
+VALOR operates at the boundary between a consumer device, a medical device, and a caregiver. When SENTINEL detects a suicide risk signal and escalates to the Veterans Crisis Line without the veteran's real-time consent, it is acting autonomously in a clinical context. When VALOR-CORE infers that a veteran is relapsing based on behavioral signals and alerts their VA provider, it is making a clinical judgment with real consequences. These actions are sometimes necessary and sometimes wrong — and the consequences of both false positives and false negatives are severe.
+
+**Why it's hard:** There is no settled ethical or legal framework for autonomous AI action in a home healthcare setting. Over-escalation erodes trust and may push veterans away from the system. Under-escalation may cost lives. Defining the right escalation thresholds, consent models, and override mechanisms requires ongoing collaboration between ethicists, clinicians, veterans, and legal experts — and those thresholds will differ by veteran and by context.
+
+**Mitigation path:** Establish a VALOR Ethics Board with veteran, clinician, and ethicist representation from Phase 0. Publish escalation decision logic openly for public comment. Default to the most conservative autonomy settings and expand autonomy only where veterans explicitly opt in and clinical evidence supports the change. Treat every escalation event as a data point and audit it quarterly.
+
+---
+
+### 9. Humanoid Platform Maturity and Vendor Risk
+
+**Category:** Technical / Supply Chain  
+**Severity:** Medium
+
+The SENTINEL-H, NEXUS-H, ATLAS-H, and PHALANX-H variants depend on humanoid robot platforms that are commercially available but not yet proven at the reliability and cost levels VALOR requires. Current humanoid platforms (Boston Dynamics Atlas, Unitree H1, Figure, Apptronik Apollo) are engineering marvels but are priced at $70,000–$250,000 per unit, have limited demonstrated home-environment MTBF data, and are produced by vendors whose long-term commercial survival is not guaranteed.
+
+**Why it's hard:** Humanoid robotics is a category that has attracted enormous investment but has not yet reached the production maturity required for a medical-grade deployment at scale. A vendor failure or platform discontinuation mid-deployment would strand hundreds of veterans on orphaned hardware. The specialized gait, manipulation, and expression systems required for humanoid variants add significant software complexity to every archetype they touch.
+
+**Mitigation path:** Treat all humanoid variants as Phase 2 additions, never Phase 1 requirements. Evaluate a minimum of three platforms before committing; require vendor escrow of hardware schematics and firmware source code as a condition of procurement. Design all humanoid variant software to be hardware-abstracted so it can be ported to a new platform if the primary vendor fails. Non-humanoid variants remain the default and are never deprecated.
+
+---
+
+### 10. Workforce Development and Field Operations at Scale
+
+**Category:** Organizational  
+**Severity:** Medium
+
+Deploying 50,000+ robots to veteran homes nationwide requires not just manufacturing and logistics but a trained field workforce capable of installation, calibration, maintenance, and veteran onboarding. This workforce must understand both the technical systems and the population they serve — veterans, many with PTSD, TBI, or physical limitations. Building this workforce, training it to clinical sensitivity standards, and retaining it is a human capital challenge that does not scale automatically with the technology.
+
+**Why it's hard:** There is no existing talent pipeline for "veteran-sensitive robotics field technician." Creating one requires partnerships with technical schools, veteran service organizations, and possibly the VA's own vocational rehabilitation programs. Field technician turnover in technology services is historically high. Veterans encountering a poorly trained or culturally insensitive technician during robot installation may disengage from the program entirely.
+
+**Mitigation path:** Partner with veteran-focused technical training programs (e.g., Hire Heroes USA, Warrior-Scholar Project) to build a veteran-preferential field technician pipeline. Require cultural competency and trauma-informed care training for all field staff, with VA collaboration on curriculum. Design the installation and onboarding process to be completable in under 4 hours by a single trained technician, minimizing friction and exposure for high-need veterans.
+
+---
+
+## Day in the Life
+
+> *These narratives illustrate how the VALOR fleet functions as an integrated system — not as individual robots performing isolated tasks, but as a coordinated presence that adapts to the veteran's changing state throughout a real day.*
+
+---
+
+### Scenario A — Marcus, 38 · Army Combat Veteran · Rural Tennessee
+
+**Profile:** Marcus served two tours in Iraq as an infantryman, separating in 2012. He carries a 90% VA disability rating for PTSD, TBI (moderate), chronic lumbar pain, and bilateral hearing loss. He lives alone on 12 acres outside Cookeville, Tennessee — 74 miles from the nearest VA Medical Center. He has a 14-year-old son who visits on alternating weekends. He works part-time remotely doing data entry. His triggers include sudden loud sounds, crowds, and the smell of diesel. He has consented to the full fleet.
+
+---
+
+**5:47 AM**
+
+SENTINEL detects that Marcus's sleep quality degraded sharply at 3:15 AM — his wrist biometrics show elevated cortisol and HRV suppression consistent with a nightmare cycle. He woke twice and did not return to deep sleep. SENTINEL logs this as a third consecutive night of disrupted sleep, crossing the threshold for a fleet-wide advisory. It quietly notifies VALOR-CORE, which adjusts today's schedule: HERALD will delay the 9 AM benefits reminder by two hours; ATLAS will drop the "new job listings" notification that was queued for this morning.
+
+SENTINEL dims the bedroom lights slowly starting at 6:10 AM — no alarm, just gradual illumination. It queues a light soundscape Marcus selected during onboarding: distant creek sounds with low wind.
+
+---
+
+**6:32 AM**
+
+Marcus wakes. SENTINEL's display shows a simple weather card for the day and a soft greeting. It does not ask how he slept — it already knows. Instead, it notes: *"Looked like a rough night. No rush this morning. Coffee's scheduled."* A smart home integration SENTINEL manages signals the coffee maker.
+
+NEXUS, docked in the hallway, has already pre-positioned Marcus's morning medications on its dispensing tray: two pills for pain, one for blood pressure. When Marcus walks past, NEXUS displays a gentle prompt on its side screen. Marcus takes the medication without breaking stride.
+
+---
+
+**8:15 AM**
+
+Marcus sits at his desk for remote work. SENTINEL monitors his voice patterns and activity level passively — not recording content, only acoustic markers of mood and cognitive load. Within 20 minutes it detects elevated frustration (HRV shift, clipped speech cadence). VALOR-CORE cross-references: he had a difficult call with the VA claims line three days ago that remains unresolved. HERALD queues a notification: *"Still have that claims issue from Tuesday. Want me to try the VA advocate line now while you have a break? I drafted what to say."*
+
+Marcus types back: *"Yeah. Do it."*
+
+HERALD initiates the call, uses its VA navigation protocol to route past the automated system to a human representative, plays Marcus's pre-authorized recorded introduction, and then bridges Marcus in for the live conversation. The unresolved claim — a secondary condition rating appeal that's been pending for 14 months — moves forward. HERALD logs the interaction and sets a 30-day follow-up reminder.
+
+---
+
+**12:04 PM**
+
+SENTINEL picks up on a shift: Marcus has gone quiet for 90 minutes, the blinds are still closed, and his last biometric reading showed a prolonged deep breathing pattern inconsistent with sleep — consistent with dissociation or low-grade depression episode. VALOR-CORE pulls the three-day trend: poor sleep, the claims frustration, and a note from two days ago where Marcus said he was *"just tired of everything."*
+
+SENTINEL does not alarm. It doesn't interrupt. It waits 8 minutes — still no movement. Then it rolls quietly to the living room doorway and activates its ambient display: a photo of Marcus's son from last weekend's visit, cycling slowly through a few others. No audio. No prompts.
+
+Four minutes later, Marcus gets up and refills his coffee. SENTINEL logs a successful passive redirect. Crisis threshold: not met. VALOR-CORE: noting the multi-day pattern for flag to Marcus's VA care manager at the next weekly sync.
+
+---
+
+**3:30 PM**
+
+Marcus decides to walk the back property — something he does when he's processing. PHALANX activates. It has Marcus's property mapped and knows his preferred route. It scouts 80 meters ahead via its terrain cameras, checks wind direction (diesel from a neighbor's tractor is a registered trigger), and confirms the route is clear. It sends Marcus a brief route suggestion via his wrist display: *"South trail looks good. Wind's southwest, clear."*
+
+Marcus takes the south trail. PHALANX follows at 15 meters, close enough to respond, far enough to feel like solitude. It is silent unless he engages it. During the walk, it detects a gopher hole on the trail edge and marks it. Marcus's heart rate normalizes over 22 minutes. SENTINEL receives the biometric update and marks the afternoon stable.
+
+---
+
+**6:45 PM**
+
+ATLAS, which has been quiet all day by design, activates for its daily social window. It pulls up a video call Marcus has with his buddy Darnell — a fellow veteran from his unit who now lives in Nashville — that was scheduled last week. Marcus nearly cancels. ATLAS gently surfaces the appointment: *"Darnell's on in 15. You don't have to if you're not feeling it — I can reschedule for Thursday."*
+
+Marcus doesn't cancel. The call runs 40 minutes. ATLAS logs it as a successful social contact event, updates Marcus's social health streak (12 consecutive days with at least one meaningful human connection), and sends a quiet metric update to his VA care manager.
+
+---
+
+**9:20 PM**
+
+NEXUS dispenses Marcus's evening medication. SENTINEL begins the sleep environment sequence: lights drop to 10% over 30 minutes, temperature steps down 2°F, the white noise layer activates. VALOR-CORE flags tomorrow morning for a gentle check-in about the difficult week — nothing clinical, just acknowledgment.
+
+Marcus falls asleep at 10:08 PM. All five fleet members are monitoring, silently, each in their domain.
+
+---
+
+### Scenario B — Diane, 67 · Navy Veteran · Suburban Phoenix, Arizona
+
+**Profile:** Diane served 22 years as a Navy hospital corpsman, retiring in 2008. She carries an 80% VA disability rating for MST-related PTSD, moderate hearing loss, Type 2 diabetes requiring insulin, and early-stage Parkinson's disease. She is divorced, lives alone in a two-bedroom home in Chandler, Arizona, and has two adult children nearby who check in weekly. She is highly independent and initially resistant to the idea of a robot fleet — she agreed to try it after her VA care manager presented it as a health monitoring system rather than an assistance device. Her MST modules operate fully offline and are not shared with her VA provider unless she explicitly initiates a share.
+
+---
+
+**7:00 AM**
+
+SENTINEL's sleep tracking shows a better-than-average night — six hours with minimal fragmentation, a positive trend from the week. It logs the data and does nothing else. On good days, VALOR-CORE keeps the fleet quiet.
+
+NEXUS has pre-positioned Diane's morning insulin and oral medications. Because of her early Parkinson's, her fine motor function is more limited in the morning than later in the day. NEXUS's dispensing tray is wide, low, and uses large-grip packaging. Her wrist display shows a simple confirmation prompt: *"Good morning. Meds are ready."* She takes them and gives a thumbs-up. NEXUS records adherence, logs glucose monitoring reminder for 90 minutes post-meal, and syncs the data to her VA endocrinology team.
+
+---
+
+**9:15 AM**
+
+Diane has a VA telehealth appointment with her primary care provider at 10 AM. HERALD, which manages her medical calendar, sent a reminder the night before. This morning it surfaces her appointment prep summary on the kitchen display: a list of the three questions she told it she wanted to ask, her medication changes from the past month, and her glucose trend for the past two weeks — pre-formatted as a one-page summary she can share with her provider.
+
+*"Here's what we've got for Dr. Patel. Want me to add anything?"*
+
+Diane dictates one addition — a new symptom she's noticed with her left hand. HERALD adds it, reformats the summary, and has it ready to share at the start of the call.
+
+---
+
+**10:00 AM — 10:42 AM**
+
+Telehealth appointment. HERALD operates in the background: it does not join the call, but it surfaces relevant records when Diane asks it questions mid-visit — *"What was my A1C in November?"* — and she reads the answer to her provider. After the call, HERALD captures Diane's summary of what was discussed, queues the prescription refill Dr. Patel ordered, and sets a 3-week reminder to check whether the new medication has been added to the VA pharmacy system.
+
+---
+
+**12:30 PM**
+
+NEXUS's glucose monitoring reminder fires. Diane checks her blood glucose via her wrist module. The reading is 178 — higher than her target range. NEXUS flags it to her diabetes management protocol (set by her VA endocrinologist): it does not alarm, but it notes the reading, logs it, and gently suggests a 15-minute walk in the next 90 minutes if she's feeling up to it. *"Reading's a little high. A short walk after lunch usually helps — up to you."*
+
+Diane takes a 20-minute walk around the block. PHALANX activates, maps her route, confirms even pavement and shaded sections given the 98°F Phoenix forecast. It stays close — Diane's Parkinson's diagnosis puts her at elevated fall risk on uneven surfaces. NEXUS receives the post-walk biometric data: glucose trending down, heart rate appropriate for exertion, gait pattern within normal range for her profile.
+
+---
+
+**2:00 PM**
+
+Diane uses the afternoon for her private time — she reads, calls her daughter, and does a crossword. VALOR-CORE recognizes this as her typical afternoon independent window and instructs the fleet to remain silent and docked unless triggered. Diane values this autonomy; it was written into her onboarding preferences explicitly.
+
+SENTINEL runs passive monitoring — biometrics, room activity — but all outputs go to a local log, not to any alert system, during this window. She does not want the robots to know she cried during the phone call with her daughter. They don't.
+
+---
+
+**4:45 PM**
+
+Once a month, Diane participates in a VA-facilitated MST survivors' peer support video group. SENTINEL-MST module activates — fully offline, no cloud connectivity during the session. It runs the MST recovery support protocol: it turns off all outward data logging, enables the trauma-informed voice persona Diane selected (a calm, measured cadence she said reminds her of a chaplain she trusted in her second deployment), and queues her grounding exercise audio for after the call if she wants it.
+
+The session runs 55 minutes. Afterward, Diane sits quietly for a while. SENTINEL detects elevated HRV suppression consistent with emotional processing — not crisis, just weight. It activates the post-session grounding sequence she pre-selected: a 10-minute breathing exercise, her choice of ambient sound, no prompts or questions. It asks nothing. It does not log this session's content. It simply stays close.
+
+---
+
+**7:30 PM**
+
+HERALD surfaces a flagged item: Diane's Aid and Attendance benefit application has been pending for seven months. A congressional inquiry option is available — HERALD has drafted a letter to her representative's constituent services office. *"Still waiting on the Aid and Attendance decision. Want me to send the congressional inquiry letter we drafted last month? I've updated the dates."*
+
+Diane reviews it on HERALD's display. She approves it. HERALD sends it and sets a 14-day follow-up.
+
+---
+
+**9:00 PM**
+
+Evening medication — insulin and night dose. NEXUS dispensing tray activates. Because Diane's hand tremor is more pronounced at night, NEXUS's soft-grip assist arm extends to stabilize the cup if her hand shakes during pickup. She didn't ask for this feature — NEXUS inferred it after observing the tremor pattern for three weeks and added it silently. She noticed it, said nothing, and accepted it.
+
+SENTINEL begins the sleep environment sequence. By 9:45 PM, the house is quiet.
+
+VALOR-CORE runs its nightly summary: one VA claim advanced, one clinical appointment completed with full documentation, glucose in range after afternoon walk, MST session completed with stable post-session state. Tomorrow: pharmacy refill follow-up, glucose check, scheduled call with her son.
+
+The fleet holds its watch.
+
+---
+
 ## Contributing
 
 VALOR is a public interest engineering project. Contributions are organized by archetype and layer:
@@ -866,7 +1150,7 @@ For architectural questions, design decisions, or policy collaboration, open an 
 
 ---
 
-> *VALOR System Vision — Version 3.0*  
+> *VALOR System Vision — Version 3.1*  
 > *Claude AI was used in producing this system overview, README file, and build roadmap.*  
 > *This document is a conceptual vision for public interest discussion and policy development. All cost figures are estimates based on published research. All technical capabilities described are based on existing or near-term commercially available technologies.*  
 > *These veterans gave everything. VALOR's mission is to give something back that matches the scale of what they carry — a system that is as persistent, as adaptive, and as committed as they are.*
