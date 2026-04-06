@@ -5,7 +5,9 @@
 [![System Status](https://img.shields.io/badge/status-concept--phase-blue)]()
 [![Archetypes](https://img.shields.io/badge/robot%20archetypes-5-teal)]()
 [![Capabilities](https://img.shields.io/badge/capability%20modules-20-purple)]()
+[![Version](https://img.shields.io/badge/version-4.0-orange)]()
 [![License](https://img.shields.io/badge/license-VA%20Research-green)]()
+[![Future-Proofed](https://img.shields.io/badge/future--proofed-100yr%20mandate-gold)]()
 
 ---
 
@@ -38,7 +40,16 @@
 17. [Policy Framework](#policy-framework)
 18. [**Top Development Challenges**](#top-development-challenges) ← *New in v3.1*
 19. [**Day in the Life**](#day-in-the-life) ← *New in v3.1*
-20. [Contributing](#contributing)
+20. [**Future-Proofing the VALOR System**](#future-proofing-the-valor-system) ← *New in v4*
+    - [The Permanence Commitment](#the-permanence-commitment)
+    - [Adaptive Technology Layer](#adaptive-technology-layer)
+    - [Cultural & Values Evolution](#cultural--values-evolution)
+    - [Shifting National Priorities & Policy Resilience](#shifting-national-priorities--policy-resilience)
+    - [Emerging Veteran Demographics](#emerging-veteran-demographics)
+    - [Long-Range Governance Model](#long-range-governance-model)
+    - [Technology Succession Protocol](#technology-succession-protocol)
+    - [The 100-Year Mandate](#the-100-year-mandate)
+21. [Contributing](#contributing)
 
 ---
 
@@ -1126,6 +1137,253 @@ The fleet holds its watch.
 
 ---
 
+## Future-Proofing the VALOR System
+
+> *VALOR was designed for today's veterans — and for every generation of veterans who will follow. This section is the system's promise: that no matter how technology evolves, how culture shifts, or how national priorities change, U.S. veterans will always be supported by a system that matches the scale of their sacrifice.*
+
+---
+
+### The Permanence Commitment
+
+VALOR is not a program. It is a permanent national infrastructure — as enduring as the VA itself. The single non-negotiable principle that governs all future-proofing decisions is:
+
+> **No U.S. veteran who needs VALOR support will ever have that support discontinued due to technology obsolescence, political change, funding volatility, or cultural drift.**
+
+Every architectural decision, governance structure, funding strategy, and technology choice documented here flows from that commitment.
+
+---
+
+### Adaptive Technology Layer
+
+#### Technology Horizon Scanning
+
+VALOR-CORE and all five robot archetypes are built as hardware-abstracted software systems from the ground up. Hardware is a vessel; the intelligence and care logic lives in the software. This architecture enables VALOR to absorb future technology generations without disrupting veteran care.
+
+The VALOR Technology Council — a standing body within VALOR governance — conducts a formal **Technology Horizon Scan** every 24 months. The scan evaluates:
+
+| Horizon Category | What Is Evaluated | Decision Output |
+|---|---|---|
+| AI & Foundation Models | New model architectures, multimodal capabilities, on-device inference improvements | Adoption roadmap or watchlist |
+| Robotics Hardware | New chassis platforms, actuator improvements, cost breakthroughs, humanoid maturity | Platform refresh schedule |
+| Biomedical Sensing | New non-invasive biometric modalities (continuous glucose, neurological markers, wearable imaging) | Module upgrade pathway |
+| Computing Infrastructure | Edge AI chips, quantum-resilient encryption, satellite broadband (rural coverage) | Infrastructure refresh plan |
+| Human-Computer Interaction | Brain-computer interfaces, AR/VR therapeutic applications, haptic feedback systems | Clinical pilot authorization |
+| Security & Privacy Technology | Post-quantum cryptography, zero-knowledge proof systems, federated learning | Mandatory upgrade timeline |
+
+Scan outputs are reviewed by the Veteran Advisory Board before any adoption decision is finalized. Veterans — not engineers — set the pace of technology change in their homes.
+
+#### The VALOR Hardware Refresh Cycle
+
+No robot in a veteran's home will ever become a stranded liability. The **VALOR Hardware Refresh Protocol** guarantees:
+
+- **Unit refresh every 5–7 years:** Each deployed unit is replaced on a rolling schedule. Retiring units enter the refurbishment pool or are ethically decommissioned. No veteran is asked to self-manage an end-of-life robot.
+- **Software support floor:** Every hardware generation receives software updates and security patches for a minimum of **10 years** from initial deployment. No veteran falls off a support cliff because their unit is "old."
+- **Backward compatibility requirement:** Each new VALOR-CORE software generation must maintain full functionality with the previous hardware generation for a minimum of 3 years. Veterans are never forced to accept a hardware upgrade before they are ready.
+- **Manufacturing resilience:** VALOR procurement policy requires at minimum two qualified chassis suppliers per archetype by Phase 3. Single-vendor dependency is treated as a critical program risk.
+
+#### AI Model Evolution Standards
+
+As foundation AI models evolve — larger, more capable, more personalized — VALOR-CORE's upgrade pathway must maintain continuity of the veteran relationship:
+
+- **Memory preservation:** When VALOR-CORE is upgraded to a new model generation, the veteran's full interaction history, behavioral profile, and relationship context is migrated forward. The veteran never has to "start over" with a new AI.
+- **Behavioral regression testing:** Before any VALOR-CORE model update is deployed to active veterans, it must pass a **Veteran Experience Regression Suite** — a battery of simulated interaction scenarios representing every veteran archetype in the system. No update that changes established interaction patterns goes live without Veteran Advisory Board review.
+- **Model provenance tracking:** VALOR-CORE maintains a permanent audit record of every AI model version that has influenced a clinical decision or escalation event for each veteran. This record is portable — the veteran owns it and can share it with any future care provider.
+
+---
+
+### Cultural & Values Evolution
+
+#### Understanding That Values Change — And Building For It
+
+American culture's understanding of veteran experience, mental health, trauma, and disability evolves continuously. What constitutes respectful care in 2026 may be inadequate or even harmful by 2040. VALOR is built to track and adapt to this evolution, not entrench assumptions from its founding generation.
+
+**The VALOR Cultural Competency Review** is conducted every 3 years by the Veteran Advisory Board in partnership with military cultural scholars, social workers, and veteran community organizations. The review examines:
+
+- Has the veteran population's relationship with mental health stigma shifted? Do current SENTINEL interaction protocols reflect where veterans actually are, not where they were when those protocols were written?
+- Have definitions of family, community, and support network evolved in ways that require ATLAS module updates?
+- Are the cultural and spiritual care integrations (chaplaincy, peer support, community anchor organizations) still the right ones, or have new forms of community emerged that better serve the current veteran population?
+- Are VALOR's language, tone, and interaction personas culturally resonant with newer veterans, who may come from different demographic and cultural backgrounds than earlier cohorts?
+
+The output of each review is a **Cultural Alignment Action Plan** — a prioritized list of module updates, interaction design revisions, and partnership changes — implemented within 18 months of the review's publication.
+
+#### The Values Stability Guarantee
+
+While VALOR's implementation adapts to cultural evolution, its foundational values are constitutionally protected within the system's governance:
+
+1. **Veteran dignity is inviolable.** No efficiency optimization, cost reduction, or technology upgrade can reduce the quality of care or the respect with which any veteran is treated.
+2. **Privacy is a right, not a feature.** The data sovereignty framework — Tier-1 data never leaves the device without explicit veteran consent — is embedded in VALOR's foundational legal documents and cannot be modified by a future administrator, contractor, or political appointee without Congressional action.
+3. **Veterans control their own care.** Every new capability VALOR acquires is opt-in. Veterans can refuse any module, any upgrade, or any feature at any time, with no reduction in their access to other VALOR services.
+4. **No veteran is left behind by obsolescence.** Veterans who cannot or choose not to engage with new technology generations retain full support on the technology they know. The system adapts to the veteran, not the other way around.
+
+---
+
+### Shifting National Priorities & Policy Resilience
+
+#### The Threat: Political and Funding Volatility
+
+Federal programs are vulnerable to administration changes, appropriations cycles, and shifting political priorities. A system that depends entirely on annual Congressional appropriations and VA administrative will can be defunded, restructured, or quietly starved in any given budget year. For veterans who depend on VALOR for crisis monitoring, medication management, or housing stability, that is not an acceptable risk.
+
+VALOR is designed with layered funding and governance structures that make it resistant — though not immune — to political disruption.
+
+#### The VALOR Permanence Architecture
+
+**Layer 1 — Statutory Authorization**
+
+VALOR is established by statute, not executive order or VA administrative policy. Its foundational authorities — the veteran data sovereignty framework, the transfer and reassignment protocol, the open API mandate, and the reimbursement pathway — are written into U.S. Code under 38 U.S.C. Modifying them requires Congressional action, creating a legislative speed bump against rapid defunding.
+
+**Layer 2 — The VALOR Trust Fund**
+
+Phase 3 financial planning includes the establishment of a **VALOR Perpetual Trust Fund**, capitalized through a combination of:
+- A one-time appropriation from Phase 3 program savings (cost reductions from manufacturing scale)
+- Philanthropic endowment contributions from major veterans' philanthropy organizations (Wounded Warrior Project, Gary Sinise Foundation, Bob Woodruff Foundation)
+- Revenue-sharing from international licensing agreements (UK, Canada, Australia veteran agency deployments)
+
+The Trust Fund is managed by an independent board and mandated to cover VALOR's minimum operating costs — ongoing veteran support, security patching, and crisis escalation infrastructure — for a minimum of **20 years** even if all federal appropriations are suspended. The Trust Fund cannot be redirected by Congress without a supermajority vote and veteran advocacy notification requirements.
+
+**Layer 3 — State and Local Government Redundancy**
+
+By Phase 3, VALOR establishes partnership agreements with at least 20 state-level veterans' affairs departments to serve as co-funders and co-operators of the regional staging and support infrastructure. State-level investment in VALOR means that even a federal funding disruption does not simultaneously collapse all regional operations. State partners have independent legal authority to continue supporting veterans within their boundaries.
+
+**Layer 4 — CMS Reimbursement**
+
+Once CMS reimbursement codes are established for VALOR as a covered DME category, individual veteran units become partially self-funding through Medicare/Medicaid billing. This separates a portion of VALOR's operating revenue from the VA appropriations process entirely, creating a private-sector funding stream that persists regardless of political conditions.
+
+#### Policy Evolution Readiness
+
+VALOR's policy framework is designed to be upgraded without system redesign. The **VALOR Policy Integration Layer** — a component of VALOR-CORE's VA integration module — is built as a configurable rules engine:
+
+- When VA benefit eligibility rules change, HERALD's navigator is updated via a policy rules update package — no software release required.
+- When new legislation creates new veteran benefit categories, VALOR-CORE adds the new benefit to its proactive detection engine within 90 days of the law's effective date.
+- When court decisions or regulatory guidance change data sharing rules, the Tier enforcement layer is updated without disrupting veteran-facing functionality.
+
+Every major policy change affecting veterans triggers a **VALOR Policy Impact Assessment** — a 30-day review of how the change affects VALOR modules — published openly on the VALOR platform and shared with the Veteran Advisory Board.
+
+---
+
+### Emerging Veteran Demographics
+
+#### The Veteran Population of the Future Is Not the Veteran Population of Today
+
+The U.S. veteran population will look significantly different in 2040 and 2060 than it does today. VALOR must be designed for veterans who have not yet served, from conflicts that have not yet occurred, with challenges that have not yet been documented.
+
+**Anticipated demographic shifts VALOR must accommodate:**
+
+| Shift | Timeline Estimate | VALOR Adaptation Required |
+|---|---|---|
+| Increasing proportion of female veterans | Already underway; accelerating post-2020 | Gender-inclusive trauma models; expanded MST module investment; female-specific health monitoring (reproductive health, hormonal factors in PTSD) |
+| Growing cohort of older veterans (Vietnam/Gulf War/post-9/11 aging) | Now through 2045 | NEXUS Parkinson's, dementia, and elder care modules; fall prevention investment; ATLAS adapts for age-related social changes |
+| Veterans of autonomous/AI-augmented warfare | 2030s onward | New trauma typologies: moral injury from remote or AI-mediated combat; survivor guilt in conflicts with minimal U.S. casualties; operator trauma |
+| Space Force and cyber operations veterans | Now through 2040 | Non-combat-zone PTSD and occupational trauma models; VALOR's crisis detection trained on non-traditional trauma signatures |
+| Veterans with AI-augmented implants or prosthetics | 2030s onward | NEXUS interface layer built for BCI-enabled prosthetics and neural implants; VALOR-CORE privacy model adapted for always-on neural data streams |
+| Increasingly diverse ethnic, cultural, and linguistic veteran cohort | Ongoing | Multi-language VALOR-CORE interaction layer; culturally-specific peer support routing; chaplaincy partnerships across a wider range of traditions |
+
+#### The New Veteran Intake Commitment
+
+Every 5 years, VALOR's onboarding research team — in partnership with the Veteran Advisory Board and VA's Center for Women Veterans and Center for Minority Veterans — conducts a **New Veteran Needs Assessment**: structured interviews with recently separated veterans to identify challenges, trauma patterns, and technology comfort profiles that may not have existed in earlier cohorts. Findings are incorporated into the next VALOR-CORE personalization model generation.
+
+No veteran generation will be served by a system calibrated exclusively for their predecessors.
+
+---
+
+### Long-Range Governance Model
+
+#### Why Governance Is a Future-Proofing Mechanism
+
+Technology and funding can be rebuilt. An institution that has lost its integrity, its accountability, or its veteran-centered values cannot be easily restored. VALOR's governance model is explicitly designed to prevent institutional drift — the gradual reorientation of a program away from its founding mission as organizational incentives, contractor relationships, and political pressures accumulate over decades.
+
+#### The Three-Branch VALOR Governance Structure
+
+**Branch 1: The VA Program Office (Operational Authority)**
+
+The VA VALOR Program Office holds day-to-day operational authority: contracts, deployment, field operations, and regulatory compliance. This is the "government" of the VALOR system — accountable to Congress, subject to FOIA, and staffed by federal employees with civil service protections.
+
+**Branch 2: The VALOR National Veteran Advisory Board (Mission Authority)**
+
+The VALOR National VAB holds **mission authority** — the power to review and formally object to any program decision that, in the VAB's determination, deviates from VALOR's core mission of veteran care. The VAB's objections trigger a mandatory 90-day Congressional review period before the objected decision can take effect. The VAB is composed of:
+- 20 veterans, selected by veteran service organizations through a transparent process, serving 4-year staggered terms
+- At minimum 6 women, 4 veterans with PTSD or TBI, 2 veterans from rural counties, and 2 veterans under age 35
+- No current government employees, contractors, or lobbyists
+
+**Branch 3: The VALOR Independent Oversight Office (Accountability Authority)**
+
+The VALOR Independent Oversight Office (IOO) is modeled on the VA Office of Inspector General. It holds **accountability authority**: independent auditing of program performance, privacy compliance, clinical outcomes, and financial integrity. The IOO reports directly to Congress, not the VA. Its findings are published publicly. It has the authority to freeze any VALOR deployment or data operation pending an investigation.
+
+#### Mission Drift Prevention Mechanisms
+
+- **The VALOR Mission Statement is statutory.** It cannot be modified by administrative action.
+- **Annual Mission Alignment Report.** Each year, the IOO publishes an assessment of whether VALOR's actual operations align with its statutory mission. This report is submitted to every member of the House and Senate Veterans' Affairs Committees.
+- **Contractor accountability.** All VALOR contractors sign a **Veteran First Covenant** — a legally binding agreement that prohibits prioritizing efficiency metrics, cost targets, or commercial considerations over veteran care quality. Violations are grounds for contract termination.
+- **Sunset prevention.** VALOR's authorizing legislation includes a mandatory 10-year reauthorization requirement — but the reauthorization burden is inverted: Congress must affirmatively vote to *end* VALOR, not to continue it. Failure to reauthorize does not sunset the program; it triggers a mandatory 3-year continuation and a GAO review.
+
+---
+
+### Technology Succession Protocol
+
+#### Planning for Technologies We Cannot Yet Name
+
+The most important future-proofing mechanism is not a plan for known technologies — it is a protocol for handling unknown ones. The history of technology is full of transformations that were invisible from 20 years prior. VALOR must be able to incorporate such transformations without destabilizing veteran care.
+
+The **VALOR Technology Succession Protocol** governs the adoption of transformative technology generations:
+
+**Stage 1 — Signal Detection (Year -3 to -1 before adoption)**
+
+The VALOR Technology Council identifies a technology as potentially transformative based on Horizon Scan outputs. A **Technology Succession Study** is commissioned: an independent technical and clinical assessment of the technology's maturity, safety profile, veteran-relevance, and integration feasibility. The Study is peer-reviewed and published.
+
+**Stage 2 — Controlled Pilot (Year 0–2)**
+
+If the Succession Study is positive, a **Controlled Succession Pilot** is authorized: up to 500 volunteer veterans receive the new technology in a research protocol with full IRB oversight. The pilot runs concurrently with current-generation support — no veteran's existing care is disrupted by the pilot.
+
+**Stage 3 — Veteran Verdict (Year 2)**
+
+Pilot participants and a representative sample of the full veteran population are surveyed. The Veteran Advisory Board reviews pilot data. A **Veteran Verdict Vote** is conducted: if fewer than 60% of pilot veterans endorse the technology for wider adoption, it returns to Stage 1 for refinement. Veterans — not engineers, not administrators, not politicians — hold the final adoption authority.
+
+**Stage 4 — Phased Integration (Year 2–5)**
+
+Approved technologies are integrated into VALOR on an opt-in basis. Existing technology continues to be supported for veterans who prefer it, for the full duration of the Backward Compatibility Commitment (10 years minimum from the previous generation's release).
+
+#### The Decommission Guarantee
+
+When a technology generation is decommissioned, the following guarantees apply to every affected veteran:
+
+- Minimum **12 months' advance notice** of technology change, in the veteran's preferred communication format
+- **Zero forced transitions** — veterans on decommissioning hardware receive a free upgrade to the successor platform, delivered and installed by a field technician, at no logistical burden to the veteran
+- **Full data portability** — 100% of the veteran's VALOR-CORE profile, history, and personalization data transfers to the successor platform before the old system is deactivated
+- **Continuity of care guarantee** — a transition period during which both the old and new systems run concurrently, so no gap in monitoring or support occurs at any point during the handoff
+
+---
+
+### The 100-Year Mandate
+
+#### VALOR's Obligation to Veterans Not Yet Born
+
+The youngest veterans currently being served by VALOR will, in some cases, still be alive in 2080 and beyond. The children of today's veterans who themselves serve will be veterans in 2040 and 2050. VALOR's responsibility extends not just to the current veteran population but to every American who will serve their country in the decades ahead.
+
+The **VALOR 100-Year Mandate** formalizes this obligation:
+
+**1. Institutional Memory Preservation**
+
+VALOR maintains a permanent, publicly accessible **Veteran Care Archive** — a longitudinal record of the challenges faced by each veteran generation, the interventions that worked, the ones that failed, and the lessons learned. This archive is anonymized, veteran-consented, and made available to future researchers, policymakers, and system designers. The knowledge accumulated in caring for today's veterans must not be lost to future generations who will need it.
+
+**2. The Successor System Obligation**
+
+VALOR is not the last word in veteran care technology. Forty years from now, there will be technologies and care modalities that make the VALOR fleet look primitive. When that moment comes, VALOR's obligation is to:
+- Provide full data portability to whatever successor system a veteran chooses
+- Share all research, outcome data, and design lessons with successor system developers
+- Support a transition period of no less than 5 years during which VALOR and successor systems can operate in parallel
+- Never use contractual, technological, or political mechanisms to prevent veterans from accessing a superior successor system
+
+**3. Permanent Research Obligation**
+
+VALOR commits to continuous publication of veteran care outcome research, openly available to all. The mission is not to protect VALOR as an institution — it is to ensure that U.S. veterans receive the best possible care, whether that care comes from VALOR or from something better that VALOR helped create.
+
+**4. The Living Document Commitment**
+
+This specification — the VALOR System Vision — is itself a living document. It will be revised, expanded, and updated as VALOR evolves, as the veteran population changes, and as new knowledge is gained. Each version is permanently archived. The evolution of this document is part of VALOR's institutional memory.
+
+> **The final measure of VALOR's success is not the number of robots deployed or the cost savings generated. It is whether, in 2080, a veteran in a place we cannot yet imagine receives care that is as persistent, as adaptive, and as committed as the service they gave. That is the mandate. It does not expire.**
+
+---
+
 ## Contributing
 
 VALOR is a public interest engineering project. Contributions are organized by archetype and layer:
@@ -1150,7 +1408,7 @@ For architectural questions, design decisions, or policy collaboration, open an 
 
 ---
 
-> *VALOR System Vision — Version 3.1*  
+> *VALOR System Vision — Version 4.0*  
 > *Claude AI was used in producing this system overview, README file, and build roadmap.*  
 > *This document is a conceptual vision for public interest discussion and policy development. All cost figures are estimates based on published research. All technical capabilities described are based on existing or near-term commercially available technologies.*  
 > *These veterans gave everything. VALOR's mission is to give something back that matches the scale of what they carry — a system that is as persistent, as adaptive, and as committed as they are.*
