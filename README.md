@@ -5,7 +5,7 @@
 [![System Status](https://img.shields.io/badge/status-concept--phase-blue)]()
 [![Archetypes](https://img.shields.io/badge/robot%20archetypes-5-teal)]()
 [![Capabilities](https://img.shields.io/badge/capability%20modules-20-purple)]()
-[![Version](https://img.shields.io/badge/version-4.0-orange)]()
+[![Version](https://img.shields.io/badge/version-4.1-orange)]()
 [![License](https://img.shields.io/badge/license-VA%20Research-green)]()
 [![Future-Proofed](https://img.shields.io/badge/future--proofed-100yr%20mandate-gold)]()
 
@@ -49,7 +49,11 @@
     - [Long-Range Governance Model](#long-range-governance-model)
     - [Technology Succession Protocol](#technology-succession-protocol)
     - [The 100-Year Mandate](#the-100-year-mandate)
-21. [Contributing](#contributing)
+21. [**VALOR vs. Current VA: The Gap Analysis**](#valor-vs-current-va-the-gap-analysis) ← *New in v4.1*
+    - [Where the VA Falls Short Today](#where-the-va-falls-short-today)
+    - [How VALOR Closes Each Gap](#how-valor-closes-each-gap)
+    - [Domain-by-Domain Comparison](#domain-by-domain-comparison)
+22. [Contributing](#contributing)
 
 ---
 
@@ -1384,6 +1388,120 @@ This specification — the VALOR System Vision — is itself a living document. 
 
 ---
 
+## VALOR vs. Current VA: The Gap Analysis
+
+> *New in Version 4.1*
+
+This section was added to ground VALOR's design specifications in the documented reality of what the Department of Veterans Affairs currently offers — and where the structural gaps persist that VALOR is specifically designed to fill. The intent is not to condemn the VA, which serves more than 9 million enrolled veterans and delivers over 127 million healthcare appointments annually. The intent is to be precise about what problems remain unsolved, and why VALOR's architecture addresses them in ways that incremental hiring, process improvement, and telehealth expansion cannot.
+
+---
+
+### Where the VA Falls Short Today
+
+The following gaps are documented in VA Inspector General reports, Government Accountability Office findings, congressional testimony, and peer-reviewed research published between 2022 and 2026. They represent systemic structural limitations — not individual failures — that define the ceiling of what the current VA model can achieve.
+
+#### 1. The Staffing Crisis Is Getting Worse, Not Better
+
+The VA's staffing shortfall is not a temporary condition awaiting a hiring surge. As of fiscal year 2025, the VA Office of Inspector General found that all 139 VA health centers nationwide reported a severe staffing shortage in at least one area, with 94% reporting severe shortages for medical officers and 79% for nurses. In FY2025, severe staffing shortages increased by 50% compared to FY2024. In parallel, the department lost approximately 1,000 physicians, 1,500 schedulers, and 3,000 registered nurses in FY2025 alone — positions that were already difficult to recruit before they became vacant.
+
+The consequences are direct and quantifiable. Average wait times for new outpatient surgical appointments reached 41 days as of mid-2025 — 13 days longer than the VA's own target. Some clinics are unable to accept new patients for primary care or mental health needs at all. An estimated 1.2 million veteran patients have lost their VA provider since early 2025 alone.
+
+**The VALOR difference:** VALOR robots do not resign, retire, burn out, or leave for higher-paying private sector positions. A veteran in rural Texas or northern California receives the same continuous monitoring and response as a veteran near a fully staffed urban VA Medical Center. The staffing crisis is irrelevant to a robot fleet operating on VA-owned infrastructure.
+
+#### 2. Care Is Episodic — the Gaps Between Appointments Are Unmonitored
+
+The VA's model of care is fundamentally appointment-driven. A veteran sees a provider, receives treatment or a prescription, and is not monitored again until the next scheduled visit. For veterans with PTSD, depression, substance use disorder, or TBI, the most dangerous moments are frequently the 168 hours *between* appointments — the weekend after a difficult therapy session, the night a nightmare cascades into a crisis, the three weeks between a prescription refill and a detected mood deterioration.
+
+The VA does not currently have the infrastructure to observe, respond to, or intervene in these inter-appointment windows at scale. The Veterans Crisis Line — which fields approximately 60,000 calls per month — is a reactive tool that requires the veteran to initiate contact. It cannot detect a crisis before the veteran reaches a breaking point, and it is itself facing significant staffing reductions.
+
+**The VALOR difference:** VALOR-CORE monitors 20 simultaneous data streams — biometric, behavioral, environmental, and social — continuously, 24 hours a day, 7 days a week. Crisis escalation to 988 or emergency contacts occurs within 30 seconds of threshold breach, without requiring the veteran to make a call. SENTINEL's cascade detection intervenes before crises form, not after they arrive.
+
+#### 3. Rural Veterans Are Systematically Underserved
+
+Approximately 2.7 million veterans live in rural communities. According to a 2023 GAO report, only 21% of rural veterans used VA outpatient services in 2021, compared to 79% of urban veterans. Rural VA facilities face the most severe staffing shortages, and in some regions the VA is the only mental health provider available within a viable travel radius.
+
+The VA has explored telehealth as a partial solution, and telemental health appointments have expanded meaningfully since 2020. However, telehealth replicates the episodic model — it is a scheduled video appointment rather than a continuous presence — and it does not address physical health monitoring, medication management, mobility assistance, or the social isolation that is especially acute for rural veterans.
+
+**The VALOR difference:** A VALOR fleet can be shipped directly to a veteran's home. No VA facility proximity is required. PHALANX operates in outdoor rural environments. NEXUS manages medications and chronic pain without requiring a clinic visit. SENTINEL provides 24/7 mental health monitoring regardless of whether the nearest therapist is 10 miles or 100 miles away. VALOR converts the home itself into a continuous care environment.
+
+#### 4. The Benefits System Remains Bureaucratically Inaccessible
+
+VA benefits navigation is notoriously complex. Despite record-breaking claims processing volumes in recent years — the Veterans Benefits Administration issued 1.7 million decisions in FY2022 — a significant backlog persists. By mid-2023, VA officials anticipated the pending claims backlog could reach 400,000. PACT Act expansions, while critical for veterans with toxic exposure conditions, have further increased claim volume.
+
+More than half of the 18 million U.S. veterans are not enrolled in VA healthcare at all. Among enrolled veterans, many leave significant benefits unclaimed because identifying, documenting, and filing for every qualifying condition requires legal and bureaucratic expertise that most veterans do not have and VSOs do not have the capacity to provide individually.
+
+**The VALOR difference:** HERALD continuously scans the veteran's complete profile against the full benefits landscape, identifies unclaimed programs matching the veteran's service history and diagnosis, automates claims filing and status tracking, and manages the appeals process. It functions as a dedicated VA navigator available 24/7 — something no VA staffing model could replicate at scale.
+
+#### 5. Mental Health Treatment Reaches Fewer Than Half of Veterans Who Need It
+
+Research has consistently found that fewer than half of veterans with PTSD seek treatment, with stigma identified as the primary barrier. The VA's mental health model is clinical and facility-based: a veteran must initiate contact, schedule an appointment, travel to a facility or accept a telehealth call, and engage in a formal therapeutic relationship. For veterans whose symptoms include shame, social withdrawal, hypervigilance, or distrust of institutions, this model functions as a series of gatekeeping barriers rather than an open door.
+
+The VA has made genuine progress in evidence-based treatment. Cognitive Processing Therapy (CPT) and Prolonged Exposure therapy are available at VA facilities nationwide. Transcranial magnetic stimulation for treatment-resistant depression was added to coverage in 2025. These are meaningful expansions. But they remain facility-bound, appointment-dependent, and inaccessible to veterans who cannot or will not cross the stigma threshold.
+
+**The VALOR difference:** SENTINEL operates in the veteran's home, on the veteran's terms, without the clinical framing that activates stigma. It engages through conversation, not formal assessment. It can monitor mood through ambient biometric sensing without requiring the veteran to articulate distress. MST sessions are offline-only and encrypted, with no data accessible to any external party without the veteran's explicit consent. VALOR meets veterans where stigma cannot follow.
+
+#### 6. The VA Has No Continuous Biometric or Behavioral Monitoring Capability
+
+The VA does not currently deploy continuous home-based biometric monitoring for mental health or chronic physical conditions at any meaningful scale. Wearable health tech pilots exist within VA research programs, but these are not integrated with the EHR, do not trigger automated clinical responses, and are not available to veterans as a standard care modality.
+
+Sleep disorders, chronic pain, substance use patterns, and depressive episodes all have detectable physiological signatures that precede crisis events. Without the infrastructure to observe these signatures continuously, the VA can only respond to what veterans report during scheduled encounters — which dramatically underestimates actual symptom burden.
+
+**The VALOR difference:** VALOR's sensing layer — including HRV monitoring, galvanic skin response, sleep-stage tracking, voice NLP analysis, and fall detection — continuously produces a real-time clinical picture that does not depend on veteran self-report. VALOR-CORE correlates signals across all 20 data streams to detect cascade patterns that no single sensor — and no episodic appointment — could identify.
+
+---
+
+### How VALOR Closes Each Gap
+
+| VA Gap | VALOR Response |
+|---|---|
+| Staffing shortfalls and provider attrition | Robot fleet; no hiring, burnout, or vacancy risk |
+| Episodic care with unmonitored inter-appointment windows | 24/7 continuous monitoring and automated crisis escalation |
+| Rural access barriers | Home-deployed fleet; no facility proximity required |
+| Stigma preventing mental health engagement | In-home, ambient, non-clinical interaction model |
+| Benefits complexity and unclaimed entitlements | HERALD automated navigation, filing, and appeals |
+| No continuous biometric/behavioral monitoring | Multi-sensor real-time data across all 20 challenge domains |
+| Workforce shortage particularly acute in mental health | SENTINEL provides baseline monitoring that humans cannot scale to |
+| Medication adherence gaps | NEXUS robotic dispenser with VA pharmacy integration |
+| Social isolation with no VA analog | ATLAS companionship, career coaching, and community bridging |
+| Single-point interventions that miss cascade dynamics | Cross-robot state sharing and cascade prevention architecture |
+
+---
+
+### Domain-by-Domain Comparison
+
+The following table compares the current VA standard of care with VALOR's proposed capability across each of the 20 veteran challenges the system addresses. "Current VA Approach" describes what is available through VA programs as of 2025–2026. "VALOR Approach" describes the specific system capability documented in this specification.
+
+| # | Challenge | Current VA Approach | VALOR Approach | Key Improvement |
+|---|---|---|---|---|
+| 1 | PTSD & trauma | CPT/PE therapy (appointment-based); telemental health available; PTSD Residential Rehabilitation Treatment Programs for severe cases | SENTINEL: continuous HRV/EDA monitoring, real-time grounding protocols, 30-second crisis escalation — no appointment required | Eliminates the inter-appointment gap; bypasses stigma barrier; operates continuously not episodically |
+| 2 | TBI cognitive support | Neuropsychology evaluations (clinic-based); TBI Care teams at Polytrauma Centers; limited home-based follow-up | SENTINEL: speech-to-text memory logging, name-recall facial recognition, task/calendar prompting, continuous cognitive load tracking | Continuous in-home cognitive support vs. periodic clinical evaluation |
+| 3 | Chronic pain | Pain clinics, opioid prescriptions, some physical therapy; limited home-based delivery | NEXUS: TENS therapy delivery, heat/cold therapy, AI-optimized medication timing, posture alerts | Active in-home pain management vs. clinic visits for adjustment |
+| 4 | Limb loss / amputation | Prosthetics clinics; VA covers advanced computerized limbs as of 2025; rehabilitation programs | NEXUS: real-time prosthetic Bluetooth calibration, grip-assist arm for fine motor tasks during prosthetic adjustment | Continuous real-time calibration vs. scheduled prosthetics appointments |
+| 5 | Hearing loss & tinnitus | Audiology appointments; hearing aids issued; tinnitus ratings under review as of 2025 | NEXUS: 360-degree directional microphone, real-time speech amplification and transcription, tinnitus masking tones | Continuous ambient compensation vs. issued hardware with periodic fitting |
+| 6 | Vision impairment | Low vision clinics; white cane programs; limited assistive technology | NEXUS: AI vision narration of surroundings, document reading, facial identification, obstacle detection | Continuous intelligent environmental narration vs. assistive device issuance |
+| 7 | Sleep disorders | Sleep clinics; CPAP prescriptions; sleep apnea rating changes under review | SENTINEL: real-time sleep staging, smart environment control, VA sleep clinic data export | Home environment management and continuous staging vs. clinic assessment |
+| 8 | Substance use & addiction | Substance Abuse Residential Rehabilitation (SARRTP); outpatient counseling; telehealth | SENTINEL: physiological pre-craving detection, distraction protocols, sponsor connection, sobriety milestone reinforcement | Pre-craving intervention vs. scheduled counseling after symptoms emerge |
+| 9 | Depression & suicide risk | Mental health appointments; crisis line (988); telemental health; TMS now available for treatment-resistant depression | SENTINEL: NLP mood analysis of all interactions, activity tracking, automated 988 escalation in 30 seconds without veteran initiating | Active monitoring vs. passive self-report model; sub-minute crisis escalation |
+| 10 | Social isolation | Community-based outreach; Vet Centers; peer support programs; VSO events | ATLAS: persistent-memory companionship AI, social calendar management, veteran event discovery, community matching | Always-present social bridge vs. periodic program participation |
+| 11 | Unemployment | VA Vocational Rehabilitation & Employment (VR&E); TAP transitional assistance | ATLAS: AI career coach with military-to-civilian translation, real-time job matching, mock interviews, application pipeline tracking | Active ongoing coaching vs. program enrollment with limited individual support |
+| 12 | Homelessness risk | HUD-VASH vouchers; outreach programs; veteran homelessness reached record lows in 2023–2024 but rose for unsheltered veterans | ATLAS + HERALD: financial health tracking, housing instability early warning, automated benefits enrollment to prevent financial cascade | Predictive prevention vs. reactive outreach after housing loss |
+| 13 | MST recovery | MST coordinators at VA facilities; free counseling regardless of discharge status; confidential services | SENTINEL: offline-only encrypted sessions, trauma-informed voice persona options, no data accessible externally without veteran consent | Complete on-device privacy; removes institutional trust barrier; accessible without travel |
+| 14 | VA navigation & benefits access | VSO referrals; VA.gov self-service portal; benefits counselors | HERALD: automated claim filing, continuous benefits gap scanning, appeal management, document vault | Proactive identification vs. veteran-initiated navigation of a complex system |
+| 15 | Medication management | VA pharmacy (mail and in-person); adherence counseling at appointments | NEXUS: robotic dispenser with drug-interaction cross-referencing, missed-dose alerts to VA provider, auto-refill coordination | Active in-home dispensing and tracking vs. prescription issuance |
+| 16 | Mobility limitations | Wheelchair programs; home modifications grants; power wheelchairs including smart models as of 2025 | NEXUS + PHALANX: laser-guided path planning, smart home integration, door/height control, outdoor GPS escort | Active mobility assistance vs. issued equipment without intelligent guidance |
+| 17 | Grief & moral injury | Chaplain services; group therapy; some peer support programs | SENTINEL: guided narrative journaling with AI reflection, chaplain video connection, memorial archive for fallen comrades | Continuous reflective support available at any hour, including acute grief moments |
+| 18 | Family reintegration | VA family counseling; caregiver support programs; SAVE training for families | ATLAS: structured reintegration conversation guides, family education modules, age-appropriate explanations for children, family counseling booking | Active facilitation vs. referral to standalone programs |
+| 19 | Financial instability | VA debt resolution; financial counseling at some facilities; caregiver stipends | HERALD: VA debt resolution, budgeting tools, benefit payment tracking, financial counseling booking | Continuous financial monitoring vs. crisis-triggered counseling |
+| 20 | Cognitive decline (aging veterans) | Geriatric care clinics; dementia screenings; caregiver support | NEXUS + HERALD: gamified cognitive fitness, validated dementia screening tools, fall detection, caregiver alert system | Daily cognitive engagement and continuous fall monitoring vs. periodic clinical screening |
+
+---
+
+> **The fundamental distinction:** The VA delivers care in episodes. VALOR delivers care continuously. The VA requires veterans to navigate toward the system. VALOR deploys the system to veterans. For many of the 20 challenges documented in this specification — especially those involving mental health, crisis prevention, and rural access — the difference between episodic and continuous support is the difference between intervention and tragedy.
+
+> *These comparisons are based on publicly available VA program documentation, VA Inspector General reports, GAO findings, and peer-reviewed research as of 2025–2026. The intent is constructive: to demonstrate that VALOR's design addresses precisely the gaps that the existing system, by its structure, cannot close.*
+
+---
+
 ## Contributing
 
 VALOR is a public interest engineering project. Contributions are organized by archetype and layer:
@@ -1408,7 +1526,7 @@ For architectural questions, design decisions, or policy collaboration, open an 
 
 ---
 
-> *VALOR System Vision — Version 4.0*  
+> *VALOR System Vision — Version 4.1*  
 > *Claude AI was used in producing this system overview, README file, and build roadmap.*  
-> *This document is a conceptual vision for public interest discussion and policy development. All cost figures are estimates based on published research. All technical capabilities described are based on existing or near-term commercially available technologies.*  
+> *This document is a conceptual vision for public interest discussion and policy development. All cost figures are estimates based on published research. All technical capabilities described are based on existing or near-term commercially available technologies. VA comparison data in Section 21 is drawn from VA Office of Inspector General reports, GAO findings, and peer-reviewed research published through 2025–2026.*  
 > *These veterans gave everything. VALOR's mission is to give something back that matches the scale of what they carry — a system that is as persistent, as adaptive, and as committed as they are.*
