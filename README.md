@@ -5,7 +5,7 @@
 [![System Status](https://img.shields.io/badge/status-concept--phase-blue)]()
 [![Archetypes](https://img.shields.io/badge/robot%20archetypes-5-teal)]()
 [![Capabilities](https://img.shields.io/badge/capability%20modules-20-purple)]()
-[![Version](https://img.shields.io/badge/version-4.1-orange)]()
+[![Version](https://img.shields.io/badge/version-5.1-orange)]()
 [![License](https://img.shields.io/badge/license-VA%20Research-green)]()
 [![Future-Proofed](https://img.shields.io/badge/future--proofed-100yr%20mandate-gold)]()
 
@@ -35,12 +35,12 @@
     - [Privacy & Security](#privacy--security)
 13. [The 20 Veteran Challenges Addressed](#the-20-veteran-challenges-addressed)
 14. [Implementation Roadmap](#implementation-roadmap)
-15. [**Build Roadmap & Development Plan**](#build-roadmap--development-plan) ← *New in v3*
+15. [Build Roadmap & Development Plan](#build-roadmap--development-plan)
 16. [Financial Case & ROI](#financial-case--roi)
 17. [Policy Framework](#policy-framework)
-18. [**Top Development Challenges**](#top-development-challenges) ← *New in v3.1*
-19. [**Day in the Life**](#day-in-the-life) ← *New in v3.1*
-20. [**Future-Proofing the VALOR System**](#future-proofing-the-valor-system) ← *New in v4*
+18. [Top Development Challenges](#top-development-challenges)
+19. [Day in the Life](#day-in-the-life)
+20. [Future-Proofing the VALOR System](#future-proofing-the-valor-system)
     - [The Permanence Commitment](#the-permanence-commitment)
     - [Adaptive Technology Layer](#adaptive-technology-layer)
     - [Cultural & Values Evolution](#cultural--values-evolution)
@@ -49,11 +49,23 @@
     - [Long-Range Governance Model](#long-range-governance-model)
     - [Technology Succession Protocol](#technology-succession-protocol)
     - [The 100-Year Mandate](#the-100-year-mandate)
-21. [**VALOR vs. Current VA: The Gap Analysis**](#valor-vs-current-va-the-gap-analysis) ← *New in v4.1*
+21. [VALOR vs. Current VA: The Gap Analysis](#valor-vs-current-va-the-gap-analysis)
     - [Where the VA Falls Short Today](#where-the-va-falls-short-today)
     - [How VALOR Closes Each Gap](#how-valor-closes-each-gap)
     - [Domain-by-Domain Comparison](#domain-by-domain-comparison)
-22. [Contributing](#contributing)
+22. [Research-to-Build Pipeline](#research-to-build-pipeline)
+    - [Pipeline Philosophy](#pipeline-philosophy)
+    - [Stage 1 — Research Discovery](#stage-1--research-discovery)
+    - [Stage 2 — Reproducibility & Replicability Gate](#stage-2--reproducibility--replicability-gate)
+    - [Stage 3 — VALOR Relevance Assessment](#stage-3--valor-relevance-assessment)
+    - [Stage 4 — Integration Design Sprint](#stage-4--integration-design-sprint)
+    - [Stage 5 — Prototype & Validation](#stage-5--prototype--validation)
+    - [Stage 6 — Production Integration](#stage-6--production-integration)
+    - [Stage 7 — Post-Integration Monitoring](#stage-7--post-integration-monitoring)
+    - [Research Intake Registry](#research-intake-registry)
+    - [Reproducibility Standards](#reproducibility-standards)
+    - [Pipeline Governance](#pipeline-governance)
+23. [Contributing](#contributing)
 
 ---
 
@@ -481,6 +493,8 @@ All sensitive data categories are classified by tier:
 - [ ] 500-unit pilot at 5 VA Medical Centers (VAMCs) — high-need veteran cohort
 - [ ] IRB-approved outcome study: hospitalization rates, crisis calls, housing stability, employment
 - [ ] Policy work: VA DME reclassification for AI therapeutic tools; Veteran AI Bill of Rights
+- [ ] **Research-to-Build Pipeline stood up**: Research Intake Registry initialized; Research Integration Committee (RIC) constituted; Work Stream Research Liaisons assigned; Stage 1–3 intake active for all five work streams
+- [ ] **Minimum 10 findings processed through the full pipeline** before any clinical AI model enters the 500-unit pilot — no pilot module proceeds without a Confidence Tier A or B classification
 
 ### Phase 2 — Expansion (Years 3–4) · $280M
 
@@ -490,6 +504,8 @@ All sensitive data categories are classified by tier:
 - [ ] 5,000-unit deployment across 25 VAMCs and rural outreach programs
 - [ ] Outcome data published; VA and CMS reimbursement pathway established
 - [ ] Commercial licensing discussions with allied nation VA equivalents (UK, Canada, Australia)
+- [ ] **Pipeline at steady-state operation**: all seven stages active; Stage 7 post-integration monitoring producing outcome data for the first Phase 1 integrations; first annual pipeline audit completed
+- [ ] **Phase 1 pilot data feeds back into the pipeline**: SENTINEL and HERALD real-world outcome data entered into the Intake Registry as first-party findings; any model updates required by Phase 1 outcomes processed through Stage 4–6 before Phase 2 deployment
 
 ### Phase 3 — Scale (Years 5–8) · $800M+
 
@@ -499,6 +515,8 @@ All sensitive data categories are classified by tier:
 - [ ] Cost per unit at scale: $18,000–$24,000 (comparable to power wheelchair)
 - [ ] Full VA reimbursement for all veterans with qualifying disability ratings (50%+)
 - [ ] Transfer pool operational: refurbished units available for rapid reallocation nationwide
+- [ ] **Pipeline research output published**: VALOR internal research meeting the Reproducibility Standards published in peer-reviewed literature on a Phase 1 / Phase 2 / Phase 3 cadence as committed in the Research-to-Build Pipeline
+- [ ] **Third-party API integrations subject to pipeline review**: any VSO or nonprofit application built on the VALOR-CORE Open API that incorporates clinical or behavioral AI must submit their underlying research evidence to the Intake Registry for Stage 3 relevance assessment before certification
 
 ---
 
@@ -535,6 +553,7 @@ The build is organized into five parallel work streams that run across all phase
 | **WS-3: Clinical AI & Modules** | Biometric models, NLP, crisis detection, sleep staging, mood inference, personalization engine |
 | **WS-4: Safety, Privacy & Compliance** | IRB, FedRAMP, data tier enforcement, sanitization protocol, cybersecurity |
 | **WS-5: Veteran Experience & Field Ops** | Co-design, onboarding UX, logistics, field support, transfer operations |
+| **WS-6: Research-to-Build Pipeline** | Research Intake Registry, RIC governance, Research Integration Briefs, ADR oversight, Stage 5 pilot protocols, post-integration monitoring |
 
 ---
 
@@ -571,6 +590,8 @@ Before any hardware is ordered or code is committed to production, the following
 - [ ] Chassis candidates received and evaluated
 - [ ] FedRAMP-Moderate cloud environment operational
 - [ ] IRB protocol drafted (not yet submitted — submission is Phase 1 milestone)
+- [ ] **Research Integration Committee (RIC) constituted** — Chief Medical Officer, five Work Stream Research Liaisons (one per WS), Clinical AI Lead, IRB & Regulatory Specialist, Veteran Advisory Board representative, and Privacy Officer advisory seat filled
+- [ ] **VALOR Research Intake Registry initialized** in `valor/docs/research/` — schema live, access controls set, at least five candidate research findings submitted to Stage 1 for inaugural triage
 
 ---
 
@@ -629,13 +650,13 @@ HERALD is the simplest hardware archetype — a docked display unit — which is
 
 This work stream runs in parallel with hardware and is the most technically risk-laden area. Key models to develop or adapt:
 
-| Model | Approach | Validation requirement |
-|---|---|---|
-| PTSD/stress detection from HRV + EDA | Fine-tune on veteran biometric dataset; baseline from published HRV-stress literature | 80%+ sensitivity at <5% false positive rate in held-out veteran cohort |
-| Mood/depression inference from voice NLP | Adapt existing speech affect models (e.g., based on openSMILE feature set + fine-tuned transformer) | Validated against PHQ-9 scores in pilot cohort |
-| Sleep stage classification from mattress pressure | Train on pressure-PSG paired dataset; compare to commercial sleep mat accuracy benchmarks | AHI correlation r > 0.85 vs. PSG |
-| Substance craving pre-signal detection | Most speculative model; begin with HRV + EDA + activity pattern features; expect to iterate | Pilot validation only in Phase 1; do not deploy as clinical decision support without Phase 2 validation |
-| VA benefits eligibility classifier | Rules-based engine cross-referenced against VA VASRD and CFR Title 38; update quarterly | 99%+ accuracy on known-benefit test cases |
+| Model | Approach | Validation requirement | Pipeline requirement |
+|---|---|---|---|
+| PTSD/stress detection from HRV + EDA | Fine-tune on veteran biometric dataset; baseline from published HRV-stress literature | 80%+ sensitivity at <5% false positive rate in held-out veteran cohort | Minimum Confidence Tier B before pilot deployment; Tier A required for any autonomous escalation action |
+| Mood/depression inference from voice NLP | Adapt existing speech affect models (e.g., based on openSMILE feature set + fine-tuned transformer) | Validated against PHQ-9 scores in pilot cohort | Minimum Confidence Tier B; supporting findings must pass Stage 2 reproducibility gate |
+| Sleep stage classification from mattress pressure | Train on pressure-PSG paired dataset; compare to commercial sleep mat accuracy benchmarks | AHI correlation r > 0.85 vs. PSG | Minimum Confidence Tier B; population alignment must be rated High or Moderate for veteran cohort |
+| Substance craving pre-signal detection | Most speculative model; begin with HRV + EDA + activity pattern features; expect to iterate | Pilot validation only in Phase 1; do not deploy as clinical decision support without Phase 2 validation | Confidence Tier C maximum in Phase 1; advisory-only; Tier B required before any autonomous craving-triggered intervention |
+| VA benefits eligibility classifier | Rules-based engine cross-referenced against VA VASRD and CFR Title 38; update quarterly | 99%+ accuracy on known-benefit test cases | Rules-based engine exempt from probabilistic pipeline tiers; regulatory source citations required in Registry |
 
 All clinical AI models are subject to a **Model Risk Review** before deployment: bias audit across demographic subgroups, adversarial input testing, and sign-off from the Chief Medical Officer.
 
@@ -669,6 +690,9 @@ All clinical AI models are subject to a **Model Risk Review** before deployment:
 - [ ] FedRAMP High authorization received
 - [ ] VA DME reclassification petition submitted
 - [ ] 12-month pilot outcome data showing statistically significant reduction in hospitalization or crisis events (minimum threshold for Phase 2 funding approval)
+- [ ] **Research Intake Registry active with minimum 10 findings at Stage 3 or beyond** — all clinical AI models deployed in the 500-unit pilot traceable to at least one Confidence Tier A or B finding in the Registry
+- [ ] **First Research Integration Brief (RIB) published** for each of the five primary clinical AI models deployed in Phase 1
+- [ ] **RIC weekly cadence established and documented** — meeting notes and stage-transition decisions recorded in the Registry for auditability
 
 ---
 
@@ -726,6 +750,9 @@ With all five archetypes in hand, the integration work is:
 - [ ] VA reimbursement for VALOR approved for veterans with 50%+ disability rating
 - [ ] NEXUS medication dispenser FDA 510(k) clearance received (or timeline confirmed)
 - [ ] Phase 1 outcomes published in peer-reviewed journal
+- [ ] **All NEXUS and ATLAS clinical modules traceable to Confidence Tier A or B findings** in the Research Intake Registry before production deployment
+- [ ] **Phase 1 pilot outcome data entered into the Registry** as first-party findings and processed through Stage 3 relevance assessment — any material discrepancy with pre-deployment Confidence Tier assignments documented and resolved
+- [ ] **First annual pipeline audit completed** — RIC publishes audit report covering tier assignment accuracy, integration timeline adherence, and Stage 7 monitoring outcomes for all Phase 1 integrations
 
 ---
 
@@ -777,6 +804,9 @@ At 50,000+ units, VALOR is a national logistics operation:
 - [ ] Transfer pool operational with 5,000+ refurbished units in inventory
 - [ ] VALOR National Operations Center operational 24/7
 - [ ] Full VA reimbursement pipeline active; CMS pathway established
+- [ ] **VALOR internal research published in peer-reviewed literature** on the Phase 1 / Phase 2 / Phase 3 cadence — all publications meeting the Reproducibility Standards defined in the Research-to-Build Pipeline
+- [ ] **Third-party Open API integrations subject to pipeline review** — any certified VSO or nonprofit application incorporating clinical or behavioral AI must have supporting evidence submitted to the Intake Registry and assessed at Stage 3 before certification is granted
+- [ ] **Stage 7 post-integration monitoring active for all production modules** — monitoring dashboards operational in the VALOR NOC; any module whose real-world performance diverges materially from pilot expectations flagged for RIC review within 30 days of detection
 
 ---
 
@@ -792,6 +822,8 @@ At 50,000+ units, VALOR is a national logistics operation:
 | Biometric wrist module accuracy insufficient for PTSD detection | Medium | High | Validate against clinical PTSD assessment tools in 100-person study before pilot deployment; publish results |
 | Inter-robot coordination latency too high for cascade prevention | Low | Medium | Requires LAN-speed mesh; test under degraded rural broadband; design offline-capable fallback for all critical protocols |
 | Cybersecurity breach of veteran Tier-1 data | Low | Critical | FedRAMP High; on-device only processing for Tier-1; penetration test every 6 months; breach response plan maintained and rehearsed |
+| Research pipeline bottleneck delays clinical module deployment | Medium | High | RIC weekly cadence and defined stage timelines (Section 22) prevent queue buildup; Confidence Tier C findings may proceed to advisory-only deployment while full pipeline review completes, ensuring clinical value is not blocked by process overhead |
+| Real-world pilot outcomes contradict pipeline Confidence Tier assignments | Low | High | Stage 7 post-integration monitoring designed specifically for this; any material discrepancy triggers mandatory RIC review and possible model rollback within 72 hours via the fleet management console |
 
 ---
 
@@ -799,10 +831,10 @@ At 50,000+ units, VALOR is a national logistics operation:
 
 | Phase | Headcount (cumulative) | Key hires |
 |---|---|---|
-| Pre-Phase 0 | 25–35 | CTO, CMO, CPO, 5 WS leads, 4 senior engineers per WS, 2 clinical researchers |
-| Phase 1 | 80–120 | Clinical AI engineers (×6), VA integration engineers (×4), IRB/regulatory specialist, field operations lead, 25 field technicians for pilot |
-| Phase 2 | 200–280 | Mechanical engineers for NEXUS arms (×4), ATLAS software engineers (×6), humanoid robotics specialists (×4), reimbursement/health economics analyst, 100 field technicians |
-| Phase 3 | 500–700 | Manufacturing partnerships team, open API developer relations, 330 regional field technicians, NOC operators (×20), refurbishment center staff (×60) |
+| Pre-Phase 0 | 25–35 | CTO, CMO, CPO, 5 WS leads, 4 senior engineers per WS, 2 clinical researchers, **WS-6 Research Pipeline Lead** |
+| Phase 1 | 80–120 | Clinical AI engineers (×6), VA integration engineers (×4), IRB/regulatory specialist, field operations lead, 25 field technicians for pilot, **5 Work Stream Research Liaisons** (one per WS, responsible for Stage 1 discovery and Registry submissions) |
+| Phase 2 | 200–280 | Mechanical engineers for NEXUS arms (×4), ATLAS software engineers (×6), humanoid robotics specialists (×4), reimbursement/health economics analyst, 100 field technicians, **Clinical AI Replication Analyst** (responsible for Stage 2 reproducibility review and internal replication commitment) |
+| Phase 3 | 500–700 | Manufacturing partnerships team, open API developer relations, 330 regional field technicians, NOC operators (×20), refurbishment center staff (×60), **Stage 7 Monitoring Analysts (×3)** (sustained post-integration monitoring across all production modules at national scale) |
 
 ---
 
@@ -832,6 +864,26 @@ Year 8    [Phase 3: full reimbursement + ecosystem maturity ─]
 | VA benefits unclaimed per veteran | $4,200–$9,600/year left on table | Full recovery via HERALD auto-filing |
 
 > All figures are estimates based on published VA and CBO research. See [VALOR System Vision v1.0](./VALOR_System_Vision.docx) for full citations and methodology.
+
+### Research Pipeline Investment & Financial Justification
+
+The Research-to-Build Pipeline is not a cost center — it is the financial risk management layer for the entire program. Every VALOR clinical module that reaches a veteran represents a capital investment that can be voided by a single failed deployment, a post-market FDA safety action, or a congressional inquiry triggered by a high-profile adverse event.
+
+The pipeline adds an estimated **$8M–$12M in cumulative operating cost across Phases 1–3** (Research Pipeline Lead + 5 WS Research Liaisons + Clinical AI Replication Analyst + Stage 7 Monitoring Analysts + registry infrastructure). Against a total program budget of $1.2B+, this represents under 1% of total cost.
+
+The financial return on that investment is:
+
+- **Avoided failed deployments:** A clinical AI model deployed without adequate evidence review that causes a material adverse event (e.g., a missed crisis escalation in a module later shown to have a reproducibility failure in its foundational research) could result in a program funding suspension, an FDA enforcement action, and reputational damage that sets the program back 2–4 years. At a program burn rate of $280M in Phase 2, a 6-month suspension costs $140M — 14× the total pipeline operating cost over all three phases.
+- **CMS reimbursement acceleration:** CMS reimbursement pathway development requires a body of peer-reviewed clinical evidence. The pipeline's Reproducibility Standards and publication cadence directly produces that evidence on a structured timeline — accelerating reimbursement approval and unlocking the sustainable funding pathway that reduces dependence on annual appropriations.
+- **VA procurement confidence:** VA procurement officers and Congressional appropriators are more likely to fund subsequent phases when Phase 1 outcomes are published under the rigorous standards of the pipeline's Reproducibility Standards commitment, rather than appearing as self-reported internal metrics. Published, pre-registered outcome data is the strongest financial argument for Phase 2 and Phase 3 authorization.
+
+**Pipeline budget allocation within phase budgets:**
+
+| Phase | Total Budget | Pipeline Operating Estimate | % of Budget |
+|---|---|---|---|
+| Phase 1 | $120M | $3M–$4M | 2.5–3.3% |
+| Phase 2 | $280M | $3M–$4M | 1.1–1.4% |
+| Phase 3 | $800M+ | $2M–$4M | 0.3–0.5% |
 
 ---
 
@@ -1502,6 +1554,331 @@ The following table compares the current VA standard of care with VALOR's propos
 
 ---
 
+## Research-to-Build Pipeline
+
+> *VALOR must never be built on assumption, institutional momentum, or engineering enthusiasm alone. It must be built on evidence — rigorously collected, independently verified, and cleanly integrated. This section defines the canonical pipeline through which any research finding, from any source, travels before it influences a VALOR design decision, capability module, or clinical protocol.*
+
+---
+
+### Pipeline Philosophy
+
+Four principles govern how research becomes product in VALOR:
+
+**1. No finding enters production without reproducibility evidence.** A result that cannot be reproduced by an independent team is not a finding — it is a hypothesis. VALOR does not build clinical AI on hypotheses.
+
+**2. Replicability must span veteran population subgroups.** A result that holds in one demographic, service branch, or clinical context but not others is a partial finding. VALOR's veteran population is heterogeneous; effects must replicate across the subgroups that matter.
+
+**3. Integration is explicit, not implicit.** Every research finding that influences VALOR is formally logged, mapped to a specific module, and reviewed by both an engineering lead and a clinical lead. Informal hallway-conversation integrations are prohibited.
+
+**4. The pipeline is bidirectional.** VALOR's deployment data is itself research. The pipeline does not only import findings from the academic world — it exports observations back to it, closing the loop between clinical AI deployment and the literature it is built on.
+
+---
+
+### Stage 1 — Research Discovery
+
+**Purpose:** Systematically identify research relevant to VALOR's 20 challenge domains and underlying technology stack.
+
+**Sources monitored:**
+
+| Source Category | Examples | Cadence |
+|---|---|---|
+| Peer-reviewed clinical literature | PubMed, PsycINFO, JAMA, NEJM, LANCET | Monthly automated digest |
+| VA and DoD research outputs | VA HSR&D, DoD CDMRP, RAND Arroyo | Quarterly manual review |
+| Robotics and HRI research | IEEE RAS, ACM/IEEE HRI, ICRA, IROS | Conference cycle (1–2x/year) |
+| Clinical AI and ML | NeurIPS clinical track, ML4H, CHIL | Conference cycle (2x/year) |
+| Regulatory and standards bodies | FDA SaMD guidance, ISO 13482, IEC 62443 | As published |
+| Veteran community evidence | VSO reports, VA Inspector General findings, veteran-led research | Quarterly |
+
+**Discovery ownership:** Each VALOR work stream (WS-1 through WS-5) designates one **Research Liaison** responsible for monitoring the sources relevant to their domain and submitting candidate findings to the Research Intake Registry (see [Research Intake Registry](#research-intake-registry)).
+
+**Submission threshold:** A finding is submitted to the intake registry if it meets any of the following criteria:
+- It proposes or validates a technique directly applicable to a VALOR capability module
+- It contradicts an assumption currently embedded in VALOR design
+- It introduces a safety signal relevant to a deployed or planned module
+- It describes outcomes from a veteran-population intervention with effect sizes large enough to motivate a design change
+
+---
+
+### Stage 2 — Reproducibility & Replicability Gate
+
+> *This is the most important stage in the pipeline. No downstream work begins until a finding has been evaluated against rigorous reproducibility and replicability standards.*
+
+**Purpose:** Filter out findings that do not meet the evidentiary standard required for clinical AI integration.
+
+---
+
+#### Reproducibility Assessment
+
+Reproducibility asks: *can the same team, using the same data, methods, and code, produce the same result?*
+
+Every candidate finding is evaluated against the following checklist:
+
+| Criterion | Requirement | Acceptable Evidence |
+|---|---|---|
+| **Code availability** | Analysis code is publicly available or provided on request | GitHub/OSF repository link; verified executable |
+| **Data availability** | Raw data is publicly available, or a synthetic equivalent is provided, or the study uses a publicly available benchmark dataset | DOI-linked dataset; IRB-restricted but requestable data with documented protocol |
+| **Environment specification** | Software versions, hardware, and execution environment are fully documented | Docker image, conda environment, or detailed dependency manifest |
+| **Pre-registered hypothesis** | Primary outcomes were pre-registered before data collection or analysis | OSF, ClinicalTrials.gov, or AsPredicted registration with timestamp predating data |
+| **Statistical transparency** | Reported effect sizes, confidence intervals, and raw p-values (not just significance flags) | Full results table; no selective outcome reporting evident |
+| **Negative results reported** | Failed conditions and null results are reported alongside positive results | Methods section documents pre-specified analyses; supplementary negative results table |
+
+**Scoring:** Each criterion is scored Pass / Conditional Pass / Fail. A finding with two or more Fails does not advance. A finding with one Fail may advance to a Conditional Track — see below.
+
+**Conditional Track:** A finding that fails one reproducibility criterion but is otherwise compelling may enter the pipeline with a mandatory internal reproduction attempt before Stage 4. VALOR's Research Team must independently reproduce the key result using the authors' code and/or a re-implementation before integration design begins.
+
+---
+
+#### Replicability Assessment
+
+Replicability asks: *does the finding hold when a different team, using different data or methods, attempts to produce the same result?*
+
+| Dimension | Question | Evidence Required |
+|---|---|---|
+| **Independent replication** | Has another independent lab or group reported a consistent finding? | Two or more independent publications with consistent direction of effect |
+| **Population generalizability** | Were the study populations representative of the VALOR veteran population? | Subgroup data available for: age (>55 for aging veterans), sex, race/ethnicity, service branch, PTSD/TBI comorbidity status |
+| **Effect magnitude consistency** | Are effect sizes consistent across replications, or only directionally consistent? | Forest plot or meta-analytic estimate preferred; single-study claims discounted |
+| **Context robustness** | Does the finding hold in home/community settings, not just clinical lab settings? | At minimum one ecologically valid study; lab-only findings are flagged |
+| **Temporal stability** | Do effects persist at follow-up (3+ months)? | Longitudinal data preferred; cross-sectional findings restricted to lower-autonomy modules |
+
+**Population alignment scoring:** VALOR weights replicability evidence by how closely the study population matches the veteran cohort it would be applied to. A finding replicated specifically in combat veterans with PTSD carries more weight for SENTINEL configuration than a finding replicated only in a civilian anxious-adult population. Alignment scores (High / Moderate / Low) are recorded in the Intake Registry and govern the confidence tier assigned to the integration.
+
+---
+
+#### Confidence Tier Assignment
+
+After the Reproducibility and Replicability Assessments, every finding is assigned a Confidence Tier that governs how it may be used in VALOR:
+
+| Tier | Criteria | Permitted Integration Level |
+|---|---|---|
+| **Tier A — Production Ready** | Full reproducibility (all criteria pass) + independent replication + high population alignment | May inform autonomous module behavior, clinical threshold settings, and default configuration |
+| **Tier B — Supervised Use** | Full reproducibility + at least one replication + moderate population alignment | May inform module behavior with mandatory human-in-the-loop review; cannot set autonomous escalation thresholds |
+| **Tier C — Advisory Only** | Partial reproducibility OR single study with no replication | May inform design discussions and prototype exploration; cannot ship in any production module without elevation to Tier B/A |
+| **Tier D — Watch List** | Promising but insufficient evidence; fails reproducibility gate | Logged in registry with reason; reassessed when new evidence appears; no integration |
+
+---
+
+### Stage 3 — VALOR Relevance Assessment
+
+**Purpose:** Translate a vetted finding into a specific, scoped VALOR integration proposal.
+
+A finding that passes Stage 2 is handed off to a **cross-functional triage panel** consisting of:
+- The submitting Research Liaison
+- The engineering lead for the affected work stream
+- A clinical reviewer (CMO, clinical researcher, or VA clinical partner)
+- A veteran representative from the Veteran Advisory Board (for findings that directly affect veteran interaction or clinical protocols)
+
+The panel produces a **Research Integration Brief (RIB)** — a one-page structured document containing:
+
+```
+RESEARCH INTEGRATION BRIEF — TEMPLATE
+
+Finding ID:        [R-YYYY-NNN]
+Source:            [Citation + DOI]
+Confidence Tier:   [A / B / C]
+Submitted by:      [Research Liaison, WS-X]
+Triage date:       [YYYY-MM-DD]
+
+SUMMARY OF FINDING
+[2–3 sentence plain-language summary of what the research found]
+
+VALOR RELEVANCE
+Affected archetype(s):    [SENTINEL / NEXUS / ATLAS / HERALD / PHALANX / VALOR-CORE]
+Affected module(s):       [specific capability modules]
+Challenge domain(s):      [1–20]
+
+INTEGRATION HYPOTHESIS
+[What specific change to VALOR design, configuration, or behavior does this finding motivate?]
+
+SCOPE ESTIMATE
+Engineering complexity:   [Low / Medium / High]
+Clinical risk:            [None / Low / Medium / High]
+Data requirements:        [What veteran data is needed to implement this?]
+Privacy implications:     [Any new Tier-1/2/3 data handling implications?]
+
+VETERAN ADVISORY BOARD REVIEW REQUIRED?
+[Yes — if change affects interaction patterns, escalation logic, or privacy]
+[No — if change is infrastructure or internal model configuration only]
+
+RECOMMENDED ACTION
+[Proceed to Stage 4 / Hold pending replication / Reject with rationale]
+```
+
+Completed RIBs are published to the Research Intake Registry within 10 business days of Stage 2 completion.
+
+---
+
+### Stage 4 — Integration Design Sprint
+
+**Purpose:** Produce a concrete, scoped engineering specification for the finding's integration into VALOR.
+
+Findings approved in Stage 3 enter a time-boxed **Integration Design Sprint** — a structured 2–4 week design process led by the relevant work stream engineering team, with mandatory clinical and VAB review at completion.
+
+**Sprint deliverables:**
+
+| Deliverable | Description |
+|---|---|
+| **Architecture Decision Record (ADR)** | Documents *what* is being changed, *why* (linking to the RIB and the underlying finding), *alternatives considered*, and *consequences*. ADRs are version-controlled and permanent. |
+| **Data flow diagram** | Shows exactly what veteran data is consumed by the new behavior, where it is processed (edge vs. cloud), and what privacy tier it falls under |
+| **Failure mode analysis** | Documents what happens if the integrated finding turns out to be wrong for a specific veteran — what is the observable failure signal, and what is the fallback behavior? |
+| **Validation criteria** | Pre-specifies the measurable outcomes that will confirm the integration is working as intended in pilot, before any production rollout |
+| **Rollback specification** | Defines exactly how the change is reversed if validation fails or a safety signal appears post-deployment |
+
+**Mandatory review gates before Stage 5:**
+- Engineering lead sign-off on ADR
+- Clinical reviewer sign-off on failure mode analysis and validation criteria
+- VAB review and approval if Veteran Advisory Board review was flagged in the RIB
+- Privacy review if new Tier-1 or Tier-2 data handling is introduced
+
+---
+
+### Stage 5 — Prototype & Validation
+
+**Purpose:** Test the integration in a controlled setting before it reaches any live veteran.
+
+Integrations are validated in a three-environment progression:
+
+**5a. Simulation Environment**
+VALOR maintains a continuously updated simulation environment — a software replica of each archetype's sensor stack, decision logic, and VALOR-CORE integration — against which all changes are tested before hardware contact. Simulation runs:
+- Standard veteran scenario suite (30 scripted scenarios covering the 20 challenge domains)
+- Adversarial scenario suite (edge cases, sensor failure, ambiguous signals)
+- Regression suite (all previously validated behaviors must continue to pass)
+
+Simulation must achieve >95% expected-behavior rate against the validation criteria defined in Stage 4 before hardware testing.
+
+**5b. Controlled Hardware Testing**
+The integration is deployed on physical prototype hardware with simulated veteran data (synthetic profiles, not real veterans). Testing focuses on:
+- Sensor integration correctness
+- Latency requirements (crisis escalation: <30 seconds end-to-end)
+- Privacy tier enforcement (Tier-1 data must not leave device)
+- Robot behavior coherence across multi-archetype scenarios
+
+**5c. Supervised Pilot Testing**
+The integration is deployed to a small cohort of consenting pilot veterans (minimum 10, target 30) with enhanced logging and a dedicated clinical monitor assigned. Pilot runs for a minimum of 90 days. All pilot data is reviewed against pre-specified validation criteria at day 30, day 60, and day 90. The pilot is halted immediately if:
+- A safety signal appears
+- Veteran satisfaction ratings fall below the pilot threshold
+- Clinical outcomes move in an unexpected direction
+
+**IRB requirement:** Any Stage 5c pilot with a new clinical AI behavior (e.g., a new crisis escalation model, a new mood inference algorithm) requires an IRB amendment before deployment. Infrastructure changes with no clinical AI behavior impact may proceed under the existing IRB protocol with clinical reviewer documentation.
+
+---
+
+### Stage 6 — Production Integration
+
+**Purpose:** Cleanly and traceably merge the validated integration into the VALOR production system.
+
+**Integration requirements:**
+
+| Requirement | Description |
+|---|---|
+| **Merged to `main` via reviewed PR** | All production code changes are peer-reviewed before merge. The PR must reference the Finding ID, ADR, and pilot results. |
+| **Changelog entry** | Every production integration receives a changelog entry in the VALOR-CORE release notes, linking the change to its originating Research Finding ID |
+| **Module version bump** | The affected capability module version is incremented, and the new version is documented in the module manifest alongside the Research Finding ID |
+| **Clinical documentation update** | If the integration changes clinical behavior visible to VA providers, the VALOR clinical documentation is updated before the release ships |
+| **Fleet rollout gating** | Production rollouts follow a staged deployment: 1% of fleet → 10% → 50% → 100%, with 72-hour hold periods between stages and automated rollback on anomaly detection |
+
+**Traceability guarantee:** At any point in time, a VALOR engineer, VA clinical partner, or auditor must be able to answer: *"Why does VALOR-CORE behave this way?"* — and trace the answer directly to a Research Finding ID, its confidence tier, its RIB, its ADR, its pilot results, and the PR that merged it. This chain of custody is non-negotiable.
+
+---
+
+### Stage 7 — Post-Integration Monitoring
+
+**Purpose:** Close the loop — confirm that the finding holds in real-world deployment and feed observations back to the research record.
+
+Every production integration is assigned a **Post-Integration Monitoring Plan** specifying:
+
+| Monitoring Element | Description |
+|---|---|
+| **Primary outcome metric** | The specific measurable outcome the finding predicted (e.g., "30-day crisis escalation rate," "medication adherence rate," "veteran-reported grounding protocol effectiveness") |
+| **Monitoring cadence** | How frequently the outcome metric is reviewed (weekly automated / monthly clinical / quarterly strategic) |
+| **Drift threshold** | The statistical threshold that triggers a review — defined as a pre-specified deviation from pilot baseline |
+| **Veteran feedback integration** | Systematic collection of veteran-reported experience with the new behavior, analyzed quarterly |
+| **Disconfirmation trigger** | The specific signal that would cause the integration to be flagged for rollback review |
+
+**Feedback to research community:** When VALOR's deployment data provides evidence that confirms, extends, or contradicts the originating research finding, the VALOR Research Team is responsible for:
+1. Documenting the real-world outcome data in the Intake Registry alongside the original finding
+2. Sharing aggregate (de-identified, VA-approved) findings with the originating research team when a data sharing agreement is in place
+3. Publishing VALOR outcome data in peer-reviewed literature on a Phase 1 / Phase 2 / Phase 3 cadence, as committed to in the Implementation Roadmap
+
+---
+
+### Research Intake Registry
+
+The **VALOR Research Intake Registry** is the canonical, version-controlled record of every research finding that has been evaluated for VALOR integration. It is maintained as a structured database within the `valor/docs/research/` directory of the project repository.
+
+**Registry schema:**
+
+| Field | Type | Description |
+|---|---|---|
+| `finding_id` | String | Unique identifier: `R-YYYY-NNN` |
+| `citation` | String | Full citation with DOI |
+| `submission_date` | Date | Date submitted to registry |
+| `submitted_by` | String | Research Liaison and work stream |
+| `stage` | Enum | Current pipeline stage (1–7) or terminal status (Rejected / Watch List) |
+| `confidence_tier` | Enum | A / B / C / D |
+| `reproducibility_score` | Object | Pass/Fail per criterion |
+| `replicability_score` | Object | Assessment per dimension |
+| `population_alignment` | Enum | High / Moderate / Low |
+| `affected_archetypes` | Array | SENTINEL, NEXUS, ATLAS, HERALD, PHALANX, VALOR-CORE |
+| `affected_modules` | Array | Specific capability module names |
+| `challenge_domains` | Array | Integer 1–20 |
+| `rib_link` | URL | Link to Research Integration Brief document |
+| `adr_link` | URL | Link to Architecture Decision Record (if Stage 4+) |
+| `pilot_results_link` | URL | Link to Stage 5c pilot summary (if Stage 5+) |
+| `production_pr_link` | URL | Link to merged production PR (if Stage 6+) |
+| `monitoring_plan_link` | URL | Link to Post-Integration Monitoring Plan |
+| `notes` | Text | Free-text notes from triage panel or subsequent review |
+
+**Registry access:** The registry is readable by all VALOR contributors. Write access requires Research Liaison role or higher. The registry is published publicly (with any sensitive clinical detail redacted) as part of VALOR's commitment to research transparency.
+
+---
+
+### Reproducibility Standards
+
+VALOR maintains its own internal reproducibility standards that extend beyond requiring them in incoming research. These standards apply to research *produced by* VALOR:
+
+**All VALOR internal research (IRB studies, pilot analyses, outcome publications) must:**
+
+1. **Pre-register** primary and secondary outcomes on ClinicalTrials.gov or OSF before data collection begins
+2. **Publish analysis code** in the `valor/research/` repository within 60 days of manuscript submission
+3. **Publish de-identified datasets** or synthetic equivalents within 60 days of manuscript acceptance, subject to VA data sharing agreements
+4. **Report all pre-specified outcomes**, including null results — selective reporting is prohibited
+5. **Report subgroup results** for: age cohort (18–34, 35–54, 55+), sex, race/ethnicity, service era (Vietnam, Gulf War, Post-9/11), and primary diagnosis category (PTSD, TBI, MST, physical disability, no mental health diagnosis)
+6. **Apply CONSORT (for RCTs) or STROBE (for observational studies)** reporting standards to all manuscripts
+7. **Mandate effect size reporting** with confidence intervals for all primary outcomes — p-values alone are insufficient
+
+**Replication commitment:** For every major finding VALOR publishes, the research team designates an independent internal team to attempt replication before public release. Discrepancies between original and replication are documented in a supplementary note published alongside the manuscript.
+
+---
+
+### Pipeline Governance
+
+The Research-to-Build Pipeline is governed by the **VALOR Research Integration Committee (RIC)**, a standing body that reports to the Chief Medical Officer.
+
+**Committee composition:**
+
+| Role | Count | Responsibilities |
+|---|---|---|
+| Chief Medical Officer (chair) | 1 | Final authority on Tier A/B confidence classifications and clinical safety decisions |
+| Work Stream Research Liaisons | 5 (one per WS) | Discovery, submission, and Stage 3 triage participation |
+| Clinical AI Lead | 1 | Technical review of AI/ML findings; simulation environment ownership |
+| IRB & Regulatory Specialist | 1 | Stage 5c protocol compliance; FDA pre-submission alignment |
+| Veteran Advisory Board Representative | 1 (rotating) | Veteran perspective in triage and design sprint review |
+| Privacy Officer (advisory) | 1 | Review of any finding that introduces new data handling |
+
+**RIC cadence:**
+- Weekly: Intake registry review — new submissions triaged, stage updates reviewed
+- Monthly: Active Stage 4–6 integrations reviewed for timeline and risk
+- Quarterly: Post-integration monitoring data reviewed; Watch List reassessed against new literature
+- Annually: Full pipeline audit — Are confidence tier assignments still appropriate? Are any production integrations now contradicted by new evidence?
+
+**Appeal and override process:** Any VALOR contributor may formally challenge a Confidence Tier assignment or an integration approval by submitting a written challenge to the RIC. The RIC must respond within 15 business days. If the challenge is sustained, the finding is re-evaluated from Stage 2. No integration that has received a formal challenge may proceed to production until the challenge is resolved.
+
+---
+
+> *The Research-to-Build Pipeline is how VALOR earns the right to operate in a veteran's home. Every intervention VALOR takes — every grounding protocol, every medication alert, every crisis escalation — is downstream of a finding that passed through this pipeline. The veteran trusts VALOR. VALOR must trust only evidence.*
+
+---
+
 ## Contributing
 
 VALOR is a public interest engineering project. Contributions are organized by archetype and layer:
@@ -1519,6 +1896,7 @@ valor/
 ├── transfer/            # Sanitization protocol, logistics integration, reallocation systems
 ├── hardware/            # Robot chassis specs, sensor integration, form factor documentation
 ├── privacy/             # Data classification, encryption, consent management
+├── research/            # Research Intake Registry, RIBs, ADRs, pilot results, published datasets
 └── docs/                # System vision, architecture decision records, policy briefs
 ```
 
@@ -1526,7 +1904,8 @@ For architectural questions, design decisions, or policy collaboration, open an 
 
 ---
 
-> *VALOR System Vision — Version 4.1*  
+> *VALOR System Vision — Version 5.0*  
 > *Claude AI was used in producing this system overview, README file, and build roadmap.*  
 > *This document is a conceptual vision for public interest discussion and policy development. All cost figures are estimates based on published research. All technical capabilities described are based on existing or near-term commercially available technologies. VA comparison data in Section 21 is drawn from VA Office of Inspector General reports, GAO findings, and peer-reviewed research published through 2025–2026.*  
+> *Version 5 adds the Research-to-Build Pipeline (Section 22) — the formal framework governing how external research findings and internal pilot outcomes are evaluated for reproducibility and replicability before integration into VALOR design, clinical protocols, and production modules.*  
 > *These veterans gave everything. VALOR's mission is to give something back that matches the scale of what they carry — a system that is as persistent, as adaptive, and as committed as they are.*
