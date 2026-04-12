@@ -5,7 +5,7 @@
 [![System Status](https://img.shields.io/badge/status-concept--phase-blue)]()
 [![Archetypes](https://img.shields.io/badge/robot%20archetypes-5-teal)]()
 [![Capabilities](https://img.shields.io/badge/capability%20modules-20-purple)]()
-[![Version](https://img.shields.io/badge/version-5.1-orange)]()
+[![Version](https://img.shields.io/badge/version-5.2-orange)]()
 [![License](https://img.shields.io/badge/license-VA%20Research-green)]()
 [![Future-Proofed](https://img.shields.io/badge/future--proofed-100yr%20mandate-gold)]()
 
@@ -17,30 +17,31 @@
 2. [The Case for a Robot Fleet](#the-case-for-a-robot-fleet)
 3. [System Overview](#system-overview)
 4. [Design Principles](#design-principles)
-5. [Veteran Personalization Profile](#veteran-personalization-profile)
-6. [VALOR-CORE Backbone](#valor-core-backbone)
-7. [Robot Archetypes](#robot-archetypes)
+5. [The Mobility Imperative](#the-mobility-imperative)
+6. [Veteran Personalization Profile](#veteran-personalization-profile)
+7. [VALOR-CORE Backbone](#valor-core-backbone)
+8. [Robot Archetypes](#robot-archetypes)
    - [SENTINEL — Mental Health & Crisis Guardian](#sentinel--mental-health--crisis-guardian)
    - [NEXUS — Physical Health & Mobility Platform](#nexus--physical-health--mobility-platform)
    - [ATLAS — Social Life & Community Bridge](#atlas--social-life--community-bridge)
    - [HERALD — Benefits, Administration & Financial Guardian](#herald--benefits-administration--financial-guardian)
    - [PHALANX — External Environment & Safety Scout](#phalanx--external-environment--safety-scout)
-8. [Humanoid Robot Options](#humanoid-robot-options)
-9. [Inter-Robot Communication](#inter-robot-communication)
-10. [Cascade Prevention — How the Fleet Works Together](#cascade-prevention--how-the-fleet-works-together)
-11. [Robot Transfer & Reassignment Protocol](#robot-transfer--reassignment-protocol)
-12. [Technology Architecture](#technology-architecture)
+9. [Humanoid Robot Options](#humanoid-robot-options)
+10. [Inter-Robot Communication](#inter-robot-communication)
+11. [Cascade Prevention — How the Fleet Works Together](#cascade-prevention--how-the-fleet-works-together)
+12. [Robot Transfer & Reassignment Protocol](#robot-transfer--reassignment-protocol)
+13. [Technology Architecture](#technology-architecture)
     - [Sensing Layer](#sensing-layer)
     - [AI & Compute Layer](#ai--compute-layer)
     - [Privacy & Security](#privacy--security)
-13. [The 20 Veteran Challenges Addressed](#the-20-veteran-challenges-addressed)
-14. [Implementation Roadmap](#implementation-roadmap)
-15. [Build Roadmap & Development Plan](#build-roadmap--development-plan)
-16. [Financial Case & ROI](#financial-case--roi)
-17. [Policy Framework](#policy-framework)
-18. [Top Development Challenges](#top-development-challenges)
-19. [Day in the Life](#day-in-the-life)
-20. [Future-Proofing the VALOR System](#future-proofing-the-valor-system)
+14. [The 20 Veteran Challenges Addressed](#the-20-veteran-challenges-addressed)
+15. [Implementation Roadmap](#implementation-roadmap)
+16. [Build Roadmap & Development Plan](#build-roadmap--development-plan)
+17. [Financial Case & ROI](#financial-case--roi)
+18. [Policy Framework](#policy-framework)
+19. [Top Development Challenges](#top-development-challenges)
+20. [Day in the Life](#day-in-the-life)
+21. [Future-Proofing the VALOR System](#future-proofing-the-valor-system)
     - [The Permanence Commitment](#the-permanence-commitment)
     - [Adaptive Technology Layer](#adaptive-technology-layer)
     - [Cultural & Values Evolution](#cultural--values-evolution)
@@ -49,11 +50,11 @@
     - [Long-Range Governance Model](#long-range-governance-model)
     - [Technology Succession Protocol](#technology-succession-protocol)
     - [The 100-Year Mandate](#the-100-year-mandate)
-21. [VALOR vs. Current VA: The Gap Analysis](#valor-vs-current-va-the-gap-analysis)
+22. [VALOR vs. Current VA: The Gap Analysis](#valor-vs-current-va-the-gap-analysis)
     - [Where the VA Falls Short Today](#where-the-va-falls-short-today)
     - [How VALOR Closes Each Gap](#how-valor-closes-each-gap)
     - [Domain-by-Domain Comparison](#domain-by-domain-comparison)
-22. [Research-to-Build Pipeline](#research-to-build-pipeline)
+23. [Research-to-Build Pipeline](#research-to-build-pipeline)
     - [Pipeline Philosophy](#pipeline-philosophy)
     - [Stage 1 — Research Discovery](#stage-1--research-discovery)
     - [Stage 2 — Reproducibility & Replicability Gate](#stage-2--reproducibility--replicability-gate)
@@ -65,7 +66,7 @@
     - [Research Intake Registry](#research-intake-registry)
     - [Reproducibility Standards](#reproducibility-standards)
     - [Pipeline Governance](#pipeline-governance)
-23. [Contributing](#contributing)
+24. [Contributing](#contributing)
 
 ---
 
@@ -117,6 +118,12 @@ The hardware required for VALOR — onboard LiDAR, biometric wrist sensors, edge
 
 The United States has spent over $2 trillion on post-9/11 veteran benefits and care — yet suicide rates, homelessness, and unemployment among veterans remain persistently higher than the civilian population. The gap between what veterans are owed and what they receive is not a funding gap alone — it is a systems gap. A fleet of intelligent, persistent, interconnected robots is the first intervention proposal that matches the complexity and duration of what veterans actually face.
 
+### 7. Mobile Robots Close the Gap That Stationary Technology Cannot
+
+Every assistive technology deployed in veteran homes to date — tablets, smart speakers, telehealth stations, medication dispensers — shares a fundamental limitation: it stays where it is placed. Veterans in crisis do not always go to where the device is. Veterans in pain do not always have the energy to walk to the medication station. Veterans with PTSD may freeze in the hallway, dissociate in the bedroom, or spiral in a room the device cannot see.
+
+Mobile robots eliminate this gap. VALOR robots navigate to wherever the veteran is — not to where the designer assumed they would be. This is not an engineering optimization; it is the foundational design requirement that makes every other VALOR capability clinically viable. A stationary SENTINEL with the world's best biometric sensors is still useless if the veteran having a crisis is in the bathroom and the robot is docked in the living room.
+
 ---
 
 ## System Overview
@@ -124,6 +131,7 @@ The United States has spent over $2 trillion on post-9/11 veteran benefits and c
 VALOR is not a replacement for human caregivers, VA providers, or peer support specialists. It is the always-present connective tissue between a veteran and every support system that exists for them — lowering the barrier to access, preventing crises before they occur, and ensuring no veteran falls through the cracks because navigating the system requires more energy than they have on a given day.
 
 Each robot in the fleet:
+- **Navigates autonomously** throughout the veteran's home (and outdoors, for PHALANX) — bringing support to wherever the veteran is
 - Operates independently when needed
 - Shares state continuously with all other fleet members via VALOR-CORE
 - Hands off tasks to the appropriate archetype when a situation spans domains
@@ -147,6 +155,79 @@ Each robot continuously monitors upstream signals for downstream risks. The slee
 
 ### 5. Deep Personalization
 Every veteran carries a unique combination of service history, diagnosis, cultural background, family structure, and personal preferences. VALOR-CORE is not a generic AI assistant — it is a continuously-learning model built around one person. The fleet adapts its behavior, communication style, and intervention strategies to that individual, not to a population average.
+
+### 6. Mobility as Mission Architecture
+VALOR robots are mobile by design because the veteran's life is mobile. Static support devices require veterans to come to the device; VALOR comes to the veteran. Mobility is what enables crisis response at any location in the home, medication delivery to a veteran in pain, companionship in the space where the veteran actually spends time, and outdoor escort beyond the front door. For every archetype except HERALD in its standard configuration, mobility is not a feature — it is the prerequisite for every other capability.
+
+---
+
+## The Mobility Imperative
+
+> **Mobility is not a convenience feature. It is the architectural foundation that separates VALOR from every stationary assistive technology that came before it — and it is the single most important factor in whether a robot can actually help a veteran in crisis.**
+
+A fixed device can inform, remind, or alert. A mobile robot can *intervene*. The distinction is not cosmetic — it is the difference between a system that waits for a veteran to come to it and a system that comes to the veteran, wherever they are in their home, at the moment they need it most.
+
+---
+
+### Why Mobility Is Mission-Critical
+
+**1. Crises do not happen at desks.**
+
+Veterans with PTSD, TBI, or depression do not enter crisis states in front of a display unit. They dissociate in the bedroom at 2 AM. They freeze in the hallway. They curl up on the bathroom floor. A robot that cannot reach those spaces cannot respond to what happens in them. The 30-second crisis escalation target that defines VALOR's safety guarantee is only achievable if the robot physically has line-of-sight, audio contact, and sensor proximity — none of which are possible from a fixed dock in another room.
+
+**2. Medication, therapy, and assistance must come to the veteran — not the reverse.**
+
+A veteran with limited mobility, a severe pain episode, or a PTSD freeze response cannot always walk to where help is stationed. NEXUS's dispensing arms, heat/cold therapy, and physical assist capabilities are only useful if the robot can navigate to where the veteran is. Requiring the veteran to travel to the robot during a health event inverts the purpose of the system.
+
+**3. Physical presence affects therapeutic outcomes in ways that audio-video cannot replicate.**
+
+Research on social robotics consistently demonstrates that embodied, proximate presence produces stronger rapport, trust, and therapeutic alliance than screen-based interaction — especially for populations with social withdrawal, hypervigilance, or trauma. SENTINEL's passive redirect capabilities (e.g., displaying a calming photo at the living room doorway during a dissociation episode) depend on the robot being *in the room*, positioned correctly, at the right moment. A wall-mounted screen cannot do this.
+
+**4. The home is not a single room.**
+
+A veteran's daily life spans bedroom, kitchen, living room, bathroom, yard, and vehicle entrance. A robot confined to one location monitors a fraction of that space. The full 20-domain support that VALOR promises requires continuous environmental awareness across the entire home — which requires robots that move.
+
+**5. Outdoor mobility extends the perimeter of care.**
+
+Isolation and agoraphobia are among the most debilitating secondary effects of PTSD and other service-connected conditions. A veteran who cannot safely leave their home without a trusted companion is effectively imprisoned by their own symptoms. PHALANX's outdoor mobility is not supplemental — it is the mechanism by which VALOR extends its care perimeter beyond four walls and reconnects veterans to the communities, green spaces, and physical activity that clinical evidence consistently links to mental health recovery.
+
+---
+
+### Mobility Requirements by Archetype
+
+| Archetype | Mobility Requirement | Why It Matters |
+|---|---|---|
+| **SENTINEL** | Autonomous indoor multi-room navigation; silent drive motors; obstacle avoidance; docking with wireless charging | Must reach veteran anywhere in the home within 60 seconds; passive redirects require physical proximity; crisis detection requires unobstructed sensor proximity |
+| **NEXUS** | Full indoor navigation including tight spaces (bathrooms, bedrooms); articulated arm reach augmented by position; fall-response co-location | Medication dispensing, pain therapy, and physical assist all require physical co-presence; fall detection response requires rapid co-location |
+| **ATLAS** | Quiet rolling presence in living areas; autonomous docking when veteran has visitors; proximity-aware social modulation | Companionship effectiveness scales with proximity; social check-ins require in-room presence; docking behavior prevents social intrusion |
+| **PHALANX** | Outdoor ruggedized mobility; GPS-guided route scouting; curb-climbing capability; sustained outdoor operation | Outdoor escort requires real-time physical co-navigation; trigger environment detection requires proximity-based environmental sensing; fall response in outdoor terrain requires robustness |
+| **HERALD** | Optional mobile capability (see below) | Primary value is administrative; mobility unlocks important secondary capabilities |
+
+---
+
+### Mobility as a Safety Architecture
+
+Beyond individual use cases, mobility is a **fleet safety architecture**. When NEXUS detects a fall, it broadcasts to the fleet — and PHALANX physically locks the perimeter while SENTINEL navigates to the veteran's location. When SENTINEL detects a crisis signal in the bedroom, it routes to the doorway rather than triggering a cold audio alert. These coordinated physical responses are only possible because the robots can move.
+
+The VALOR 30-second crisis escalation guarantee implicitly requires mobility. A stationary SENTINEL in the living room that detects a crisis biometric signal from a wrist module cannot confirm the veteran's condition, cannot make physical contact, cannot visually confirm consciousness, and cannot serve as a co-located communications anchor for the 988 dispatcher. A mobile SENTINEL can do all of these things within the escalation window.
+
+> **Mobility is not what makes VALOR a robot fleet. It is what makes the fleet capable of the promises it makes.**
+
+---
+
+### Mobility Standards and Specifications
+
+All mobile VALOR archetypes are designed to meet the following baseline mobility standards:
+
+| Standard | Specification |
+|---|---|
+| **Indoor navigation** | ROS 2 Nav2-based autonomous navigation; 2D LiDAR + stereo RGB-D obstacle avoidance; dynamic re-routing around people and pets |
+| **Floor clearance** | Threshold traversal up to 15mm (handles standard door thresholds and transition strips); tested on hardwood, carpet, tile |
+| **Speed** | Maximum 0.8 m/s indoors (designed for safe co-habitation); crisis-response sprint mode at 1.2 m/s |
+| **Noise profile** | Target < 35 dB at 1m during normal navigation; silent mode < 25 dB for overnight operation |
+| **Battery and availability** | 12-hour continuous operation (SENTINEL, NEXUS); 8-hour outdoor operation (PHALANX); autonomous return-to-dock before battery depletion; wireless charging dock standard |
+| **Safe-stop protocol** | Immediate halt within 100ms of any obstacle within 200mm; force-limited contact detection on all exterior surfaces |
+| **Outdoor specs (PHALANX)** | IP65 weather resistance; GPS + LiDAR; curb-climb up to 50mm; 8-hour outdoor battery; tested in rain, temperature range −10°C to 50°C |
 
 ---
 
@@ -204,7 +285,8 @@ All robots share a unified AI backbone: **VALOR-CORE**. This is a personalized, 
 
 **Nickname:** "The Guardian"  
 **Domain:** Continuous mood, crisis, and behavioral health monitoring  
-**Form factor:** Mobile desktop companion (~tablet on wheeled base); moves autonomously between rooms; warm non-humanoid curved display; always-on local-only wake detection  
+**Form factor:** Mobile desktop companion (~tablet on wheeled base); **autonomous multi-room mobility is core to its crisis-response mission** — it navigates silently between rooms to maintain sensor proximity to the veteran at all times; warm non-humanoid curved display; always-on local-only wake detection; silent-mode drive motors for overnight navigation without sleep disruption  
+**Mobility rationale:** SENTINEL's 30-second crisis escalation guarantee, passive redirect interventions, and real-time biometric monitoring all depend on physical proximity to the veteran. A stationary SENTINEL cannot fulfill its mission — a veteran in crisis in the bedroom is unreachable by a unit docked in the living room.  
 **Humanoid option:** See [Humanoid Robot Options](#humanoid-robot-options) — SENTINEL-H variant available for veterans who respond better to embodied social presence
 
 **Capability modules:**
@@ -227,7 +309,8 @@ All robots share a unified AI backbone: **VALOR-CORE**. This is a personalized, 
 
 **Nickname:** "The Medic"  
 **Domain:** Integrated physical support, medication management, and therapeutic intervention  
-**Form factor:** Largest fleet unit (~bedside clinical cart); articulated arms with soft-robotics grippers (3 kg payload); 12-hour battery; wireless charging dock; designed for indoor home environments  
+**Form factor:** Largest fleet unit (~bedside clinical cart); articulated arms with soft-robotics grippers (3 kg payload); 12-hour battery; wireless charging dock; designed for indoor home environments; **full autonomous mobility throughout the home is essential** — NEXUS navigates to the veteran's location to deliver medications, pain therapy, and physical assistance rather than requiring a mobility-limited or pain-affected veteran to travel to a fixed station  
+**Mobility rationale:** Veterans with limb loss, Parkinson's, chronic pain, or post-fall states cannot reliably come to a docked unit for time-sensitive care. NEXUS's value proposition collapses without the ability to navigate to wherever the veteran needs it — especially in fall-response scenarios where rapid co-location is a safety requirement.  
 **Humanoid option:** See [Humanoid Robot Options](#humanoid-robot-options) — NEXUS-H variant provides upper-body assist in a form factor that transfers more intuitively to physical therapy exercises
 
 **Capability modules:**
@@ -250,7 +333,8 @@ All robots share a unified AI backbone: **VALOR-CORE**. This is a personalized, 
 
 **Nickname:** "The Connector"  
 **Domain:** Combating isolation, rebuilding relationships, and facilitating reintegration  
-**Form factor:** Compact rolling unit (~large speaker on base); minimal display surface; quiet, slow-moving; designed for living rooms and common areas; docks autonomously when veteran has visitors  
+**Form factor:** Compact rolling unit (~large speaker on base); minimal display surface; **near-silent mobility throughout living areas is central to its therapeutic function** — ATLAS navigates to wherever the veteran is spending time rather than requiring social engagement to happen in a fixed location; quiet, slow-moving; designed for living rooms and common areas; docks autonomously when veteran has visitors  
+**Mobility rationale:** The therapeutic value of companionship depends on presence in the same space as the veteran. An ATLAS docked in a hallway cannot provide ambient social engagement to a veteran in the kitchen. Mobility allows ATLAS to follow the veteran's daily rhythm rather than forcing the veteran to adapt their movement to where the robot is stationed.  
 **Humanoid option:** See [Humanoid Robot Options](#humanoid-robot-options) — ATLAS-H variant for veterans whose primary challenge is social isolation; embodied presence shown to reduce loneliness metrics more effectively than screen-based interaction
 
 **Capability modules:**
@@ -270,7 +354,27 @@ All robots share a unified AI backbone: **VALOR-CORE**. This is a personalized, 
 
 **Nickname:** "The Advocate"  
 **Domain:** VA benefits navigation, financial management, legal support, and administrative burden reduction  
-**Form factor:** Desktop-docked display unit with touchscreen interface; serves as the veteran's primary VALOR-CORE dashboard; does not need to move
+**Form factor:** Desktop-docked display unit with touchscreen interface; serves as the veteran's primary VALOR-CORE dashboard; **does not require mobility to fulfill its core mission** — HERALD's value is software, data, and communication, all of which function from a fixed station
+
+> **HERALD and Mobility: A Design Deliberation**
+>
+> HERALD is the only VALOR archetype whose primary mission does not require physical mobility. Its core functions — benefits filing, document management, appointment coordination, financial monitoring — are fundamentally digital and can be delivered from a fixed display unit in the veteran's home. Mandating mobility for HERALD would add cost, mechanical complexity, and battery management burden without a proportionate clinical benefit.
+>
+> **However, mobility is a meaningful optional upgrade for HERALD**, and veterans or VA programs may elect to deploy a mobile HERALD variant based on the following documented benefits:
+>
+> **1. Room-to-Room Accessibility.** Veterans with limited mobility, chronic pain, or PTSD-driven room avoidance may not reliably travel to a fixed HERALD station. A mobile HERALD can navigate to wherever the veteran is — the bedroom after a difficult morning, the living room during a rest period — ensuring that critical administrative tasks (appointment reminders, claim deadlines, benefit alerts) are surfaced at the right moment, in the right space.
+>
+> **2. Dynamic Fleet Coordination.** In a mobile configuration, HERALD can physically co-locate with NEXUS or SENTINEL during multi-robot coordination events — for example, positioning itself near the veteran during a post-fall recovery sequence to surface insurance information or initiate a VA telehealth connection without requiring the veteran to move to another room.
+>
+> **3. Proactive Document Scanning.** HERALD relies on NEXUS's document scanner in the standard configuration. A mobile HERALD with an integrated document scanner module can navigate to where documents are kept (kitchen table, filing cabinet area, desk) and initiate scanning workflows without requiring the veteran to transport documents.
+>
+> **4. Home Visit Support.** When VA field workers, VSO representatives, or legal aid visitors come to the veteran's home, a mobile HERALD can navigate to the meeting location and serve as an interactive briefing station — displaying relevant records, claim summaries, and appointment histories in the room where the conversation is actually happening.
+>
+> **5. Aging-in-Place Adaptability.** As veterans age and their mobility declines, a fixed HERALD station can become inaccessible. A mobile variant future-proofs HERALD's accessibility for the aging veteran cohort without requiring a hardware replacement.
+>
+> The standard HERALD deployment remains fixed-dock. The mobile HERALD variant is offered as a VA-prescribed upgrade for veterans whose living situation, mobility status, or care complexity indicates a clinical benefit from in-room administrative access.
+
+**Humanoid option:** Not applicable — HERALD's administrative function does not benefit from humanoid embodiment. A mobile cart variant with enhanced display and document scanner is the preferred upgrade path.
 
 **Capability modules:**
 
@@ -282,7 +386,7 @@ All robots share a unified AI backbone: **VALOR-CORE**. This is a personalized, 
 | Legal resource connector | VSO referral, JAG consultation scheduling, discharge upgrade tracking |
 | Appointment coordinator | Pulls VA schedule API, manages all medical and benefits appointments across the fleet |
 
-**Key integration:** HERALD is the administrative hub of the fleet. NEXUS feeds pharmacy data for auto-refills; SENTINEL feeds mental health appointment needs; ATLAS feeds career and education program bookings.
+**Key integration:** HERALD is the administrative hub of the fleet. NEXUS feeds pharmacy data for auto-refills; SENTINEL feeds mental health appointment needs; ATLAS feeds career and education program bookings. In the optional mobile configuration, HERALD co-locates physically with the veteran or with other fleet members during multi-domain care events.
 
 ---
 
@@ -290,7 +394,8 @@ All robots share a unified AI backbone: **VALOR-CORE**. This is a personalized, 
 
 **Nickname:** "The Scout"  
 **Domain:** Outdoor navigation, environmental hazard detection, and emergency response  
-**Form factor:** Ruggedized wheeled outdoor unit; weather-resistant; GPS + LiDAR; runs ahead of or alongside the veteran in outdoor environments  
+**Form factor:** Ruggedized wheeled outdoor unit; weather-resistant; GPS + LiDAR; **PHALANX is the fleet's mobility-forward archetype — it exists precisely because veterans' lives do not end at the front door**; runs ahead of or alongside the veteran in outdoor environments; IP65-rated for rain and dust; operates in temperature extremes; built for sustained outdoor operation across varied terrain  
+**Mobility rationale:** PHALANX's entire mission is physical co-navigation in the outdoor environment. Without mobility, it cannot scout routes, detect trigger environments before the veteran enters them, escort veterans with agoraphobia on gradual exposure walks, respond to outdoor falls, or extend the perimeter of VALOR's care into the world outside the home. PHALANX is immobile only when docked — and when docked, it is not fulfilling its mission.  
 **Humanoid option:** See [Humanoid Robot Options](#humanoid-robot-options) — PHALANX-H for veterans who need physical outdoor escort support
 
 **Capability modules:**
@@ -625,10 +730,11 @@ The backbone is built in three increments:
 #### WS-2: SENTINEL Hardware (Months 7–18)
 
 **SENTINEL Prototype v1 (Months 7–12)**
-- Select chassis from Gate 0 evaluation. Recommended form factor: compact wheeled base with a curved OLED/LCD display panel, silent drive motors, and a docking station with wireless charging.
-- Integrate NVIDIA Jetson Orin module as edge compute unit. Validate thermal envelope and battery life under continuous inference load.
+- Select chassis from Gate 0 evaluation. Required form factor: compact wheeled base with a curved OLED/LCD display panel, **silent drive motors rated below 35 dB at 1m** (critical for overnight operation), autonomous multi-room navigation via ROS 2 Nav2, and a docking station with wireless charging. **Mobility is not optional for SENTINEL** — the crisis response guarantee is only achievable with a robot that can navigate to wherever the veteran is within the home.
+- Integrate NVIDIA Jetson Orin module as edge compute unit. Validate thermal envelope and battery life under continuous inference load including active navigation.
 - Integrate the biometric wrist module as a separate companion device: select and validate a PPG + EDA + accelerometer module (e.g., based on MAX86150 or similar clinical-grade sensor IC). Commission custom wrist band enclosure.
 - Integrate mattress pressure sensor pad for sleep staging (select from commercially available sleep mat options; validate sleep stage accuracy against PSG gold standard in a 20-subject sleep study).
+- **Validate full autonomous room-to-room navigation** in a representative home floor plan with obstacles, pets, and threshold strips — navigation reliability must exceed 98% successful room transit before pilot deployment.
 - Validate that all Tier-1 biometric processing runs fully on-device with zero cloud dependency for emergency escalation.
 
 **SENTINEL Prototype v2 (Months 12–18)**
@@ -639,12 +745,13 @@ The backbone is built in three increments:
 
 #### WS-2: HERALD Hardware (Months 7–14)
 
-HERALD is the simplest hardware archetype — a docked display unit — which is intentional. Its value is software, not mobility.
+HERALD is the simplest hardware archetype — a docked display unit in its standard configuration — which is intentional. Its primary value is software, not mobility. However, the hardware design must accommodate a **mobile HERALD variant** as a VA-prescribed upgrade path, so the chassis and compute architecture should be designed from the outset to accept wheels and a drive system without requiring a hardware redesign.
 
-- Select commercial touchscreen display unit as base (10–13" tablet in ruggedized kiosk enclosure, or custom build)
+- Select commercial touchscreen display unit as base (10–13" tablet in ruggedized kiosk enclosure, or custom build with modular base that accepts both fixed-dock and wheeled-mobile configurations)
 - Integrate document scanner module (USB or embedded, 300 DPI minimum, auto-crop)
 - HERALD software implementation: VA benefits navigator, document vault, financial health manager, appointment coordinator, legal resource connector
 - HERALD serves as the veteran's primary VALOR-CORE dashboard — implement the profile viewer, consent manager, and data audit interface here
+- **Mobile HERALD variant specification (Month 12–14):** Define the wheeled base upgrade kit; validate that HERALD software navigation layer integrates cleanly with VALOR-CORE's inter-robot positioning system; document the clinical prescription criteria under which a mobile HERALD is indicated
 
 #### WS-3: Clinical AI Models (Months 7–24)
 
@@ -703,13 +810,14 @@ All clinical AI models are subject to a **Model Risk Review** before deployment:
 
 #### NEXUS Development (Months 31–42)
 
-NEXUS is the most mechanically complex archetype due to its articulated arms and medication dispensing requirements.
+NEXUS is the most mechanically complex archetype due to its articulated arms, medication dispensing requirements, and **the full indoor mobility required to bring those capabilities to wherever the veteran needs them**.
 
-- Hardware: Select or commission a wheeled bedside platform with two 3 DOF soft-robotic arms. Evaluate commercial options (e.g., Hello Robot Stretch, or custom build on mobile base). Key requirements: safe force limits (ISO/TS 15066 for collaborative robotics), FDA 510(k) pathway consideration for the medication dispensing module.
+- Hardware: Select or commission a wheeled bedside platform with two 3 DOF soft-robotic arms. Evaluate commercial options (e.g., Hello Robot Stretch, or custom build on mobile base). Key requirements: **full autonomous indoor navigation** (including tight bathroom and bedroom corridors), safe force limits (ISO/TS 15066 for collaborative robotics), FDA 510(k) pathway consideration for the medication dispensing module. **Mobility must be validated in the smallest rooms of a veteran's home** — a robot that cannot navigate to the bathroom cannot respond to the most common fall scenario.
 - **FDA pathway:** The smart medication dispenser module likely requires FDA 510(k) clearance as a Class II medical device. Begin pre-submission meeting with FDA in Month 31; plan 18–24 months for clearance. Deploy Phase 2 NEXUS units with dispensing module in a non-dispensing monitoring-only mode until clearance is received.
 - Integrate TENS therapy delivery arms, heat/cold pad dispensers, hearing support array, and AI vision system modules.
 - Prosthetic interface coordinator: partner with two commercial prosthetic manufacturers (e.g., Ottobock, Össur) for Bluetooth SDK access and calibration API.
 - Validate fall detection via floor pressure mat in a 30-unit home trial before broad deployment.
+- **Validate NEXUS fall-response navigation:** when a fall is detected, NEXUS must navigate to the veteran's GPS-pinned location within 90 seconds from any point in the home. This is a hard safety requirement with no acceptable failure rate in production.
 
 #### ATLAS Development (Months 31–40)
 
@@ -763,10 +871,11 @@ With all five archetypes in hand, the integration work is:
 
 #### PHALANX Development (Months 55–66)
 
-PHALANX is the most operationally challenging archetype due to outdoor autonomy requirements.
+PHALANX is the most operationally challenging archetype due to outdoor autonomy requirements — and the most mobility-dependent archetype in the fleet. **PHALANX exists entirely because of its ability to move.** Every capability it provides — route scouting, trigger avoidance, fall response, outdoor escort — is a function of locomotion. A stationary PHALANX is not a degraded PHALANX; it is a non-functional one.
 
-- Hardware: Ruggedized wheeled outdoor platform. Requirements: IP65 weather resistance, GPS + LiDAR + stereo cameras, 8-hour outdoor battery life, curb-climbing capability. Evaluate platforms: Clearpath Husky, Boston Dynamics Spot (for -H variant), or custom outdoor UGV.
+- Hardware: Ruggedized wheeled outdoor platform. Requirements: IP65 weather resistance, GPS + LiDAR + stereo cameras, **8-hour outdoor battery life**, curb-climbing capability (minimum 50mm), tested across grass, gravel, pavement, and wet surfaces. Evaluate platforms: Clearpath Husky, Boston Dynamics Spot (for -H variant), or custom outdoor UGV. **All platforms must demonstrate sustained outdoor co-navigation alongside a walking human** before procurement commitment.
 - Outdoor autonomy stack: build on ROS 2 Nav2 as baseline; extend with veteran-specific trigger-environment routing (PTSD trigger map must be updatable by veteran at any time; route re-planning must complete in under 10 seconds).
+- **Companion walking validation:** PHALANX must maintain a configurable follow distance (default: 10–15 meters ahead as a scout; or 1–2 meters alongside as escort) while adapting in real-time to the veteran's pace, stops, and direction changes. This is the primary navigation use case.
 - Emergency response module: integrate with local 911 CAD systems via RapidSOS API for GPS-pinned incident reporting.
 - Home perimeter monitoring: integrate with Matter/Zigbee smart home ecosystem; validate that SENTINEL PTSD hypervigilance module correctly de-escalates when PHALANX reports perimeter clear.
 
@@ -821,6 +930,7 @@ At 50,000+ units, VALOR is a national logistics operation:
 | Humanoid platform vendor delivers unreliable hardware | Medium | Medium | Evaluate 3 platforms before committing; pilot 500 units before scaling; maintain non-humanoid variant as default |
 | Biometric wrist module accuracy insufficient for PTSD detection | Medium | High | Validate against clinical PTSD assessment tools in 100-person study before pilot deployment; publish results |
 | Inter-robot coordination latency too high for cascade prevention | Low | Medium | Requires LAN-speed mesh; test under degraded rural broadband; design offline-capable fallback for all critical protocols |
+| Robot mobility system failure in a safety-critical scenario | Medium | High | Mobility systems are the highest-stress mechanical component; design crisis escalation to initiate from wrist module independently of robot position; target 18+ month MTBF for drive systems; 48-hour replacement SLA required before Phase 3 |
 | Cybersecurity breach of veteran Tier-1 data | Low | Critical | FedRAMP High; on-device only processing for Tier-1; penetration test every 6 months; breach response plan maintained and rehearsed |
 | Research pipeline bottleneck delays clinical module deployment | Medium | High | RIC weekly cadence and defined stage timelines (Section 22) prevent queue buildup; Confidence Tier C findings may proceed to advisory-only deployment while full pipeline review completes, ensuring clinical value is not blocked by process overhead |
 | Real-world pilot outcomes contradict pipeline Confidence Tier assignments | Low | High | Stage 7 post-integration monitoring designed specifically for this; any material discrepancy triggers mandatory RIC review and possible model rollback within 72 hours via the fleet management console |
@@ -974,11 +1084,11 @@ VALOR's value proposition depends on deep integration with VA systems: the EHR (
 **Category:** Engineering / Operations  
 **Severity:** High
 
-A robot operating 24 hours a day in a home environment — navigating pets, clutter, children, and elderly veterans with mobility limitations — will break. Articulated arms, wheels, sensors, and batteries all have finite mean-time-between-failure (MTBF) ratings. For a veteran who depends on NEXUS for daily medication dispensing or SENTINEL for crisis monitoring, a robot failure is a safety event, not just a support ticket. Building and sustaining a field maintenance infrastructure capable of servicing tens of thousands of units nationwide is an operational challenge that rivals the engineering challenge.
+A robot operating 24 hours a day in a home environment — navigating pets, clutter, children, and elderly veterans with mobility limitations — will break. Articulated arms, wheels, drive motors, sensors, and batteries all have finite mean-time-between-failure (MTBF) ratings. **The mobility systems — drive trains, wheels, navigation sensors — are among the most mechanically stressed components in the fleet**, operating continuously across varied floor surfaces, thresholds, and obstacles. For a veteran who depends on NEXUS for daily medication dispensing or SENTINEL for crisis monitoring, a mobility failure is a safety event, not just a support ticket: a robot that cannot navigate cannot reach the veteran. Building and sustaining a field maintenance infrastructure capable of servicing tens of thousands of units nationwide is an operational challenge that rivals the engineering challenge.
 
-**Why it's hard:** Consumer robotics companies have largely failed at the service model. The robots that require the most reliable support — those serving elderly, disabled, or high-need populations — are precisely the robots whose users cannot self-troubleshoot. Rural deployment makes dispatch logistics extremely expensive and slow.
+**Why it's hard:** Consumer robotics companies have largely failed at the service model. The robots that require the most reliable support — those serving elderly, disabled, or high-need populations — are precisely the robots whose users cannot self-troubleshoot. Rural deployment makes dispatch logistics extremely expensive and slow. Mobility system failures (jammed wheels, navigation sensor degradation, dock alignment failures) are the most common failure mode across wheeled robot platforms in home environments.
 
-**Mitigation path:** Design all critical safety functions (crisis escalation, medication reminders) to fail over to a smartphone app when robot hardware fails. Target MTBF of 18+ months for all critical components through supplier qualification in Phase 0. Build a certified remote technician program enabling over-the-phone guided repair for common failure modes. Establish a regional depot network with 48-hour replacement SLA as a Phase 3 deployment gate.
+**Mitigation path:** Design all critical safety functions (crisis escalation, medication reminders) to fail over to a smartphone app when robot hardware fails. Target MTBF of 18+ months for all critical components including mobility systems through supplier qualification in Phase 0. Build a certified remote technician program enabling over-the-phone guided repair for common failure modes. Establish a regional depot network with 48-hour replacement SLA as a Phase 3 deployment gate. Validate mobility systems specifically across floor surface types, threshold heights, and obstacle profiles representative of the veteran home environments in the pilot cohort.
 
 ---
 
@@ -1904,8 +2014,9 @@ For architectural questions, design decisions, or policy collaboration, open an 
 
 ---
 
-> *VALOR System Vision — Version 5.0*  
+> *VALOR System Vision — Version 5.2*  
 > *Claude AI was used in producing this system overview, README file, and build roadmap.*  
-> *This document is a conceptual vision for public interest discussion and policy development. All cost figures are estimates based on published research. All technical capabilities described are based on existing or near-term commercially available technologies. VA comparison data in Section 21 is drawn from VA Office of Inspector General reports, GAO findings, and peer-reviewed research published through 2025–2026.*  
-> *Version 5 adds the Research-to-Build Pipeline (Section 22) — the formal framework governing how external research findings and internal pilot outcomes are evaluated for reproducibility and replicability before integration into VALOR design, clinical protocols, and production modules.*  
+> *This document is a conceptual vision for public interest discussion and policy development. All cost figures are estimates based on published research. All technical capabilities described are based on existing or near-term commercially available technologies. VA comparison data in Section 22 is drawn from VA Office of Inspector General reports, GAO findings, and peer-reviewed research published through 2025–2026.*  
+> *Version 5.1 adds the Research-to-Build Pipeline (Section 23) — the formal framework governing how external research findings and internal pilot outcomes are evaluated for reproducibility and replicability before integration into VALOR design, clinical protocols, and production modules.*  
+> *Version 5.2 adds The Mobility Imperative (Section 5) — a dedicated analysis of why mobility is the foundational architectural requirement for the VALOR fleet. Mobility language has been strengthened throughout all archetype descriptions, the Design Principles, the Case for a Robot Fleet, the Build Roadmap, and the Top Development Challenges. HERALD's optional mobile variant benefits have been formally documented. PHALANX mobility-as-mission language has been elevated throughout.*  
 > *These veterans gave everything. VALOR's mission is to give something back that matches the scale of what they carry — a system that is as persistent, as adaptive, and as committed as they are.*
