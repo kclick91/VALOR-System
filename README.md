@@ -5,7 +5,7 @@
 [![System Status](https://img.shields.io/badge/status-concept--phase-blue)]()
 [![Archetypes](https://img.shields.io/badge/robot%20archetypes-5-teal)]()
 [![Capabilities](https://img.shields.io/badge/capability%20modules-20-purple)]()
-[![Version](https://img.shields.io/badge/version-5.2-orange)]()
+[![Version](https://img.shields.io/badge/version-6.0-orange)]()
 [![License](https://img.shields.io/badge/license-VA%20Research-green)]()
 [![Future-Proofed](https://img.shields.io/badge/future--proofed-100yr%20mandate-gold)]()
 
@@ -67,6 +67,7 @@
     - [Reproducibility Standards](#reproducibility-standards)
     - [Pipeline Governance](#pipeline-governance)
 24. [Contributing](#contributing)
+25. [The Standard Model of Physics — Applied to Veteran Care](#the-standard-model-of-physics--applied-to-veteran-care)
 
 ---
 
@@ -2014,9 +2015,184 @@ For architectural questions, design decisions, or policy collaboration, open an 
 
 ---
 
-> *VALOR System Vision — Version 5.2*  
+---
+
+## The Standard Model of Physics — Applied to Veteran Care
+
+> **A deep understanding of the Standard Model of Particle Physics — the most precisely tested scientific theory in human history — is not an abstract academic exercise. It is the invisible substrate beneath every sensor, every semiconductor, every medical scanner, every material, and every communication technology in the VALOR System. The veterans who carry service-connected injuries, TBI, chronic pain, and invisible wounds deserve care built on the deepest possible understanding of the physical universe. This section demonstrates why.**
+
+---
+
+### What Is the Standard Model?
+
+The **Standard Model of Particle Physics** is the theoretical framework that describes the fundamental constituents of matter and the forces that govern their interactions. It accounts for three of the four known fundamental forces — the electromagnetic force, the strong nuclear force, and the weak nuclear force — and classifies all known elementary particles.
+
+**The particle zoo in brief:**
+
+| Category | Particles | Role |
+|---|---|---|
+| **Quarks** | up, down, charm, strange, top, bottom | Constituents of protons and neutrons; define nuclear matter |
+| **Leptons** | electron, muon, tau, and three neutrinos | Electrons form atoms; enable all chemistry and biology |
+| **Gauge bosons** | photon (γ), W±, Z⁰, gluon (g) | Force carriers: EM, weak, strong forces |
+| **Scalar boson** | Higgs (H⁰) | Gives mass to W±, Z⁰, and all fermions via the Higgs mechanism |
+
+The Standard Model's predictive precision is extraordinary — the electron's anomalous magnetic moment (g-factor) is predicted to 12 decimal places and confirmed experimentally. This is not a model that merely approximates reality; it describes it with a fidelity unmatched in any other branch of science.
+
+The practical implication: **every technology VALOR deploys — from MRI scanners to semiconductor chips to laser rangefinders to radiation therapy — is a direct engineering application of Standard Model physics.** The further our understanding of the Standard Model extends, the more precisely and powerfully we can build tools to serve veterans.
+
+---
+
+### 1. Electromagnetic Force — The Foundation of Every VALOR Sensor
+
+The photon is the force carrier of electromagnetism. Every sensor in the VALOR fleet is, at root, a photon-interaction device.
+
+**LiDAR and spatial navigation:** PHALANX and all mobile archetypes use LiDAR — time-of-flight photon measurement — to construct 3D maps of the veteran's environment. The physics of photon propagation at the speed of light, and the precision with which we can time those returns (thanks to quantum electrodynamics, or QED, which is the Standard Model's description of photon-electron interaction), directly determines VALOR's ability to navigate safely around a veteran in a wheelchair, avoid a service dog, or detect a veteran who has fallen.
+
+**Photoplethysmography (PPG) — heart rate and HRV:** SENTINEL's biometric wrist module detects blood volume pulse by shining infrared photons through the skin and measuring the fraction absorbed by hemoglobin. The absorption spectrum of hemoglobin is a direct consequence of its quantum electronic structure — governed entirely by QED. Understanding the precise wavelength-dependent absorption cross-sections, how they shift under different physiological states, and how scattering in tissue affects signal quality all require fluency with Standard Model electromagnetism.
+
+**Galvanic skin response (GSR):** Electron flow (current) through sweat-moistened skin is a PTSD stress proxy SENTINEL uses for crisis detection. The electron — a lepton in the Standard Model — is the charge carrier. Ionic conductance in electrolyte solutions, skin impedance models, and signal fidelity under motion artifact are all electromagnetic phenomena at the quantum level.
+
+**Thermal imaging:** NEXUS uses infrared thermography to map pain-related inflammation. Thermal photons emitted by tissue (blackbody radiation, governed by Planck's law — itself a quantum mechanical result rooted in photon statistics) encode tissue temperature with millimeter-scale spatial resolution. The capacity to detect a veteran's inflamed joint before they report pain depends on the precision with which we understand photon emission and detection.
+
+> **Applied to VALOR:** A SENTINEL team that deeply understands QED can design biometric sensors with better SNR, lower false positive rates in crisis detection, and greater accuracy under motion — directly reducing missed crisis escalations and false alarms that erode veteran trust.
+
+---
+
+### 2. Semiconductor Physics — The Engine of Every AI Inference Chip
+
+The transistor is a quantum mechanical device. Without the Standard Model — specifically, the quantum theory of how electrons inhabit energy bands in crystalline solids (a direct consequence of quantum electrodynamics applied to periodic lattices) — there is no NVIDIA Jetson, no edge AI inference, and no VALOR-CORE running on-robot.
+
+**Band gap engineering:** The distinction between a conductor, semiconductor, and insulator is entirely a consequence of how electrons (Standard Model leptons) interact with the periodic potential of an atomic lattice via the electromagnetic force. Silicon's 1.1 eV band gap — which makes it ideal for room-temperature electronics — is calculable from first principles using Standard Model inputs. Gallium nitride (GaN), used in high-efficiency power converters that extend VALOR's battery life, has a 3.4 eV band gap exploited precisely because engineers understood its quantum origin.
+
+**Moore's Law ceiling and quantum tunneling:** As transistor gate lengths shrink below 5 nm (current commercial chips), electrons tunnel quantum mechanically through barriers — a distinctly Standard Model phenomenon with no classical analog. Understanding when tunneling leakage becomes device-limiting, and how to design around it (FinFETs, gate-all-around architectures, topological insulators), requires exactly the quantum field theory that underlies the Standard Model. VALOR's roadmap into its 50-year and 100-year mandate will witness multiple generations of post-silicon computing substrates, each exploiting deeper Standard Model phenomena.
+
+**Spintronics and MRAM:** Emerging memory technologies that may eventually replace DRAM exploit *electron spin* — a purely quantum mechanical property that has no classical equivalent and emerges directly from the Dirac equation (relativistic quantum mechanics, the theoretical backbone of the Standard Model's fermion sector). MRAM offers non-volatile, radiation-hard memory with zero standby power — highly relevant to VALOR robots operating continuously in veteran homes. Understanding spin is understanding the Standard Model's description of fermionic angular momentum.
+
+> **Applied to VALOR:** Hardware engineers on the VALOR team who understand semiconductor quantum mechanics at the Standard Model level are equipped to evaluate next-generation chip platforms, predict where thermal and quantum noise floors lie, and ensure VALOR-CORE's inference hardware remains state-of-the-art across the 100-year mandate without black-box vendor dependency.
+
+---
+
+### 3. Medical Imaging — The Standard Model in the Clinic
+
+The most transformative diagnostic technologies in veteran healthcare are direct applications of Standard Model physics. Veterans carry some of the highest rates of TBI, musculoskeletal injury, and blast-exposure-related organ damage of any patient population — and imaging these injuries accurately determines treatment, benefits eligibility, and quality of life.
+
+**MRI — Nuclear Magnetic Resonance:** MRI exploits the *nuclear spin* of hydrogen nuclei (protons) — a property described by the Standard Model's treatment of the strong and electromagnetic forces operating at the nuclear level. A proton placed in a strong magnetic field precesses at a Larmor frequency governed by its nuclear magnetic moment (a quantity calculable from QCD, the Standard Model's description of the strong force). RF photons at exactly this frequency flip the spin; the relaxation signal encodes tissue contrast. TBI — the "invisible wound" of post-9/11 veterans — is best characterized by diffusion tensor MRI, which maps white matter microstructure at a resolution that reveals axonal shear injuries invisible to CT. Every improvement in MRI resolution and contrast is downstream of deeper understanding of nuclear spin physics.
+
+**PET scanning — Positron-Electron Annihilation:** PET imaging — used to assess TBI-related neuroinflammation and PTSD-related amygdala hyperactivity — operates on positron emission from radioactive tracers. The positron is the antiparticle of the electron, predicted by the Standard Model's Dirac equation and discovered in 1932. When a positron annihilates with an electron, two 511 keV photons are emitted at exactly 180° — a consequence of conservation of 4-momentum in Standard Model quantum electrodynamics. PET scanners detect these coincident photons to localize the tracer. Without Standard Model physics, PET is inexplicable; with it, it is engineerable to sub-millimeter accuracy.
+
+**X-ray and CT — Compton Scattering and Photoelectric Absorption:** X-ray imaging of veteran musculoskeletal injuries (blast-fractured vertebrae, shrapnel-adjacent bone damage, prosthetic interface osseointegration) depends on differential photon absorption by tissue — governed by the photoelectric effect and Compton scattering, both QED processes. CT's ability to reconstruct 3D bone and soft tissue structure from 2D projection images applies the mathematics of the Radon transform to photon attenuation data with physics roots in the Standard Model.
+
+**Radiation therapy for veteran cancer:** Veterans exposed to Agent Orange, burn pit emissions, or ionizing radiation during service carry elevated cancer rates. Radiation oncology delivers precisely localized photon or proton beams to tumors while sparing surrounding tissue. Proton therapy, in particular, exploits the Bragg peak — the sharp energy deposition maximum at the end of a charged particle's range — a consequence of the Bethe-Bloch equation, which describes charged particle energy loss through matter using Standard Model inputs. NEXUS's role as a health advocate means understanding which veteran diagnoses respond to which treatment modalities — and physics literacy enables the system to surface proton therapy candidacy where appropriate.
+
+> **Applied to VALOR:** NEXUS's health-data integration modules, and HERALD's benefits eligibility navigation for service-connected conditions, both improve when the system can reason fluently about the diagnostic modalities veterans are undergoing — what they measure, what they miss, and how their outputs map to clinical decisions.
+
+---
+
+### 4. Materials Science — Prosthetics, Armor, and Biomechanics
+
+The Standard Model governs the behavior of electrons in chemical bonds — which means it governs the properties of every material. For veterans with limb loss, blast injury, and chronic musculoskeletal damage, material science is not abstract.
+
+**Prosthetic limbs and the physics of carbon fiber:** Modern below-knee prostheses use carbon fiber composites whose extraordinary specific stiffness and fatigue resistance emerge from the quantum mechanical bonding structure of the sp² carbon lattice — a consequence of how electrons hybridize according to QED and quantum chemistry. The energy-return properties of a running blade — the difference between a veteran returning to competitive athletics versus limping through daily life — are tunable precisely because materials engineers understand the electron-level physics that determines elastic modulus and failure modes.
+
+**Osseointegration implants:** Titanium's biocompatibility — its ability to bond directly to bone without rejection — is a quantum surface effect. The native TiO₂ oxide layer that forms on titanium surfaces creates an electronic interface that resists protein denaturation and supports osteoblast adhesion. This is electron chemistry all the way down. Understanding it at the Standard Model level allows biomaterials engineers to tune surface oxide thickness, doping levels, and photon-activated surface treatments to improve osseointegration outcomes for veteran amputees.
+
+**Smart textiles and wearable sensors:** SENTINEL's biometric wrist module and NEXUS's physiological monitoring depend on flexible electronics and smart textiles that maintain signal fidelity through motion. Conductive polymers (PEDOT, graphene-based inks) exploit conjugated electron systems — delocalized π electrons that form charge transport channels through molecular orbital overlap, calculable via quantum chemistry. The ability to design stretchable conductors that remain electrically stable through a veteran's full range of motion is a direct application of understanding electron behavior in non-crystalline soft-matter systems.
+
+> **Applied to VALOR:** NEXUS's physical health modules — particularly prosthetic interface monitoring, pain management, and physical therapy guidance — benefit from a materials-physics-literate design team that can evaluate emerging prosthetic and sensor materials against first-principles performance criteria rather than relying solely on manufacturer specifications.
+
+---
+
+### 5. Quantum Sensing — The Next Frontier for Veteran Health Monitoring
+
+The Standard Model's quantum mechanical framework is opening a new generation of sensors that will dramatically improve VALOR's capabilities within the 100-year mandate window.
+
+**Quantum magnetometers (OPMs) for non-invasive brain activity:** Optically pumped magnetometers (OPMs) use quantum transitions of alkali metal atoms (rubidium, cesium) to detect magnetic fields 100× weaker than SQUID-based MEG scanners, and — critically — they operate at room temperature. The physics is Standard Model atomic spectroscopy: photons drive transitions between hyperfine energy levels split by the nuclear magnetic moment (strong force) and electron spin (QED). OPM-MEG systems are wearable, lightweight, and can map real-time neural activity with millisecond temporal resolution. For veterans with TBI and PTSD — whose neurological signatures are subtle and require high-sensitivity imaging — OPM technology could enable SENTINEL to monitor brain state continuously and non-invasively, detecting pre-crisis neural patterns before behavioral symptoms emerge.
+
+**Nitrogen-vacancy (NV) centers in diamond for nanoscale sensing:** NV centers in diamond lattices are point defects whose spin state can be initialized and read optically — a quantum information system operating at room temperature. Their extreme magnetic field sensitivity (single-neuron-level field detection) and single-photon emission properties make them candidates for next-generation medical imaging and precision drug delivery tracking. Standard Model quantum optics and solid-state spin physics govern every aspect of their operation.
+
+**Quantum communication and veteran data security:** HERALD handles sensitive VA benefits data, legal documents, and health records. Quantum key distribution (QKD), enabled by the no-cloning theorem of quantum mechanics (a theorem about photon quantum states, rooted in the Standard Model), makes eavesdropping on encrypted channels physically impossible — not merely computationally infeasible. As quantum computing matures, QKD becomes the gold standard for protecting veteran data from adversarial decryption. Understanding QKD at the physics level allows HERALD's privacy architecture to evolve appropriately over the 100-year mandate.
+
+> **Applied to VALOR:** Quantum sensing represents the most significant near-future expansion of VALOR's diagnostic and monitoring capabilities. The team members capable of evaluating, integrating, and troubleshooting these systems are those who understand the Standard Model at a level deep enough to bridge physics and engineering.
+
+---
+
+### 6. Nuclear Medicine — Veteran-Specific Cancer and Toxin Exposure
+
+Veterans of multiple service eras carry elevated radiological and chemical exposure burdens. Agent Orange (dioxin), burn pit particulates, depleted uranium, and nuclear test observation have produced cancer clusters in veteran populations that require sophisticated nuclear medicine responses.
+
+**Alpha and beta decay for targeted radiotherapy:** Targeted alpha therapy (TAT) uses alpha-emitting isotopes (Bismuth-213, Actinium-225) conjugated to antibodies that seek specific tumor antigens. The alpha particle (a helium-4 nucleus — two protons and two neutrons, constituents described entirely by QCD and the strong force) deposits all its energy within ~100 microns of emission, sparing surrounding tissue. This extraordinary spatial precision — a direct consequence of the Standard Model's description of heavy charged particle energy loss — makes TAT particularly promising for the disseminated cancers that burn-pit and Agent Orange exposures produce. Veterans deserve oncologists and benefit advocates who understand why this matters.
+
+**Neutron activation analysis for exposure documentation:** Depleted uranium exposure produces uranium deposits in bone and kidney. Neutron activation analysis — bombarding tissue or urine samples with neutrons (Standard Model strong-force mediated nuclear scattering) and detecting the characteristic gamma rays from activated isotopes — can quantify trace uranium loads at parts-per-billion sensitivity. Veterans seeking service-connection for DU-related kidney disease or cancer need diagnostic tools accurate enough to document the exposure; those tools are Standard Model applications.
+
+> **Applied to VALOR:** HERALD's benefits navigation module and NEXUS's health-monitoring module gain substantive capability when the VALOR team understands the nuclear physics underlying veteran-specific exposure pathologies — allowing VALOR to intelligently surface diagnostic options, flag exposure-related symptom clusters, and connect veterans to the specialized oncology resources their conditions require.
+
+---
+
+### 7. The Weak Force — Beta Decay in PET and Neuroimaging
+
+The weak nuclear force — mediated by the massive W± and Z⁰ bosons (whose masses arise via the Higgs mechanism) — governs radioactive beta decay. This is the physics behind PET tracers.
+
+**FDG-PET for veteran neuroimaging:** [¹⁸F]-fluorodeoxyglucose (FDG) is the most widely used PET tracer for brain glucose metabolism. Fluorine-18 undergoes positron emission (β⁺ decay, a weak force process mediated by W⁺ boson exchange: a proton converts to a neutron, emitting a positron and a neutrino) with an 110-minute half-life — long enough for clinical imaging, short enough to minimize radiation dose. The design of PET tracers — choosing isotopes with the right half-life, decay energy, and chemical incorporation — requires fluency with weak force nuclear physics. Veterans with PTSD show characteristic FDG-PET hypometabolism in the prefrontal cortex and hypermetabolism in the amygdala; these patterns are diagnostic signatures that NEXUS's health data integration modules should recognize and surface for clinical review.
+
+**Neutrino detection and future medical physics:** The Standard Model predicts three neutrino flavors, each interacting only via the weak force and gravity. While currently too weakly interacting to be clinically useful, coherent elastic neutrino-nucleus scattering (CEνNS) experiments are pioneering ultra-sensitive nuclear recoil detectors. The same detector technology that catches neutrinos is being adapted for dark matter searches and, prospectively, for medical isotope production monitoring. The 100-year mandate horizon means VALOR should be architected to incorporate technologies whose current form exists only in physics laboratories.
+
+> **Applied to VALOR:** Understanding weak-force nuclear physics gives the VALOR clinical team the foundation to interpret PET neuroimaging findings accurately, communicate them to VA providers effectively, and evaluate next-generation brain imaging modalities as they transition from research to clinical application.
+
+---
+
+### 8. The Higgs Field — Mass, Inertia, and Why Matter Exists at All
+
+The Higgs boson — discovered at CERN in 2012 — is the quantum excitation of the Higgs field, which permeates all of space and gives mass to the W±, Z⁰ bosons and all fermions through the Brout-Englert-Higgs mechanism. Without the Higgs mechanism, the weak force bosons would be massless (like the photon), the weak force would have infinite range, and nuclear chemistry as we know it would not exist — nor would atoms, molecules, biology, or veterans.
+
+This is not merely philosophical. The Higgs mechanism tells us something deep about why matter has the properties it does — why hydrogen is stable, why carbon forms four bonds, why DNA stores information, why neurons fire. Every medical technology, every material, every drug, every diagnostic probe ultimately traces its properties back to the mass spectrum of elementary particles set by their Yukawa couplings to the Higgs field.
+
+For a project operating on a 100-year mandate, understanding that VALOR's technologies are not arbitrary inventions but consequences of deep physical law is a source of long-term engineering confidence. The Standard Model will not be repealed. The electron's charge will not change. The speed of light will not shift. This stability of physical law is the bedrock on which century-scale engineering commitments can be made.
+
+> **The design principle this unlocks:** VALOR's 100-Year Mandate is undergirded by physics that is genuinely permanent. The technological implementations change; the physics does not. A VALOR engineer who understands why the laws are what they are — not just that they are — is equipped to evaluate radically new technologies against stable physical constraints, distinguishing genuine innovation from speculative noise across the entire mandate horizon.
+
+---
+
+### 9. Summary — The Standard Model as a VALOR Design Resource
+
+The table below maps Standard Model physics domains to specific VALOR capabilities:
+
+| Standard Model Domain | Force / Particle | VALOR Application | Affected Archetype(s) |
+|---|---|---|---|
+| Quantum electrodynamics (QED) | Photon, electron | LiDAR navigation, biometric sensors (PPG, GSR), thermal imaging, semiconductor chips | All (especially SENTINEL, PHALANX) |
+| Band structure / solid-state QM | Electron in periodic lattice | Transistors, edge AI inference chips, battery chemistry, spintronics memory | VALOR-CORE, all archetypes |
+| Nuclear magnetic resonance | Proton spin (strong + EM) | MRI for TBI diagnosis, fMRI for PTSD neuroimaging | NEXUS, HERALD |
+| Positron-electron annihilation | Positron (QED, Dirac) | PET scanning for neuroinflammation, cancer staging | NEXUS, HERALD |
+| Compton scattering / photoelectric | Photon-electron (QED) | X-ray and CT imaging of blast injuries, prosthetic interface | NEXUS, HERALD |
+| Charged particle energy loss (Bethe-Bloch) | Proton (QED) | Proton therapy for veteran cancers | NEXUS, HERALD |
+| Quantum atomic spectroscopy | Photon, alkali atom hyperfine | OPM-MEG wearable brain imaging | SENTINEL, NEXUS |
+| NV center spin physics | Electron spin (QED) | Next-generation nanoscale sensing | SENTINEL (future) |
+| Quantum key distribution | Photon (QED no-cloning) | Veteran data security, HERALD document vault | HERALD, VALOR-CORE |
+| Beta decay (weak force, W± boson) | W±, neutrino | PET tracer design, FDG-PET neuroimaging | NEXUS |
+| Alpha decay (strong / QCD) | Alpha particle | Targeted alpha therapy for veteran cancers | NEXUS, HERALD |
+| Higgs mechanism | Higgs field, mass generation | Why matter exists and has stable properties; 100-year design confidence | VALOR-CORE (philosophical / architectural) |
+| Neutron activation analysis | Neutron (strong force) | DU exposure documentation, service-connection evidence | HERALD, NEXUS |
+| Materials quantum chemistry | Electron bonding (QED) | Carbon fiber prosthetics, Ti osseointegration, smart textile sensors | NEXUS |
+
+---
+
+### 10. Conclusion — Why VALOR Teams Should Study Physics
+
+The argument is simple:
+
+1. Every sensor VALOR uses, every chip VALOR runs on, every medical scanner that images a veteran's wounds, every prosthetic limb that restores a veteran's mobility, and every encryption system that protects a veteran's most sensitive data is a direct consequence of Standard Model physics.
+
+2. A team that understands this physics at depth — not merely as a user of technology products, but as practitioners who can reason from physical law — can evaluate new technologies more rigorously, identify failure modes earlier, and build systems that will remain technically coherent across the 100-year mandate.
+
+3. Veterans who have sacrificed the most deserve care built on the deepest possible foundations. The Standard Model is the deepest foundation physics has yet found. VALOR should build from it, not just on top of it.
+
+> **The Standard Model is not a section of a physics textbook. It is the operating manual for the universe in which veterans are injured, healed, remembered, and served. VALOR should read it.**
+
+---
+
+> *VALOR System Vision — Version 6.0*  
 > *Claude AI was used in producing this system overview, README file, and build roadmap.*  
 > *This document is a conceptual vision for public interest discussion and policy development. All cost figures are estimates based on published research. All technical capabilities described are based on existing or near-term commercially available technologies. VA comparison data in Section 22 is drawn from VA Office of Inspector General reports, GAO findings, and peer-reviewed research published through 2025–2026.*  
 > *Version 5.1 adds the Research-to-Build Pipeline (Section 23) — the formal framework governing how external research findings and internal pilot outcomes are evaluated for reproducibility and replicability before integration into VALOR design, clinical protocols, and production modules.*  
 > *Version 5.2 adds The Mobility Imperative (Section 5) — a dedicated analysis of why mobility is the foundational architectural requirement for the VALOR fleet. Mobility language has been strengthened throughout all archetype descriptions, the Design Principles, the Case for a Robot Fleet, the Build Roadmap, and the Top Development Challenges. HERALD's optional mobile variant benefits have been formally documented. PHALANX mobility-as-mission language has been elevated throughout.*  
+> *Version 6.0 adds The Standard Model of Physics — Applied to Veteran Care (Section 25) — a comprehensive demonstration of how deep understanding of particle physics, quantum electrodynamics, nuclear forces, and the Higgs mechanism directly underlies every sensor, chip, medical imaging system, prosthetic material, and data security architecture in the VALOR System, with explicit mapping of Standard Model domains to VALOR archetypes and capabilities.*  
 > *These veterans gave everything. VALOR's mission is to give something back that matches the scale of what they carry — a system that is as persistent, as adaptive, and as committed as they are.*
