@@ -5,7 +5,7 @@
 [![System Status](https://img.shields.io/badge/status-concept--phase-blue)]()
 [![Archetypes](https://img.shields.io/badge/robot%20archetypes-5-teal)]()
 [![Capabilities](https://img.shields.io/badge/capability%20modules-20-purple)]()
-[![Version](https://img.shields.io/badge/version-6.0-orange)]()
+[![Version](https://img.shields.io/badge/version-6.1-orange)]()
 [![License](https://img.shields.io/badge/license-VA%20Research-green)]()
 [![Future-Proofed](https://img.shields.io/badge/future--proofed-100yr%20mandate-gold)]()
 
@@ -68,6 +68,7 @@
     - [Pipeline Governance](#pipeline-governance)
 24. [Contributing](#contributing)
 25. [The Standard Model of Physics — Applied to Veteran Care](#the-standard-model-of-physics--applied-to-veteran-care)
+26. [Sample Fleet Images](#sample-fleet-images)
 
 ---
 
@@ -2189,10 +2190,33 @@ The argument is simple:
 
 ---
 
-> *VALOR System Vision — Version 6.0*  
+---
+
+## Sample Fleet Images
+
+The following images illustrate representative VALOR System fleet configurations. These are concept visuals intended to communicate the scale, diversity, and deployment context of the five robot archetypes operating as a coordinated unit.
+
+**Fleet Type 1 — Standard Veteran Support Configuration**
+
+> A full five-archetype deployment (SENTINEL, NEXUS, ATLAS, HERALD, PHALANX) in a typical residential and community support context.
+
+[View Sample Image — Fleet Type 1](https://medium.com/@clickkelly/valor-system-image-23a377943ea3)
+
+---
+
+**Fleet Types 2 & 3 — Specialized and Scaled Configurations**
+
+> Illustrates variant fleet compositions, including reduced-archetype deployments for rural or resource-constrained settings, and scaled multi-veteran configurations for community or facility use.
+
+[View Sample Images — Fleet Types 2 & 3](https://medium.com/@clickkelly/valor-system-image-type-2-and-3-f286ea7dd62c)
+
+---
+
+> *VALOR System Vision — Version 6.1*  
 > *Claude AI was used in producing this system overview, README file, and build roadmap.*  
 > *This document is a conceptual vision for public interest discussion and policy development. All cost figures are estimates based on published research. All technical capabilities described are based on existing or near-term commercially available technologies. VA comparison data in Section 22 is drawn from VA Office of Inspector General reports, GAO findings, and peer-reviewed research published through 2025–2026.*  
 > *Version 5.1 adds the Research-to-Build Pipeline (Section 23) — the formal framework governing how external research findings and internal pilot outcomes are evaluated for reproducibility and replicability before integration into VALOR design, clinical protocols, and production modules.*  
 > *Version 5.2 adds The Mobility Imperative (Section 5) — a dedicated analysis of why mobility is the foundational architectural requirement for the VALOR fleet. Mobility language has been strengthened throughout all archetype descriptions, the Design Principles, the Case for a Robot Fleet, the Build Roadmap, and the Top Development Challenges. HERALD's optional mobile variant benefits have been formally documented. PHALANX mobility-as-mission language has been elevated throughout.*  
 > *Version 6.0 adds The Standard Model of Physics — Applied to Veteran Care (Section 25) — a comprehensive demonstration of how deep understanding of particle physics, quantum electrodynamics, nuclear forces, and the Higgs mechanism directly underlies every sensor, chip, medical imaging system, prosthetic material, and data security architecture in the VALOR System, with explicit mapping of Standard Model domains to VALOR archetypes and capabilities.*  
+> *Version 6.1 adds Sample Fleet Images (Section 26) — links to concept visuals illustrating representative VALOR fleet configurations across Fleet Types 1, 2, and 3.*  
 > *These veterans gave everything. VALOR's mission is to give something back that matches the scale of what they carry — a system that is as persistent, as adaptive, and as committed as they are.*
